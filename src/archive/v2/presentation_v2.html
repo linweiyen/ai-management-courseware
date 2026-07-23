@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="三小時課程：大語言模型運用於企業管理與決策流程，三幕故事深度版">
+  <title>大語言模型運用於企業管理與決策流程｜三幕故事版</title>
+  <style>
+    :root{
+      --navy:#0b2239;--navy2:#123b5d;--blue:#0878ad;--cyan:#e9f7fb;
+      --orange:#e87321;--orange-soft:#fff1e5;--green:#167258;--green-soft:#eaf7f0;
+      --red:#b63f46;--red-soft:#fdebed;--yellow:#8b650b;--yellow-soft:#fff5d3;
+      --ink:#162638;--muted:#5f6f7f;--line:#d9e4eb;--paper:#fff;--bg:#f3f7f9;
+      --shadow:0 14px 40px rgba(8,34,57,.08);--radius:20px;--scale:1;
+    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:72px}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;font-size:calc(16px * var(--scale));line-height:1.78}
+    a{color:var(--blue);text-underline-offset:3px}button,input{font:inherit}button{cursor:pointer}
+    .progress{position:fixed;inset:0 0 auto;height:5px;background:rgba(255,255,255,.25);z-index:100}.progress span{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--orange),#ffd166)}
+    .hero{position:relative;overflow:hidden;background:linear-gradient(130deg,#061725,var(--navy2) 58%,var(--blue));color:white;padding:66px max(5vw,26px) 58px}
+    .hero:after{content:"";position:absolute;width:420px;height:420px;border:1px solid rgba(255,255,255,.13);border-radius:50%;right:-130px;top:-180px;box-shadow:0 0 0 55px rgba(255,255,255,.025),0 0 0 110px rgba(255,255,255,.015)}
+    .hero-inner{position:relative;z-index:1;max-width:1240px;margin:auto;display:grid;grid-template-columns:1.3fr .7fr;gap:55px;align-items:center}
+    .kicker{color:#8bdcf0;font-weight:850;font-size:.82rem;letter-spacing:.14em}.hero h1{font-size:clamp(2.35rem,5.3vw,5rem);line-height:1.1;letter-spacing:-.035em;margin:.23em 0 .18em}.hero p{font-size:clamp(1.03rem,2vw,1.3rem);opacity:.92;max-width:780px;margin:0}
+    .chips{display:flex;gap:9px;flex-wrap:wrap;margin-top:24px}.chip{padding:5px 11px;border:1px solid rgba(255,255,255,.23);background:rgba(255,255,255,.09);border-radius:999px;font-size:.87rem}
+    .three-questions{display:grid;gap:10px}.question-card{padding:16px 18px;border-radius:15px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(5px);font-weight:850}.question-card span{display:inline-grid;place-items:center;width:26px;height:26px;margin-right:8px;border-radius:50%;background:white;color:var(--navy)}
+    .toolbar{position:sticky;top:0;z-index:80;background:rgba(255,255,255,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}.toolbar-inner{max-width:1380px;margin:auto;padding:8px 20px;min-height:57px;display:flex;align-items:center;justify-content:space-between;gap:12px}.toolbar-title{font-weight:850;color:var(--navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.actions{display:flex;gap:7px}.tool{padding:7px 10px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--navy)}.tool:hover,.tool.active{background:var(--cyan);border-color:#99d2e4}.menu{display:none}
+    .layout{max-width:1380px;margin:auto;padding:28px 20px 85px;display:grid;grid-template-columns:260px minmax(0,1fr);gap:28px;align-items:start}.nav{position:sticky;top:77px;max-height:calc(100vh - 95px);overflow:auto;padding:14px 11px;background:var(--paper);border:1px solid var(--line);border-radius:17px;box-shadow:var(--shadow)}.nav-label{padding:5px 9px 11px;color:var(--muted);font-size:.72rem;font-weight:900;letter-spacing:.1em}.nav a{display:grid;grid-template-columns:28px 1fr;gap:7px;padding:9px;border-radius:9px;color:#40556a;text-decoration:none;font-size:.89rem;line-height:1.35}.nav a span:first-child{color:#93a4b3}.nav a:hover,.nav a.active{background:var(--cyan);color:var(--blue);font-weight:850}
+    main{min-width:0}.section{margin:0 0 29px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:74px}.section-head{padding:29px 33px 23px;border-bottom:1px solid var(--line);background:linear-gradient(105deg,#f0fafc,#fff 70%)}.act{display:inline-block;padding:3px 9px;border-radius:6px;background:var(--navy2);color:white;font-size:.72rem;font-weight:900;letter-spacing:.08em}.section-head h2{margin:9px 0 4px;font-size:clamp(1.65rem,3.1vw,2.55rem);line-height:1.25;letter-spacing:-.02em}.section-head p{margin:0;color:var(--muted);max-width:850px}.section-body{padding:29px 33px 35px}
+    h3{color:var(--navy2);font-size:1.34rem;line-height:1.35;margin:1.55em 0 .5em}h3:first-child{margin-top:0}h4{color:var(--blue);font-size:1.02rem;margin:1em 0 .35em}p{margin:.64em 0}ul,ol{padding-left:1.42rem}li{margin:.34em 0}.muted{color:var(--muted)}.small{font-size:.86rem}
+    .grid2,.grid3{display:grid;gap:15px;margin:18px 0}.grid2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .card{padding:19px;border:1px solid var(--line);border-radius:15px;background:#fff}.card.soft{background:#f4fbfd}.card.warm{background:#fffaf3;border-color:#eedec9}.card.green{background:#f4fbf7;border-color:#d4e9df}.card.red{background:#fff7f7;border-color:#eed4d6}.card h3,.card h4{margin-top:0}.icon{width:43px;height:43px;display:grid;place-items:center;border-radius:12px;background:var(--cyan);font-size:1.3rem;margin-bottom:11px}.icon.orange{background:var(--orange-soft)}.icon.green{background:var(--green-soft)}.icon.red{background:var(--red-soft)}
+    .callout{margin:20px 0;padding:16px 18px;border-left:5px solid var(--blue);border-radius:0 13px 13px 0;background:#f1fafc}.callout strong{color:var(--blue)}.callout.warn{background:var(--yellow-soft);border-color:#d7a11e}.callout.danger{background:var(--red-soft);border-color:var(--red)}.callout.success{background:var(--green-soft);border-color:var(--green)}
+    .story{position:relative;margin:18px 0;padding:22px 22px 20px 75px;border-radius:17px;background:linear-gradient(145deg,var(--navy),var(--navy2));color:white}.story:before{content:"故事";position:absolute;left:19px;top:20px;width:40px;height:40px;display:grid;place-items:center;border-radius:50%;background:var(--orange);font-size:.72rem;font-weight:900}.story h3,.story h4{color:white;margin-top:0}.story p{opacity:.94}.story .choice{display:inline-block;margin:4px 5px 0 0;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.2);font-size:.84rem}
+    .memory{display:flex;gap:12px;align-items:center;margin:20px 0;padding:16px 18px;border-radius:14px;background:var(--orange-soft);border:1px solid #f0d7bf}.memory:before{content:"只記這句";flex:0 0 auto;padding:4px 8px;border-radius:6px;background:var(--orange);color:#fff;font-size:.72rem;font-weight:900}.memory strong{font-size:1.08rem;color:#8a4312}
+    .note{margin:21px 0;padding:15px 17px;border:1px dashed #dab16c;border-radius:13px;background:#fffaf0;color:#624b22}.note:before{content:"講師口條";display:inline-block;margin-right:8px;padding:2px 7px;border-radius:5px;background:#7a591a;color:#fff;font-size:.7rem;font-weight:900}body.hide-notes .note{display:none}
+    .table-wrap{overflow:auto;margin:18px 0;border:1px solid var(--line);border-radius:13px}table{width:100%;border-collapse:collapse;background:#fff;font-size:.93rem}th,td{text-align:left;vertical-align:top;padding:11px 13px;border-bottom:1px solid var(--line)}th{background:var(--navy2);color:white;white-space:nowrap}tr:last-child td{border-bottom:0}tbody tr:nth-child(even){background:#f8fafb}
+    .tag{display:inline-block;padding:2px 8px;border-radius:999px;background:var(--cyan);color:var(--blue);font-size:.73rem;font-weight:850}.tag.orange{background:var(--orange-soft);color:#ad5317}.tag.green{background:var(--green-soft);color:var(--green)}.tag.red{background:var(--red-soft);color:var(--red)}
+    .timeline{display:grid;grid-template-columns:repeat(5,minmax(170px,1fr));gap:9px;overflow:auto;margin:19px 0;padding-bottom:4px}.timebox{min-height:130px;padding:15px;border-radius:14px;background:linear-gradient(145deg,var(--navy2),var(--blue));color:#fff}.timebox.break{background:#f0f4f6;color:var(--muted);border:1px dashed #b6c5d0}.timebox strong{color:#9ee7f5}.timebox.break strong{color:var(--blue)}.timebox h4{color:inherit;margin:.4em 0}
+    .token-line{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:19px 0;padding:19px;border-radius:14px;background:#071827;color:white}.token{padding:6px 10px;border-radius:8px;background:#1c4566}.token.hot{background:var(--orange);font-weight:900}.arrow{color:#8bdcf0;font-weight:900}
+    .three-step{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:20px 0}.step{position:relative;padding:20px;border:1px solid var(--line);border-top:6px solid var(--blue);border-radius:16px;background:#fff}.step:nth-child(2){border-top-color:var(--orange)}.step:nth-child(3){border-top-color:var(--green)}.step .num{font-size:.73rem;font-weight:900;color:var(--muted)}.step:after{content:"→";position:absolute;right:-18px;top:50%;color:#94a8b7;font-size:1.35rem;font-weight:900}.step:last-child:after{display:none}
+    .poll{padding:20px;border:2px solid #d7e5ec;border-radius:16px;background:linear-gradient(145deg,#fff,#f4fafc);margin:20px 0}.poll-head{display:flex;justify-content:space-between;gap:14px;align-items:start}.poll-time{white-space:nowrap;padding:4px 9px;border-radius:999px;background:var(--orange-soft);color:#aa5015;font-size:.76rem;font-weight:850}
+    details{margin:11px 0;border:1px solid var(--line);border-radius:13px;overflow:hidden;background:#fff}summary{cursor:pointer;padding:13px 16px;background:#f7fafc;color:var(--navy2);font-weight:850}details>div{padding:3px 17px 17px}
+    .calc{padding:20px;border:1px solid var(--line);border-radius:16px;background:#fbfdfe;margin:19px 0}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field label{display:block;margin-bottom:4px;color:var(--muted);font-size:.83rem;font-weight:850}.field input{width:100%;padding:9px 11px;border:1px solid #c8d6df;border-radius:9px;background:#fff}.result{margin-top:15px;padding:15px;border-radius:12px;background:var(--cyan);border:1px solid #bee4ef}.score{font-size:2.15rem;font-weight:900;color:var(--blue)}
+    input[type="range"]{accent-color:var(--blue)}.formula{padding:14px 16px;border-radius:12px;background:#071827;color:#e9f7fb;font-family:Consolas,"Courier New",monospace;white-space:pre-wrap;overflow:auto}
+    .traffic{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:19px 0}.light{padding:18px;border:1px solid var(--line);border-radius:15px}.light:before{content:"";display:block;width:34px;height:34px;border-radius:50%;margin-bottom:11px}.light.green:before{background:#2bab73;box-shadow:0 0 0 7px #e2f5ec}.light.yellow:before{background:#e6ad27;box-shadow:0 0 0 7px #fff3d2}.light.red:before{background:#d64d54;box-shadow:0 0 0 7px #fde7e8}
+    .source{font-size:.82rem;color:var(--muted);margin-top:17px;padding-top:10px;border-top:1px dashed var(--line)}.top{position:fixed;right:20px;bottom:20px;width:45px;height:45px;border:0;border-radius:50%;background:var(--navy2);color:#fff;box-shadow:0 10px 25px rgba(8,34,57,.25);opacity:0;pointer-events:none;transition:.2s}.top.show{opacity:1;pointer-events:auto}.footer{max-width:1380px;margin:auto;padding:20px 24px 42px;color:var(--muted);font-size:.84rem}
+    @media(max-width:1000px){.hero-inner{grid-template-columns:1fr}.three-questions{display:none}.layout{grid-template-columns:1fr}.nav{position:fixed;z-index:120;inset:0 auto 0 0;width:min(84vw,300px);max-height:none;border-radius:0;transform:translateX(-105%);transition:.25s}.nav.open{transform:translateX(0)}.menu{display:inline-block}.timeline{grid-template-columns:repeat(5,210px)}}
+    @media(max-width:700px){.hero{padding:45px 20px}.toolbar-inner{padding-inline:11px}.toolbar-title{display:none}.layout{padding:15px 11px 70px}.section-head,.section-body{padding:22px 19px}.grid2,.grid3,.three-step,.traffic,.form-grid{grid-template-columns:1fr}.step:after{display:none}.story{padding:68px 18px 20px}.story:before{top:16px}.memory{align-items:flex-start;flex-direction:column}.poll-head{display:block}.poll-time{display:inline-block;margin-top:6px}}
+    @media print{body{background:#fff;font-size:10.5pt}.progress,.toolbar,.nav,.top{display:none!important}.hero{background:#fff;color:#000;padding:12px 0 22px;border-bottom:3px solid #222}.hero .kicker,.hero p{color:#000}.layout{display:block;max-width:none;padding:18px 0}.section{box-shadow:none;border-color:#bbb}.section:not(:first-child){page-break-before:always}.section-head{background:#f2f2f2}.card,.story,.callout,.poll,details,.step{break-inside:avoid}.note{display:block!important}.footer{max-width:none}}
+  </style>
+</head>
+<body>
+  <div class="progress"><span id="progressBar"></span></div>
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <div><div class="kicker">產業經濟大學 · 三小時通識課程 · V2</div><h1>大語言模型運用於<br>企業管理與決策流程</h1><p>不是背框架，也不是追模型排名；我們用一家公司的故事，練習如何相信、使用與管理 AI。</p><div class="chips"><span class="chip">一般大眾</span><span class="chip">三幕故事</span><span class="chip">三個企業案例</span><span class="chip">兩個互動工具</span><span class="chip">180 分鐘</span></div></div>
+      <div class="three-questions" aria-label="課程三個核心問題"><div class="question-card"><span>1</span>這件事值得交給 AI 嗎？</div><div class="question-card"><span>2</span>使用時，怎麼避免出事？</div><div class="question-card"><span>3</span>做完後，怎麼知道有效？</div></div>
+    </div>
+  </header>
+  <div class="toolbar"><div class="toolbar-inner"><button class="tool menu" id="menuBtn" aria-label="開啟目錄">☰</button><div class="toolbar-title">大語言模型運用於企業管理與決策流程｜三幕故事版</div><div class="actions"><button class="tool active" id="noteBtn">講師口條</button><button class="tool" id="fontDown">A−</button><button class="tool" id="fontUp">A＋</button><button class="tool" id="printBtn">列印</button></div></div></div>
+  <div class="layout">
+    <nav class="nav" id="nav"><div class="nav-label">三幕課程地圖</div><a href="#guide"><span>00</span><span>怎麼使用這份教材</span></a><a href="#act1"><span>01</span><span>第一幕：AI 能相信嗎</span></a><a href="#act2"><span>02</span><span>第二幕：AI 怎麼幫決策</span></a><a href="#cases"><span>03</span><span>同一家公司三個案例</span></a><a href="#act3"><span>04</span><span>第三幕：從回答到行動</span></a><a href="#value"><span>05</span><span>效益、治理與部署</span></a><a href="#roadmap"><span>06</span><span>90 天導入計畫</span></a><a href="#teaching"><span>07</span><span>三小時帶領腳本</span></a><a href="#closing"><span>08</span><span>總結與資料來源</span></a></nav>
+    <main>
+      <section class="section" id="guide"><header class="section-head"><span class="act">開場</span><h2>這份教材只要記住三個問題</h2><p>v2 將原本分散的框架收斂成三幕故事；詳細表格保留作參考，台上不需要逐項朗讀。</p></header><div class="section-body">
+        <div class="three-step"><div class="step"><div class="num">問題一</div><h3>值得交給 AI 嗎？</h3><p>看價值、資料、可驗證性與錯誤後果。</p></div><div class="step"><div class="num">問題二</div><h3>怎麼避免出事？</h3><p>讓資料有根據、答案可查證、重要行動有人核准。</p></div><div class="step"><div class="num">問題三</div><h3>怎麼知道有效？</h3><p>比較導入前後的時間、品質、採用、財務與風險。</p></div></div>
+        <div class="memory"><strong>AI 整理與比較，人決定目標、權重與風險。</strong></div>
+        <div class="callout"><strong>為什麼現在值得學？</strong>OECD 公布的資料顯示，2025 年已有 20.2% 的企業使用 AI，高於 2024 年的 14.2% 與 2023 年的 8.7%；大型企業採用率為 52%，小型企業為 17.4%。差距不只來自工具，而是企業是否有資料、流程、人才與治理。</div>
+        <h3>三小時節奏</h3><div class="timeline"><div class="timebox"><strong>0:00–1:00</strong><h4>第一幕：能相信嗎</h4><p>故事開場、大語言模型原理、幻覺與查證練習。</p></div><div class="timebox break"><strong>1:00–1:10</strong><h4>休息</h4><p>想一個自己工作中的重複任務。</p></div><div class="timebox"><strong>1:10–2:10</strong><h4>第二幕：怎麼決策</h4><p>三階段決策、場景選擇與三個案例。</p></div><div class="timebox break"><strong>2:10–2:20</strong><h4>休息</h4><p>選一個案例，準備提出建議。</p></div><div class="timebox"><strong>2:20–3:00</strong><h4>第三幕：怎麼落地</h4><p>AI 代理、投資效益、治理、部署與 90 天行動。</p></div></div>
+        <div class="note">開場不要說「今天有九個章節」。請說：「今天各位不是來當 AI 工程師，而是來當一家公司的管理者。每到一個決策點，我都會請大家選擇：這一步敢不敢交給 AI？」</div>
+      </div></section>
+
+      <section class="section" id="act1"><header class="section-head"><span class="act">第一幕 · 60 分鐘</span><h2>AI 很厲害，但你敢相信嗎？</h2><p>先讓觀眾感受到錯誤的真實代價，再解釋模型原理。原理是答案，不是開場。</p></header><div class="section-body">
+        <div class="story"><h3>認識「新北好日子食品公司」</h3><p>這是一家虛構的食品公司，有 80 位員工、2,000 家企業客戶，每月收到大量客服訊息。公司想用 AI 分析 5,000 筆客訴。</p><p>AI 三十秒後提出結論：「最大的問題是產品品質，建議立即改善產線。」如果公司因此投入五百萬元，後來才發現大多數抱怨其實是物流延誤，這個決定是誰的責任？</p><span class="choice">A：AI</span><span class="choice">B：使用者</span><span class="choice">C：主管</span><span class="choice">D：整個決策流程</span></div>
+        <h3>為什麼 AI 能說得這麼像真的？</h3><p>大型語言模型會根據前面的文字，反覆預測下一個文字單位。它從大量文本中學到語言、概念與關係，因此很會摘要、分類、翻譯與產生內容；但它的核心機制不是「先確認真偽，再回答」。</p>
+        <div class="token-line"><span class="token">臺灣</span><span class="token">最高</span><span class="token">的</span><span class="token">山</span><span class="token">是</span><span class="arrow">→</span><span class="token hot">玉</span><span class="arrow">→</span><span class="token hot">山</span><span class="arrow">→</span><span class="token">。</span></div>
+        <div class="memory"><strong>AI 很會接話，但不會自動查證。</strong></div>
+        <h3>模型、應用程式與企業系統不是同一件事</h3>
+        <p>很多討論把「模型很聰明」直接等同「企業系統可以上線」，中間其實還隔著資料、工具、權限與流程。一般管理者不需要理解所有技術，但要知道責任落在哪一層。</p>
+        <div class="table-wrap"><table><thead><tr><th>層次</th><th>負責什麼</th><th>管理者需要問什麼</th></tr></thead><tbody>
+          <tr><td>大語言模型</td><td>理解與產生文字、圖像或程式內容</td><td>它擅長哪些任務？何時容易失準？</td></tr>
+          <tr><td>應用程式</td><td>提供聊天、摘要、客服或文件介面</td><td>資料送去哪裡？保存多久？可以關閉哪些功能？</td></tr>
+          <tr><td>企業資料與工具</td><td>提供最新知識、計算、查詢與系統操作</td><td>資料是否正確？工具權限是否過大？</td></tr>
+          <tr><td>企業流程</td><td>決定誰使用、誰覆核、誰核准、如何處理例外</td><td>出了問題誰能停止？誰負責修正與通知？</td></tr>
+        </tbody></table></div>
+        <h3>三種常見錯誤</h3><div class="grid3"><div class="card"><div class="icon red">⚠️</div><h4>補出不存在的資訊</h4><p>資料不足時，產生看似合理的日期、來源、人物或數字。</p></div><div class="card"><div class="icon orange">🧮</div><h4>精確工作出錯</h4><p>字母計數、日期、金額與多步驟計算，可能在中間某一步走偏。</p></div><div class="card"><div class="icon">🗂️</div><h4>忽略情境與限制</h4><p>文件太長、資料口徑不同或對話太久時，可能漏掉重要條件。</p></div></div>
+        <div class="story"><h3>另一個問題：兩個 AI 給了不同潮汐時間</h3><p>如果只是安排散步，答案錯誤可能只是行程不便；如果是出海、工程或安全作業，同一個錯誤就可能造成重大後果。這時不應再問第三個 AI 投票，而應回到主管機關或官方觀測資料。</p><p>同一份 AI 輸出能不能用，取決於用途與錯誤代價，不只取決於模型看起來多有自信。</p></div>
+        <h3>不要再多背一套框架，只做三件事</h3><div class="three-step"><div class="step"><div class="num">01</div><h3>資料有根據</h3><p>限定資料範圍，使用官方或企業核准來源。</p></div><div class="step"><div class="num">02</div><h3>答案可查證</h3><p>要求來源、計算、假設、未知與信心不足之處。</p></div><div class="step"><div class="num">03</div><h3>行動有人核准</h3><p>對外發送、付款、報價、刪除與影響人權益的動作不能只靠模型。</p></div></div>
+        <details><summary>可直接示範的查證要求</summary><div><p>「只使用我提供的資料回答。請把輸出分成：已知事實、根據事實形成的推論、目前不知道的事項、需要回原始資料確認的內容。如果引用數字，請標出資料日期與計算方式；資料不足時不要自行補造。」</p><p>這段要求不能保證模型永遠正確，但能讓問題比較容易被人看見，也讓覆核有清楚的檢查項目。</p></div></details>
+        <h3>四種限制，對應四種企業處理方法</h3>
+        <div class="grid2">
+          <div class="card"><h4>資訊可能過時</h4><p>模型未必知道最新法規、價格、庫存或公司政策。遇到即時資訊，要連接核准資料來源，並在輸出上標示日期。</p></div>
+          <div class="card"><h4>可能產生幻覺</h4><p>模型會把語言組合得很合理，但可能產生不存在的來源與數字。重要內容要能點回原文，不能只看摘要。</p></div>
+          <div class="card"><h4>推理可能累積錯誤</h4><p>步驟越多，中間走偏的機會越高。金額、日期、稅率、統計與門檻應交給計算器、試算表或程式處理。</p></div>
+          <div class="card"><h4>長文件可能漏掉重點</h4><p>資料放得進去，不代表模型都注意到了。應分段、建立索引、抽樣檢查，並詢問是否有矛盾或未涵蓋內容。</p></div>
+        </div>
+        <h3>有來源的回答也不代表自動正確</h3>
+        <p>企業常用「檢索增強生成」讓 AI 先搜尋指定文件，再根據找到的片段回答。這能降低憑空生成，但仍可能找錯文件、截錯段落、使用過期版本，或對正確內容做出錯誤推論。管理上仍要確認：</p>
+        <ul><li>搜尋範圍是否只有核准且最新的文件？</li><li>每個重要結論是否能回到原文位置？</li><li>同一主題若有多個版本，系統如何判斷哪個有效？</li><li>搜尋不到時，系統會誠實說不知道，還是繼續生成？</li></ul>
+        <div class="poll"><div class="poll-head"><div><span class="tag orange">8 分鐘練習</span><h3>哪一句可以直接採用？</h3></div><span class="poll-time">兩人一組</span></div><p>提供一段包含日期、價格、百分比與建議的 AI 摘要。請學員分成「可由來源支持的事實」「模型的推論」「管理建議」三類，並圈出必須回到原始資料查證的內容。</p></div>
+        <div class="note">不要連續講三個 AI 出錯笑話。觀眾笑完可能只記得「AI 很笨」。一個例子說明機制、一個練習建立查證習慣就足夠。</div>
+      </div></section>
+
+      <section class="section" id="act2"><header class="section-head"><span class="act">第二幕 · 60 分鐘</span><h2>AI 怎麼參與決策，而不是替人決定？</h2><p>先讓觀眾做一個資訊不足的選擇，再用三階段流程整理；不要求背八個步驟。</p></header><div class="section-body">
+        <div class="story"><h3>好日子食品要選新的供應商</h3><p>A 最便宜、B 功能最好、C 導入最快。請現場先選一家。</p><p>選完再揭露：A 不含維護費；B 必須綁三年；C 的資料放在海外；而現有系統只有 B 能直接整合。現在還會選同一家嗎？</p><span class="choice">A：價格</span><span class="choice">B：功能</span><span class="choice">C：速度</span><span class="choice">D：資料還不夠</span></div>
+        <h3>企業決策只需要先記三個階段</h3>
+        <div class="three-step"><div class="step"><div class="num">先定義</div><h3>我們到底在解決什麼？</h3><p>說清楚目標、成功標準、限制、受影響的人與必須取得的資料。</p></div><div class="step"><div class="num">再比較</div><h3>有哪些選擇與代價？</h3><p>整理現況、原因、替代方案、假設、成本、效益與風險。</p></div><div class="step"><div class="num">後執行</div><h3>誰核准、怎麼追蹤？</h3><p>由有權責的人做決定，留下理由，執行後用指標監測與修正。</p></div></div>
+        <details><summary>展開：三階段裡的完整工作清單</summary><div><ol><li>定義問題與成功標準。</li><li>蒐集並確認資料來源。</li><li>描述目前發生了什麼。</li><li>提出可能原因，但不把相關性直接當成因果。</li><li>產生至少兩個方案，也包括維持現況。</li><li>比較成本、效益、風險、未知與情境。</li><li>由有權責的人核准與執行。</li><li>追蹤結果，必要時停止或調整。</li></ol></div></details>
+        <div class="memory"><strong>先定義、再比較、後執行。</strong></div>
+        <h3>不是每一種「分析」都叫做決策</h3>
+        <p>企業常把五件不同的事混在一起：描述、解釋、預測、建議與執行。越往後，對資料、驗證與責任的要求越高。大語言模型很適合加速前四步的資料整理與語言工作，但不能因為文字聽起來肯定，就直接跳到第五步。</p>
+        <div class="table-wrap"><table><thead><tr><th>決策深度</th><th>要回答的問題</th><th>AI 可協助</th><th>人要守住</th></tr></thead><tbody>
+          <tr><td>描述</td><td>發生了什麼？</td><td>摘要客訴、整理數量與趨勢</td><td>確認定義、期間與資料是否完整</td></tr>
+          <tr><td>解釋</td><td>為什麼發生？</td><td>提出可能原因、找相似案例</td><td>區分相關與因果，補做調查或實驗</td></tr>
+          <tr><td>預測</td><td>接下來可能如何？</td><td>整理情境、結合預測模型的結果</td><td>確認誤差、適用範圍與環境是否改變</td></tr>
+          <tr><td>建議</td><td>有哪些選擇？</td><td>產生方案、反方觀點與比較表</td><td>設定權重、風險容忍度與倫理界線</td></tr>
+          <tr><td>執行</td><td>要不要真的做？</td><td>草擬通知、建立任務、追蹤進度</td><td>人工核准、權限控制、停止與回復</td></tr>
+        </tbody></table></div>
+        <h3>決策品質的上限，往往是資料品質</h3>
+        <div class="grid2"><div class="card"><h4>先查定義與完整性</h4><p>「客戶流失」是 60 天未下單，還是合約正式終止？缺少電話訂單的資料，會不會讓某些客群看起來不活躍？沒有共同定義，AI 只會更快產生互相矛盾的報告。</p></div><div class="card"><h4>再查時間、偏差與授權</h4><p>去年有效的資料是否仍代表今年？只有成功案件、沒有失敗案件，結論會不會過度樂觀？資料雖然存在，公司是否真的有權用在這個目的？</p></div></div>
+        <div class="callout warn"><strong>課堂提醒：</strong>資料量大不代表資料好。三萬筆欄位混亂、定義不一的紀錄，可能不如三百筆經過抽樣、標註與驗證的資料有用。</div>
+        <h3>AI 與人的分工</h3><div class="grid2"><div class="card soft"><div class="icon">🤖</div><h4>AI 適合做</h4><ul><li>搜尋、分類、摘要與格式轉換</li><li>產生第一版報告與問題清單</li><li>找出異常、模式與可能原因</li><li>提出多個方案與反方觀點</li><li>追蹤指標並提醒異常</li></ul></div><div class="card warm"><div class="icon orange">👤</div><h4>人必須做</h4><ul><li>決定問題與成功標準</li><li>確認資料是否合法且適用</li><li>設定權重與風險容忍度</li><li>處理價值、倫理與利益衝突</li><li>核准重要行動並承擔責任</li></ul></div></div>
+        <h3>每一階段都要留下可以被檢查的產出</h3>
+        <div class="table-wrap"><table><thead><tr><th>階段</th><th>最低產出</th><th>會議上要問</th></tr></thead><tbody><tr><td>先定義</td><td>問題陳述、基準線、成功與停止條件、資料清單</td><td>如果做得很好，我們會看到哪個數字改變？</td></tr><tr><td>再比較</td><td>至少兩個方案、假設、三年成本、效益、風險與未知</td><td>如果關鍵假設錯了，排名會不會翻轉？</td></tr><tr><td>後執行</td><td>決策人、核准紀錄、行動計畫、監測指標與回復方案</td><td>誰可以按下開始，也能在出事時按下停止？</td></tr></tbody></table></div>
+        <h3>第一個 AI 專案怎麼選？只問三件事</h3><div class="grid3"><div class="card"><div class="icon orange">💰</div><h4>有沒有價值？</h4><p>是否經常發生？能節省時間、改善品質、增加收入或降低風險嗎？</p></div><div class="card"><div class="icon">🧩</div><h4>做不做得到？</h4><p>資料存在嗎？結果能驗證嗎？流程負責人與使用者願意參與嗎？</p></div><div class="card"><div class="icon red">⚠️</div><h4>出事可控制嗎？</h4><p>錯誤會造成什麼後果？能在執行前攔截、停止與回復嗎？</p></div></div>
+        <div class="calc"><h3>互動工具：應用場景優先分數</h3><p class="muted small">1–5 分。這是促進討論的工具，不會替企業做決定。</p><div class="form-grid"><div class="field"><label for="valueScore">企業價值：<span id="valueLabel">3</span></label><input id="valueScore" type="range" min="1" max="5" value="3"></div><div class="field"><label for="feasScore">資料與流程可行性：<span id="feasLabel">3</span></label><input id="feasScore" type="range" min="1" max="5" value="3"></div><div class="field"><label for="adoptScore">使用者接受度：<span id="adoptLabel">3</span></label><input id="adoptScore" type="range" min="1" max="5" value="3"></div><div class="field"><label for="riskScore">錯誤與合規風險：<span id="riskLabel">3</span></label><input id="riskScore" type="range" min="1" max="5" value="3"></div></div><div class="result"><div>優先分數</div><div class="score" id="priorityScore">60</div><div id="priorityAdvice">可以做小型驗證，但要先降低風險或補足資料。</div></div></div>
+        <div class="note">不要先解釋三項評分。先問：「會議摘要、客戶流失預警、自動決定錄取，哪一個應該先做？」觀眾選完後再問價值、可行性與風險，框架就會變成剛才討論的整理工具。</div>
+      </div></section>
+
+      <section class="section" id="cases"><header class="section-head"><span class="act">第二幕 · 案例</span><h2>同一家公司，三個管理問題</h2><p>每個案例只用同一套問法：資料是什麼、AI 幫哪一步、人在哪裡核准、用什麼指標驗收。</p></header><div class="section-body">
+        <h3>案例一：5,000 筆客訴，應該先改善什麼？</h3><div class="story"><h3>從「看總件數」走向「找改善優先順序」</h3><p>好日子食品每月收到大量文字回饋。主管知道客訴很多，卻不知道問題集中在哪些產品、流程與客群。</p></div>
+        <div class="grid3"><div class="card"><h4>資料</h4><p>去識別化客訴文字、產品、日期、通路、處理結果與退貨紀錄。</p></div><div class="card"><h4>AI 幫忙</h4><p>分類、摘要、找重複模式，列出可能原因與信心不足案例。</p></div><div class="card warm"><h4>人來決定</h4><p>確認原因是否成立，協調跨部門，決定資源與改善順序。</p></div></div>
+        <h4>實際流程不是「把 5,000 筆貼進聊天視窗」</h4>
+        <ol><li><strong>先抽樣：</strong>人工讀 100–200 筆，建立共同分類，例如產品品質、物流、門市服務、資訊不清與其他。</li><li><strong>保留證據：</strong>每個分類結果都要附原句與紀錄編號，主管可以一鍵回看，而不是只看 AI 摘要。</li><li><strong>標示不確定：</strong>一句話同時涉及物流與包裝時，允許多標籤或送人工覆核，不要硬塞進單一分類。</li><li><strong>測試重要少數：</strong>一般客訴可以接受少量分類錯誤，但食品安全、過敏、異物等重大客訴要另設規則，追求極低漏失率。</li><li><strong>形成改善循環：</strong>每週檢查前幾名問題與原文，每月確認改善行動後，同類客訴是否真的下降。</li></ol>
+        <div class="table-wrap"><table><thead><tr><th>AI 輸出</th><th>看似合理</th><th>應改成可管理的版本</th></tr></thead><tbody><tr><td>「物流問題很多」</td><td>有摘要</td><td>物流占 31%，較上月增加 8 個百分點，主要集中北區冷藏通路；附 20 筆代表原文</td></tr><tr><td>「可能是包裝不良」</td><td>有原因</td><td>這是待驗證假設；需比對生產批次、運送溫度與破損照片</td></tr><tr><td>「建議更換物流商」</td><td>有行動</td><td>先確認責任歸屬，再比較改善現行服務、區域替換與全面更換三個方案</td></tr></tbody></table></div>
+        <p><strong>驗收指標：</strong>人工分類時間、分類一致性、重大客訴漏失率、改善後同類客訴是否下降。</p>
+        <div class="callout warn"><strong>故事轉折：</strong>AI 最初把大量物流抱怨歸入「產品品質」。抽樣查看原句後，團隊才發現分類規則有問題。AI 加速了整理，也加速暴露了資料與定義不一致。</div>
+
+        <h3>案例二：哪些客戶值得業務優先聯繫？</h3><div class="grid3"><div class="card"><h4>資料</h4><p>採購頻率、金額、報價未成交、客服、拜訪筆記與合約。</p></div><div class="card"><h4>AI 幫忙</h4><p>找出異常下降、整理近期變化，草擬需要業務確認的問題。</p></div><div class="card warm"><h4>人來決定</h4><p>排除季節性與一次性因素，決定是否聯繫、用什麼方案。</p></div></div>
+        <div class="table-wrap"><table><thead><tr><th>客戶訊號</th><th>AI 初步假設</th><th>業務應確認</th></tr></thead><tbody><tr><td>採購間隔由 45 天變成 90 天</td><td>需求下降或轉向競品</td><td>近期專案、庫存與預算是否改變</td></tr><tr><td>服務工單增加，採購仍穩定</td><td>使用問題可能影響續約</td><td>安排技術服務與滿意度訪談</td></tr><tr><td>新產品詢問增加，尚未報價</td><td>可能有交叉銷售機會</td><td>確認需求、決策人與導入時間</td></tr></tbody></table></div>
+        <p>這個應用的正確輸出不是「客戶甲有 82% 機率流失」，而是「本週優先確認的 20 家客戶、觸發訊號、資料日期、建議詢問事項與不確定之處」。前者容易被當成事實；後者是一份讓業務更快準備、仍由業務判斷的工作清單。</p>
+        <div class="grid2"><div class="card"><h4>避免把歷史偏差自動化</h4><p>如果過去只有大型客戶被頻繁拜訪，資料可能學到「大型客戶才值得服務」。要另外觀察新客戶、成長客戶與長尾客戶，避免讓過去的資源分配變成永遠不變的規則。</p></div><div class="card"><h4>避免只追求短期成交</h4><p>優先名單不只看本月收入，也應納入長期價值、服務成本、關係風險與客戶公平性。評分是討論起點，不是對客戶貼永久標籤。</p></div></div>
+        <p><strong>驗收指標：</strong>業務準備時間、有效聯繫率、挽回率、交叉銷售率、建議被接受比例。</p>
+
+        <h3>案例三：三家供應商，哪一家最適合？</h3><p>AI 可以整理不同格式的報價，但必須先建立共同口徑。若 A 不含導入、B 含三年維護、C 以用量計費，直接比較總價會誤導。</p>
+        <div class="table-wrap"><table><thead><tr><th>比較面向</th><th>應確認</th><th>常見陷阱</th></tr></thead><tbody><tr><td>三年完整成本</td><td>採購、訂閱、導入、人力、維護、退出</td><td>只看水面上的報價</td></tr><tr><td>功能與實際效能</td><td>用自己的工作負載測試</td><td>只相信規格表</td></tr><tr><td>安全與供應風險</td><td>資料位置、可攜性、事件通報、替代方案</td><td>忽略供應商鎖定</td></tr><tr><td>導入與維運</td><td>時間、訓練、內部人力、備援</td><td>把內部工作當成免費</td></tr></tbody></table></div>
+        <div class="callout"><strong>AI 最適合的輸出：</strong>不是宣布「B 最好」，而是呈現保守、基準、成長三種情境；說明權重與假設改變後，排名是否跟著改變。</div>
+        <h4>情境分析要讓主管看見「什麼情況會改變答案」</h4>
+        <ul><li><strong>保守情境：</strong>使用量只有預估的一半、整合延後三個月、內部需要兩名人員維護。</li><li><strong>基準情境：</strong>使用量、上線時間與節省工時都依目前可驗證資料估算。</li><li><strong>成長情境：</strong>使用量增加兩倍，模型費用、系統容量與服務承諾是否仍可接受。</li><li><strong>敏感度檢查：</strong>價格權重由 40% 降到 20%，或資料控制權重提高時，供應商排名是否翻轉。</li></ul>
+        <div class="poll"><div class="poll-head"><div><span class="tag orange">18 分鐘小組演練</span><h3>不要選供應商，先把決策做完整</h3></div><span class="poll-time">4 人一組，最後 1 分鐘報告</span></div><ol><li>3 分鐘：寫出真正的決策問題與兩個成功標準。</li><li>4 分鐘：列出還缺少的五項資料，以及誰能提供。</li><li>4 分鐘：替價格、效能、安全、導入與退出設定權重。</li><li>4 分鐘：設計一個會讓原本排名翻轉的情境。</li><li>3 分鐘：說明 AI 可以整理什麼，以及最後由哪個角色核准。</li></ol></div>
+        <details><summary>一份管理分析要求，應包含什麼？</summary><div><p><strong>背景：</strong>要解決的問題、決策期限與受眾。<br><strong>任務：</strong>整理事實、提出選項、比較成本效益與風險。<br><strong>限制：</strong>只使用指定資料，不得補造；缺少內容標示未知。<br><strong>格式：</strong>一頁摘要、比較表與風險清單。<br><strong>驗證：</strong>列出來源、資料日期、計算、假設與需要人工確認之處。</p></div></details>
+        <details><summary>可直接示範的管理提問範例</summary><div><p>「你是採購分析助理。請根據附件中的三份報價與需求清單，建立三年完整成本比較。只可使用附件內容；無法確認的項目標示『未知』，不得自行補值。先列出各家報價口徑差異，再產生保守、基準、成長三種情境。每一個數字附來源頁碼與計算方式。最後提出需要採購、IT、資安與財務確認的問題，不要替公司選定供應商。」</p><p>示範後要追問學員：這段要求仍缺少哪些企業背景？誰設定權重？如果附件本身過期，格式再完整能不能相信？</p></div></details>
+        <div class="memory"><strong>AI 不只要給答案，還要交代來源、假設、未知與下一步。</strong></div>
+      </div></section>
+
+      <section class="section" id="act3"><header class="section-head"><span class="act">第三幕 · 40 分鐘（含管理與行動）</span><h2>當 AI 從回答走向行動，風險會突然放大</h2><p>聊天工具只給文字；AI 代理會查資料、使用工具、修改系統。能力提高，權限、成本與責任也一起提高。</p></header><div class="section-body">
+        <div class="story"><h3>AI 找出高風險客戶後，下一步呢？</h3><p>如果 AI 只是草擬一封關懷信，業務看過再寄，風險有限。如果 AI 自動更新 CRM、提供折扣並寄出郵件，錯誤就會直接進入真實世界。</p><p>請問各位：你願意讓 AI 走到哪一步？</p><span class="choice">整理資料</span><span class="choice">提出建議</span><span class="choice">草擬行動</span><span class="choice">直接執行</span></div>
+        <h3>從回答到行動的三種控制層級</h3><div class="three-step"><div class="step"><div class="num">低風險</div><h3>讀取與整理</h3><p>查文件、摘要、分類，不改變外部世界。</p></div><div class="step"><div class="num">中風險</div><h3>建議與草擬</h3><p>提出方案、建立草稿，但不得自行送出。</p></div><div class="step"><div class="num">高風險</div><h3>有限執行</h3><p>只能在白名單、額度與人工核准範圍內動作。</p></div></div>
+        <p>需要多步驟規劃、查資料、呼叫工具、檢查結果並繼續執行的系統，可稱為 <strong>AI 代理（Agent）</strong>。如果一次問答就能完成，就不必為了流行把它做成 AI 代理。</p>
+        <h3>一個可控制的 AI 代理，應該怎麼工作？</h3>
+        <div class="table-wrap"><table><thead><tr><th>步驟</th><th>AI 代理可以做</th><th>系統要限制</th></tr></thead><tbody>
+          <tr><td>1. 接收目標</td><td>把「關心高風險客戶」拆成查資料、排序、草擬與追蹤</td><td>目標、完成條件、預算與期限必須明確</td></tr>
+          <tr><td>2. 擬定計畫</td><td>說明需要哪些資料與工具，以及預計步驟</td><td>高風險任務先讓人確認計畫，不得暗中增加範圍</td></tr>
+          <tr><td>3. 讀取資料</td><td>查詢 CRM、產品與服務紀錄</td><td>只讀必要欄位；依使用者身分控管，不得取得完整資料庫</td></tr>
+          <tr><td>4. 產生草稿</td><td>提出優先清單、關懷信與後續任務</td><td>附來源、信心與未知；敏感內容必須人工覆核</td></tr>
+          <tr><td>5. 申請行動</td><td>要求寄信、更新紀錄或建立任務</td><td>對外溝通、折扣、付款與刪除必須人工核准</td></tr>
+          <tr><td>6. 執行與檢查</td><td>在核准內容內執行，確認結果並回報</td><td>留下誰、何時、用什麼資料、做了什麼；失敗可重試也可停止</td></tr>
+        </tbody></table></div>
+        <h3>權限不是「有或沒有」，而是逐層開放</h3>
+        <div class="grid2"><div class="card green"><h4>第一層：唯讀</h4><p>查詢被授權的文件與紀錄，不可修改。第一個 AI 代理最好從這裡開始，先觀察它找錯資料、理解錯任務或繞遠路的方式。</p></div><div class="card"><h4>第二層：建立草稿</h4><p>可以建立郵件、報表或系統變更草案，但要放進待辦區，由人檢查內容。</p></div><div class="card warm"><h4>第三層：有限執行</h4><p>只能對白名單對象、在固定金額或固定數量內執行；超出範圍立即要求人工核准。</p></div><div class="card"><h4>第四層：高風險禁止自動化</h4><p>大額付款、大量刪除、法律承諾、人事處分與安全關閉，不因模型表現良好就取消人類決策權。</p></div></div>
+        <div class="callout warn"><strong>三個常被忽略的風險：</strong>提示注入可能藏在郵件或文件裡，引導 AI 代理洩露資料；工具回傳的內容可能過期或遭竄改；AI 代理也可能在反覆嘗試中快速累積模型、查詢與外部服務費用。</div>
+        <h3>AI 代理增加的不只是能力</h3><div class="grid3"><div class="card"><div class="icon orange">💬</div><h4>使用成本</h4><p>規劃、修正、工具回傳與長對話，使一次任務遠高於單輪問答。</p></div><div class="card"><div class="icon">⏱️</div><h4>等待時間</h4><p>每一步都可能等待模型、資料庫或外部服務，形成延遲鏈。</p></div><div class="card"><div class="icon red">🔐</div><h4>資料與權限</h4><p>越有用的 AI 代理通常接觸越多資料與系統，攻擊面也更大。</p></div></div>
+        <h3>什麼時候根本不需要 AI 代理？</h3>
+        <ul><li>步驟固定、規則明確的工作，用傳統自動化通常更快、更便宜，也更容易測試。</li><li>錯一步就可能造成不可逆重大損失，而且無法在執行前攔截的工作，不宜交給自主系統。</li><li>沒有清楚的資料權限、流程負責人或停止機制時，先補治理，不要用 AI 代理掩蓋流程問題。</li><li>任務每月只發生一兩次、人工處理只要幾分鐘時，導入與維運成本可能高過效益。</li></ul>
+        <div class="memory"><strong>越接近真實行動，越需要最小權限、人工核准、完整紀錄與可回復機制。</strong></div>
+        <div class="note">反覆問觀眾：「整理客訴敢不敢？草擬回信敢不敢？自動寄出敢不敢？自動提供折扣敢不敢？」同一個問題逐步提高風險，比介紹各種 AI 代理架構更容易理解。</div>
+      </div></section>
+
+      <section class="section" id="value"><header class="section-head"><span class="act">第三幕 · 管理</span><h2>做了有沒有價值？怎麼避免花錢又出事？</h2><p>用效益試算、治理紅黃綠燈與部署問題串起完整成本、責任分工及事件處理。</p></header><div class="section-body">
+        <h3>省下時間，不一定等於省下現金</h3><p>AI 每月節省 100 小時，不代表公司立即少付 100 小時薪資。需要確認節省的時間是否轉成更多產出、更快服務、更少錯誤或可以實際減少的成本。</p>
+        <div class="formula">每月可實現效益 ＝ 節省工時價值 × 可實現比例 ＋ 其他可量化效益
+每月淨效益 ＝ 每月可實現效益 − 模型、系統與維運成本
+回收期間 ＝ 初始導入成本 ÷ 每月淨效益</div>
+        <div class="calc"><h3>互動工具：簡易效益試算</h3><div class="form-grid"><div class="field"><label for="monthlyHours">目前每月投入工時</label><input id="monthlyHours" type="number" min="0" value="400"></div><div class="field"><label for="hourlyCost">每小時完整人力成本（元）</label><input id="hourlyCost" type="number" min="0" value="800"></div><div class="field"><label for="saveRate">預計節省工時比例（%）</label><input id="saveRate" type="number" min="0" max="100" value="30"></div><div class="field"><label for="realizeRate">節省效益可實現比例（%）</label><input id="realizeRate" type="number" min="0" max="100" value="60"></div><div class="field"><label for="initialCost">初始導入成本（元）</label><input id="initialCost" type="number" min="0" value="600000"></div><div class="field"><label for="monthlyCost">每月模型與維運成本（元）</label><input id="monthlyCost" type="number" min="0" value="50000"></div><div class="field"><label for="otherBenefit">每月其他可量化效益（元）</label><input id="otherBenefit" type="number" min="0" value="30000"></div></div><div class="result" id="roiResult">調整數字，結果會自動更新。</div></div>
+        <p>正式驗收還要同時看五項：處理時間、正確與重工、使用者採用、財務成果，以及高風險錯誤。沒有導入前的基準線，就無法證明導入後是否改善。</p>
+        <h3>不要只算模型費用，要算完整成本</h3>
+        <div class="table-wrap"><table><thead><tr><th>成本類別</th><th>常被漏掉的項目</th><th>主管要追問</th></tr></thead><tbody><tr><td>一次性導入</td><td>流程盤點、資料清理、整合、測試、法遵與教育訓練</td><td>內部人員投入了多少時間？</td></tr><tr><td>持續使用</td><td>模型用量、雲端運算、資料庫、搜尋、監控與軟體授權</td><td>使用量增加三倍，成本怎麼變？</td></tr><tr><td>品質管理</td><td>人工覆核、抽樣、錯誤修正、提示與知識更新</td><td>為維持可靠度，每月要投入多少人力？</td></tr><tr><td>治理與風險</td><td>資安檢查、事件處理、稽核、保險與合約管理</td><td>發生一次重大錯誤，可能損失什麼？</td></tr><tr><td>退出與轉換</td><td>資料匯出、重新整合、替代供應商與停機風險</td><td>兩年後要換供應商，帶得走資料與流程嗎？</td></tr></tbody></table></div>
+        <h3>效益也不只有「省人」</h3>
+        <div class="grid3"><div class="card"><h4>效率</h4><p>處理時間、等待時間、單位產出成本、員工可承擔案件量。</p></div><div class="card"><h4>品質</h4><p>正確率、一致性、重工率、重大問題漏失率、服務回覆品質。</p></div><div class="card"><h4>成長</h4><p>回覆速度、成交率、留存率、新服務收入與更快上市。</p></div><div class="card"><h4>採用</h4><p>實際使用率、建議採納率、人工修改幅度、使用者滿意度。</p></div><div class="card"><h4>風險</h4><p>敏感資料事件、未授權行動、錯誤決策與可停止時間。</p></div><div class="card"><h4>組織學習</h4><p>知識是否被整理、流程是否變清楚、新人是否更快上手。</p></div></div>
+        <div class="callout"><strong>三種數字都要看：</strong>保守情境用較低採用率、較高覆核成本；基準情境只放已驗證假設；成長情境估算使用量放大後的效益與容量。只有單一樂觀 ROI，通常不是決策分析，而是銷售簡報。</div>
+
+        <h3>治理不必先講法條，先用紅黃綠燈</h3><div class="traffic"><div class="light green"><h4>綠燈：可在規範內使用</h4><ul><li>公開資料摘要</li><li>文字潤飾與翻譯</li><li>腦力激盪</li><li>無敏感資料的初稿</li></ul></div><div class="light yellow"><h4>黃燈：需要受控與覆核</h4><ul><li>內部資料分析</li><li>客戶建議與報價草稿</li><li>合約或政策整理</li><li>流程自動化</li></ul></div><div class="light red"><h4>紅燈：原則不自動決定</h4><ul><li>機密資料傳到未核准服務</li><li>自動解僱、授信或醫療決定</li><li>未經核准付款或刪除</li><li>重大法律與安全處置</li></ul></div></div>
+        <div class="callout warn"><strong>企業至少要回答：</strong>誰可以使用哪些 AI？哪些資料可以輸入？哪些輸出要覆核？哪些行動要核准？使用過程要留下什麼紀錄？出現錯誤時誰能停止、修正與通知受影響的人？</div>
+        <p><strong>用詞統一：</strong>本教材用「人工覆核」表示檢查內容是否正確；用「人工核准」表示授權行動可以執行。兩者都屬於人工控制，但目的不同。</p>
+        <h3>治理不是 IT 一個部門的責任</h3>
+        <div class="table-wrap"><table><thead><tr><th>角色</th><th>主要責任</th><th>不能外包給 AI 的決定</th></tr></thead><tbody><tr><td>業務負責人</td><td>問題、成功標準、流程與效益</td><td>這項應用是否值得做、結果是否能用</td></tr><tr><td>資料負責人</td><td>資料定義、品質、授權、保存與刪除</td><td>哪些資料可以用於哪些目的</td></tr><tr><td>系統負責人</td><td>整合、權限、紀錄、監控、備援與回復</td><td>AI 能讀取與改動哪些系統</td></tr><tr><td>資安、法務與風險</td><td>威脅、契約、法規、事件與稽核要求</td><td>哪些風險可接受，哪些必須禁止</td></tr><tr><td>實際使用者</td><td>測試工作流程、回報錯誤、人工覆核</td><td>在具體情境中是否採納 AI 建議</td></tr><tr><td>最終決策人</td><td>權衡效益與風險，核准上線或停止</td><td>承擔結果與對受影響者負責</td></tr></tbody></table></div>
+        <h3>真的出錯時，先做什麼？</h3>
+        <ol><li><strong>停止擴散：</strong>暫停自動行動、撤銷權杖或切回人工流程。</li><li><strong>保存證據：</strong>保留輸入、輸出、資料版本、工具呼叫、核准與執行紀錄。</li><li><strong>評估影響：</strong>哪些客戶、員工、資料或系統受到影響？錯誤是否仍在持續？</li><li><strong>修正與通知：</strong>回復資料與流程；依契約、法規與實際傷害通知相關人員。</li><li><strong>查明原因：</strong>是資料、提示、模型、權限、整合、人工覆核或流程責任出問題？</li><li><strong>確認後再開：</strong>加入測試與防護，重新評估殘餘風險，不因趕進度直接恢復。</li></ol>
+        <h3>雲端、地端（企業自有環境）還是混合？只問四題</h3><div class="grid2"><div class="card"><h4>資料能不能離開？</h4><p>若含機密、個人或受監管資料，需要更嚴格的環境、契約與權限。</p></div><div class="card"><h4>使用量穩不穩定？</h4><p>不確定或尖峰工作適合彈性；長期大量工作值得比較地端完整成本。</p></div><div class="card"><h4>延遲與斷網重要嗎？</h4><p>即時控制、工廠或離線需求，較需要地端。</p></div><div class="card"><h4>公司有沒有人維運？</h4><p>地端提高控制，也把更新、備援、安全與故障責任留給企業。</p></div></div>
+        <div class="table-wrap"><table><thead><tr><th>面向</th><th>雲端</th><th>地端（企業自有環境）</th><th>混合</th></tr></thead><tbody><tr><td>啟動速度</td><td>通常較快，先用後擴</td><td>硬體、部署與驗證時間較長</td><td>需先分流資料與工作</td></tr><tr><td>成本型態</td><td>依使用量付費，尖峰彈性高</td><td>前期投入高，長期大量使用可比較</td><td>管理複雜，但可依工作選擇</td></tr><tr><td>資料控制</td><td>取決於供應商、區域、契約與設定</td><td>企業控制較多，也承擔全部保護責任</td><td>敏感資料留受控環境，其他工作彈性使用</td></tr><tr><td>模型更新</td><td>較容易取得新能力</td><td>版本更新、測試與相容性由企業處理</td><td>需要管理兩邊版本與一致性</td></tr><tr><td>維運責任</td><td>基礎設施由供應商分擔，企業仍管帳號與資料</td><td>容量、備援、修補、監控全由企業負責</td><td>還要處理跨環境連線、身分與紀錄</td></tr></tbody></table></div>
+        <p>「地端一定安全」與「上雲一定危險」都太簡化。安全取決於資料分類、身分權限、加密、紀錄、修補、契約與實際維運能力。沒有維運團隊的地端系統，也可能比管理成熟的雲端服務更危險。</p>
+        <div class="callout"><strong>常見答案是混合：</strong>敏感與穩定工作留在受控環境；需要彈性、尖峰容量或最新模型時使用雲端。正式決策要由業務、IT、資安與財務共同完成。</div>
+      </div></section>
+
+      <section class="section" id="roadmap"><header class="section-head"><span class="act">第三幕 · 行動</span><h2>好日子食品最後怎麼做？一個 90 天計畫</h2><p>不一次自動化全部流程，而是從客訴分類開始，先證明價值與控制能力。</p></header><div class="section-body">
+        <div class="three-step"><div class="step"><div class="num">0–30 天</div><h3>說清楚</h3><ul><li>定義問題與基準線</li><li>盤點資料與授權</li><li>指定業務、資料、技術與風險負責人</li><li>決定成功與停止條件</li></ul></div><div class="step"><div class="num">31–60 天</div><h3>小型驗證</h3><ul><li>用歷史資料受控測試</li><li>抽查分類與失敗案例</li><li>比較時間、品質與成本</li><li>請實際使用者試用</li></ul></div><div class="step"><div class="num">61–90 天</div><h3>受控上線</h3><ul><li>設定權限、紀錄與人工覆核</li><li>建立事件停止與回復</li><li>小範圍上線並追蹤指標</li><li>決定擴大、調整或停止</li></ul></div></div>
+        <h3>每 30 天都要交出看得見的成果</h3>
+        <div class="table-wrap"><table><thead><tr><th>階段</th><th>應交付的成果</th><th>關卡問題</th></tr></thead><tbody><tr><td>第 30 天</td><td>一頁問題定義、現況基準線、資料清單、風險分級、角色與驗收表</td><td>沒有 AI 時的現況到底多慢、多貴、多容易錯？</td></tr><tr><td>第 60 天</td><td>歷史資料測試結果、失敗案例集、使用者回饋、初步完整成本與修正清單</td><td>結果在代表性樣本上穩定嗎？高風險錯誤能被攔截嗎？</td></tr><tr><td>第 90 天</td><td>受控上線報告、權限與紀錄、事件演練、實際 KPI、擴大或停止建議</td><td>如果使用量增加十倍，品質、成本與治理仍撐得住嗎？</td></tr></tbody></table></div>
+        <h3>概念驗證要驗證六件事，不只是「模型回答得不錯」</h3>
+        <div class="grid3"><div class="card"><h4>價值</h4><p>是否改善真實業務指標，而非只讓展示看起來聰明。</p></div><div class="card"><h4>可靠</h4><p>一般案例、邊界案例與重大風險案例的表現是否可接受。</p></div><div class="card"><h4>整合</h4><p>是否能接入真實資料與流程，權限、延遲與失敗如何處理。</p></div><div class="card"><h4>治理</h4><p>資料、紀錄、人工覆核、人工核准與事件回復是否可運作。</p></div><div class="card"><h4>採用</h4><p>使用者是否願意使用、看得懂限制，也知道何時不應採納。</p></div><div class="card"><h4>經濟</h4><p>把覆核、整合、維運與風險成本算進去後，是否仍值得。</p></div></div>
+        <h3>這次概念驗證的最低成功標準</h3><div class="grid3"><div class="card green"><h4>有用</h4><p>客訴整理時間下降，分類一致性提高，重大問題沒有被漏掉。</p></div><div class="card green"><h4>有人用</h4><p>客服與營運真的採用，人工修改量在可接受範圍。</p></div><div class="card green"><h4>管得住</h4><p>資料、權限、覆核、事件與責任都有紀錄，錯誤能停止與修正。</p></div></div>
+        <h3>導入是工作重新設計，不只是裝一個工具</h3>
+        <div class="grid2"><div class="card"><h4>讓使用者一起設計</h4><p>客服人員最知道哪些分類容易混淆、哪些例外會出大事。從需求、測試到驗收都讓實際使用者參與，會比上線後才要求配合更有效。</p></div><div class="card"><h4>說清楚省下的時間去哪裡</h4><p>若員工只聽到「提升效率」，很容易理解成裁員。主管要具體說明：省下的時間將用在複雜案件、主動服務、品質改善或增加產能。</p></div><div class="card"><h4>建立安全回報文化</h4><p>員工發現 AI 出錯時，能立即回報而不被責怪，組織才能收集失敗案例並改善；隱藏錯誤才是最大的治理風險。</p></div><div class="card"><h4>角色會改變，但責任不能模糊</h4><p>原本「製作第一稿」的人，可能轉為定義規則、抽樣覆核、處理例外與改善流程。要更新職責、訓練與績效指標。</p></div></div>
+        <div class="callout warn"><strong>停止也是成功結果：</strong>若資料不足、重大錯誤無法攔截、使用者不採用或完整成本過高，概念驗證應明確建議停止或延後。提早避免錯誤投資，本身就是決策價值。</div>
+        <div class="poll"><div class="poll-head"><div><span class="tag green">15 分鐘練習</span><h3>我的 90 天 AI 導入畫布</h3></div><span class="poll-time">個人完成，再兩人交換</span></div><ol><li>我要解決的問題是什麼？</li><li>目前流程花多少時間、錯誤多少？</li><li>可以合法使用哪些資料？</li><li>AI 只負責哪一步？</li><li>哪一步要人工覆核？哪個行動要人工核准？</li><li>用哪三個指標驗收？</li><li>最壞會發生什麼？怎麼停止與回復？</li></ol></div>
+        <div class="memory"><strong>一個問題、一組資料、一位負責人、一個人工控制、三個指標。</strong></div>
+      </div></section>
+
+      <section class="section" id="teaching"><header class="section-head"><span class="act">講師版</span><h2>三小時帶領腳本：每 10–15 分鐘換一次形式</h2><p>這是講師節奏表，不需要投影給學員。框架只占少數時間，故事、選擇、討論與回到案例才是主體。</p></header><div class="section-body">
+        <div class="table-wrap"><table><thead><tr><th>時間</th><th>做什麼</th><th>形式</th><th>只留一句話</th></tr></thead><tbody>
+          <tr><td>0–10</td><td>好日子食品客訴故事，請觀眾判斷誰負責</td><td>故事＋舉手</td><td>AI 的錯誤會變成真實決策成本。</td></tr>
+          <tr><td>10–28</td><td>下一個文字預測；分清模型、應用程式、企業資料與流程</td><td>簡短解說＋生活例子</td><td>AI 很會接話，不會自動查證。</td></tr>
+          <tr><td>28–42</td><td>錯誤類型、查證來源與三個控制</td><td>案例＋問答</td><td>資料有根據、答案可查證、行動有人核准。</td></tr>
+          <tr><td>42–50</td><td>辨認事實、推論與建議</td><td>8 分鐘兩人練習</td><td>有格式、有自信，都不是證據。</td></tr>
+          <tr><td>50–60</td><td>公布答案，討論「有來源也可能不正確」</td><td>全班收斂</td><td>來源、版本、原文與未知都要查。</td></tr>
+          <tr><td>60–70</td><td>休息</td><td>—</td><td>想一個自己的重複任務。</td></tr>
+          <tr><td>70–82</td><td>供應商選擇，逐步揭露隱藏條件</td><td>投票＋故事轉折</td><td>資訊一變，選擇就可能改變。</td></tr>
+          <tr><td>82–97</td><td>先定義、再比較、後執行；補決策深度與資料品質</td><td>流程圖＋追問</td><td>AI 整理與比較，人決定權重與風險。</td></tr>
+          <tr><td>97–107</td><td>三個應用場景評分</td><td>互動工具</td><td>有價值、做得到、出事可控制。</td></tr>
+          <tr><td>107–112</td><td>快速比較客訴、客戶與採購案例</td><td>講師導覽</td><td>同一套問法：資料、AI、人、指標。</td></tr>
+          <tr><td>112–130</td><td>供應商決策演練與一組報告</td><td>18 分鐘小組演練</td><td>不要急著選，先找資料、假設與翻轉條件。</td></tr>
+          <tr><td>130–140</td><td>休息</td><td>—</td><td>準備一句導入建議。</td></tr>
+          <tr><td>140–150</td><td>從回答到行動，逐步提高 AI 代理的權限</td><td>連續舉手</td><td>越接近行動，控制越嚴格。</td></tr>
+          <tr><td>150–162</td><td>效益試算、治理責任與部署取捨</td><td>試算＋情境</td><td>省時間不等於省錢，安全也不是只看部署位置。</td></tr>
+          <tr><td>162–177</td><td>90 天 AI 導入畫布</td><td>15 分鐘個人與兩人交換</td><td>小步驗證，再逐步擴大。</td></tr>
+          <tr><td>177–180</td><td>收尾</td><td>一句承諾</td><td>把 AI 當助理，不是拐杖。</td></tr>
+        </tbody></table></div>
+        <div class="callout"><strong>深度內容怎麼用：</strong>表格中的時段是三小時「必講路線」。各章的完整成本、角色責任、事件處理與部署比較可作為追問或課後閱讀；不要逐格朗讀。若學員是企業主管，就多講效益與責任；若是一般民眾，就多留時間給案例與查證練習。</div>
+        <h3>可以直接使用的開場</h3><div class="story"><p>「各位今天可能期待我介紹最新的 AI 工具，但工具名稱很快會更新。今天我們處理一個更長久的問題：當 AI 給我們一個看起來很專業的答案時，我們怎麼知道它能不能用？」</p><p>「如果只是改一封信，答錯可能只是尷尬；如果是選供應商、判斷客戶流失或提供報價，錯誤就會變成真實成本。今天各位不是來當 AI 工程師，而是來當一家公司的管理者。」</p></div>
+        <h3>避免無聊的五個做法</h3><ul><li><strong>先選，再解釋：</strong>讓觀眾先做決定，框架才有出場理由。</li><li><strong>一張表只講一個矛盾：</strong>不要逐格朗讀。</li><li><strong>同一故事反覆回來：</strong>觀眾不用每章重新理解背景。</li><li><strong>專業名詞放在括號：</strong>先說一般用語，再補 AI 代理、投資報酬率等名詞。</li><li><strong>每段只留一句記憶：</strong>其他內容是解釋，不要求背誦。</li></ul>
+      </div></section>
+
+      <section class="section" id="closing"><header class="section-head"><span class="act">結語</span><h2>最後只帶走五句話</h2><p>其餘細節可以回來查；這五句話足以支持一般管理者開始正確行動。</p></header><div class="section-body">
+        <ol><li><strong>AI 很會接話，但不會自動查證。</strong></li><li><strong>AI 整理與比較，人決定目標、權重與風險。</strong></li><li><strong>選場景要看：有價值、做得到、出事可控制。</strong></li><li><strong>越接近真實行動，越需要最小權限、人工核准與可回復。</strong></li><li><strong>從一個問題開始，用 90 天證明價值與控制能力，再逐步擴大。</strong></li></ol>
+        <div class="callout success"><strong>結尾：</strong>使用 AI 作為助理，而不是拐杖；讓它幫我們看得更廣、做得更快，但方向、判斷與責任仍握在人手上。</div>
+        <h3>用詞說明</h3><div class="table-wrap"><table><thead><tr><th>本教材用語</th><th>意思</th></tr></thead><tbody><tr><td>應用場景</td><td>企業想用 AI 協助的具體工作；不再混用「用例」。</td></tr><tr><td>人工覆核</td><td>人檢查內容、資料、分析或草稿是否正確。</td></tr><tr><td>人工核准</td><td>人授權一個行動可以正式執行。</td></tr><tr><td>地端（企業自有環境）</td><td>由企業控制的工作站、伺服器或私有雲；首次出現後簡稱地端。</td></tr><tr><td>AI 代理（Agent）</td><td>能規劃多步驟、使用工具並持續執行的 AI 系統。</td></tr><tr><td>概念驗證（PoC）</td><td>以小規模測試價值、可行性與風險，不代表已可正式上線。</td></tr></tbody></table></div>
+        <h3>主要官方資料</h3><ol><li><a href="https://www.ey.gov.tw/Page/448DE008087A1971/40c1a925-121d-4b6b-8f40-7e9e1a5401f2" target="_blank" rel="noopener">行政院及所屬機關（構）使用生成式 AI 參考指引</a></li><li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">NIST AI Risk Management Framework</a></li><li><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf" target="_blank" rel="noopener">NIST Generative AI Profile</a></li><li><a href="https://www.oecd.org/en/about/news/announcements/2026/01/ai-use-by-individuals-surges-across-the-oecd-as-adoption-by-firms-continues-to-expand.html" target="_blank" rel="noopener">OECD 2025 年個人與企業 AI 採用資料</a></li><li><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">European Commission：AI Act 官方說明</a></li></ol>
+        <p class="source">本教材亦參考「用 AI 放大你的競爭力_v1_20260527.pdf」中的大語言模型原理、幻覺、企業職能、AI 代理、雲端與地端內容。正式授課前應更新法規、模型、服務價格、產品規格與示範資料。</p>
+      </div></section>
+    </main>
+  </div>
+  <button class="top" id="backTop" aria-label="回到頁首">↑</button>
+  <footer class="footer">presentation_v2.html｜三幕故事深度版。重要法規、成本、模型與產品資訊，正式授課前應依最新官方資料更新。</footer>
+  <script>
+    (function(){
+      'use strict';
+      var body=document.body,root=document.documentElement;
+      var progress=document.getElementById('progressBar'),back=document.getElementById('backTop');
+      var nav=document.getElementById('nav'),menu=document.getElementById('menuBtn');
+      var note=document.getElementById('noteBtn'),scale=1;
+      function onScroll(){var max=root.scrollHeight-window.innerHeight;var p=max>0?window.scrollY/max:0;progress.style.width=Math.max(0,Math.min(100,p*100))+'%';back.classList.toggle('show',window.scrollY>650)}
+      window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+      back.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+      menu.addEventListener('click',function(){nav.classList.toggle('open')});
+      nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open')})});
+      note.addEventListener('click',function(){body.classList.toggle('hide-notes');note.classList.toggle('active',!body.classList.contains('hide-notes'))});
+      document.getElementById('fontUp').addEventListener('click',function(){scale=Math.min(1.25,scale+.05);root.style.setProperty('--scale',scale.toFixed(2))});
+      document.getElementById('fontDown').addEventListener('click',function(){scale=Math.max(.85,scale-.05);root.style.setProperty('--scale',scale.toFixed(2))});
+      document.getElementById('printBtn').addEventListener('click',function(){window.print()});
+      if('IntersectionObserver' in window){var links=Array.from(nav.querySelectorAll('a'));var observer=new IntersectionObserver(function(entries){var visible=entries.filter(function(e){return e.isIntersecting}).sort(function(a,b){return b.intersectionRatio-a.intersectionRatio});if(!visible.length)return;var id=visible[0].target.id;links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+id)})},{rootMargin:'-15% 0px -70% 0px',threshold:[0,.1,.3]});document.querySelectorAll('main .section').forEach(function(s){observer.observe(s)})}
+      function clamp(v,min,max){var n=Number(v);return Number.isFinite(n)?Math.min(max,Math.max(min,n)):min}
+      var value=document.getElementById('valueScore'),feas=document.getElementById('feasScore'),adopt=document.getElementById('adoptScore'),risk=document.getElementById('riskScore');
+      function updatePriority(){var v=clamp(value.value,1,5),f=clamp(feas.value,1,5),a=clamp(adopt.value,1,5),r=clamp(risk.value,1,5);document.getElementById('valueLabel').textContent=v;document.getElementById('feasLabel').textContent=f;document.getElementById('adoptLabel').textContent=a;document.getElementById('riskLabel').textContent=r;var score=Math.round(((v*.4+f*.3+a*.2+(6-r)*.1)/5)*100);var advice='先釐清資料、流程或風險，不建議直接導入。';if(score>=78&&r<=3)advice='適合優先做概念驗證；下一步是建立基準線、責任人與驗收標準。';else if(score>=58)advice='可以小規模驗證，但要先降低風險或補足資料。';else if(v>=4&&f<=2)advice='價值高但準備不足，先整理資料與流程，不要急著選模型。';if(r>=5)advice='風險很高，應先做法遵、倫理與人工控制評估。';document.getElementById('priorityScore').textContent=score;document.getElementById('priorityAdvice').textContent=advice}
+      [value,feas,adopt,risk].forEach(function(el){el.addEventListener('input',updatePriority)});updatePriority();
+      var ids=['monthlyHours','hourlyCost','saveRate','realizeRate','initialCost','monthlyCost','otherBenefit'];var fmt=new Intl.NumberFormat('zh-TW',{maximumFractionDigits:0});function num(id){return Math.max(0,Number(document.getElementById(id).value)||0)}
+      function updateRoi(){var benefit=num('monthlyHours')*num('hourlyCost')*Math.min(100,num('saveRate'))/100*Math.min(100,num('realizeRate'))/100+num('otherBenefit');var net=benefit-num('monthlyCost');var initial=num('initialCost');var first=net*12-initial;var roi=initial>0?first/initial*100:0;var pay=net>0?(initial/net).toFixed(1)+' 個月':'目前無法回收';document.getElementById('roiResult').innerHTML='<strong>每月可實現效益：</strong>NT$ '+fmt.format(benefit)+'　｜　<strong>每月淨效益：</strong>NT$ '+fmt.format(net)+'<br><strong>第一年淨效益：</strong>NT$ '+fmt.format(first)+'　｜　<strong>第一年投資報酬率（ROI）：</strong>'+roi.toFixed(1)+'%　｜　<strong>估計回收：</strong>'+pay+'<br><span class="small muted">未計入稅務、資金成本、重大風險損失與未量化效益，請至少比較保守、基準與樂觀三種情境。</span>'}
+      ids.forEach(function(id){document.getElementById(id).addEventListener('input',updateRoi)});updateRoi();
+      var states=[];window.addEventListener('beforeprint',function(){states=Array.from(document.querySelectorAll('details')).map(function(d){return d.open});document.querySelectorAll('details').forEach(function(d){d.open=true})});window.addEventListener('afterprint',function(){document.querySelectorAll('details').forEach(function(d,i){d.open=!!states[i]})});
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>雲端、地端與混合部署：沒有絕對最好，只有是否適合工作負載｜v4 40</title><link rel="stylesheet" href="../theme.css"></head><body class="v4-child"><main class="v4-page "><article class="chapter exact-fragment" data-source-chapter="deployment"><header class="chapter-head"><span class="chapter-index">CHAPTER 12</span><h2>雲端、地端與混合部署：沒有絕對最好，只有是否適合工作負載</h2><p>部署選擇是成本、資料、延遲、彈性與維運能力的綜合決策。</p></header><div class="chapter-body"><div class="table-wrap"><table><thead><tr><th>面向</th><th>雲端</th><th>地端</th><th>混合</th></tr></thead><tbody>
+            <tr><td>初始投入</td><td>通常較低，可快速試用</td><td>硬體與建置較高</td><td>依核心與彈性需求分配</td></tr>
+            <tr><td>長期成本</td><td>隨用量、token 與服務變動</td><td>較固定，但需利用率足夠</td><td>可將穩定工作留地端、尖峰放雲端</td></tr>
+            <tr><td>資料控制</td><td>依供應商、區域與契約</td><td>可完整留在企業環境</td><td>敏感資料留地端、非敏感使用雲端</td></tr>
+            <tr><td>擴充速度</td><td>快速、彈性</td><td>受採購與機房限制</td><td>兼顧基礎容量與彈性</td></tr>
+            <tr><td>最新能力</td><td>通常較快取得</td><td>需自行測試、更新與維護</td><td>依任務選用不同模型</td></tr>
+            <tr><td>延遲與穩定</td><td>受網路與服務狀況影響</td><td>低延遲、較可預測</td><td>關鍵流程本地，其他彈性分配</td></tr>
+            <tr><td>責任</td><td>供應商與企業共同責任</td><td>企業承擔更多維運與安全責任</td><td>架構與權責較複雜，需清楚治理</td></tr>
+          </tbody></table></div>
+<div class="quiz-box" id="deployQuiz">
+            <h3>互動工具：部署方向初步判斷</h3>
+            <p class="muted">回答五題後取得方向。這不是採購建議，正式決策仍需資安、IT、財務與業務共同評估。</p>
+            <div class="form-grid">
+              <div class="field"><label for="dataSensitivity">資料敏感度</label><select id="dataSensitivity"><option value="0">低：公開或去識別化資料</option><option value="1" selected>中：內部非公開資料</option><option value="2">高：機密、個資或受監管資料</option></select></div>
+              <div class="field"><label for="usagePattern">使用量型態</label><select id="usagePattern"><option value="0">不確定或尖峰變化大</option><option value="1" selected>逐步成長</option><option value="2">長期大量且穩定</option></select></div>
+              <div class="field"><label for="latencyNeed">延遲與離線需求</label><select id="latencyNeed"><option value="0">不敏感，可等待</option><option value="1" selected>希望穩定</option><option value="2">極低延遲或需離線</option></select></div>
+              <div class="field"><label for="itCapability">內部維運能力</label><select id="itCapability"><option value="0">有限</option><option value="1" selected>可維護一般系統</option><option value="2">具 AI、GPU 與平台團隊</option></select></div>
+              <div class="field"><label for="modelFreshness">需要最新模型的速度</label><select id="modelFreshness"><option value="0">非常重要</option><option value="1" selected>可經測試後更新</option><option value="2">穩定與控制比最新更重要</option></select></div>
+            </div>
+            <div class="result" id="deployResult">目前建議：混合部署。請調整選項查看變化。</div>
+          </div></div></article><footer class="v4-footer"><a href="../index.html" target="_top">返回教材目錄</a><span>40 / 52</span><span class="page-links"><a href="038-governance-生成式-ai-事件處理六步驟.html">上一頁</a><a href="040-deployment-常見的漸進策略.html">下一頁</a></span></footer></main><script>
+document.body.classList.toggle('embedded',window.self!==window.top);
+(function(){
+  function n(id){return Number(document.getElementById(id)?.value)||0}
+  var priority=document.getElementById('valueScore');
+  if(priority){var updatePriority=function(){var v=n('valueScore'),f=n('feasScore'),a=n('adoptScore'),r=n('riskScore');[['valueLabel',v],['feasLabel',f],['adoptLabel',a],['riskLabel',r]].forEach(function(x){document.getElementById(x[0]).textContent=x[1]});var score=Math.round(((v*.4+f*.3+a*.2+(6-r)*.1)/5)*100);var advice='先釐清資料、流程或風險，不建議直接進入正式導入。';if(score>=78&&r<=3)advice='適合作為優先 PoC，下一步是建立基準線、責任人與驗收標準。';else if(score>=58)advice='可以做小型驗證，但要先降低風險或補足資料。';else if(v>=4&&f<=2)advice='價值高但可行性不足，先做資料與流程準備，不要急著選模型。';if(r>=5)advice='風險很高。即使價值明顯，也應先做法遵、倫理與人工控制評估。';document.getElementById('priorityScore').textContent=score;document.getElementById('priorityAdvice').textContent=advice};['valueScore','feasScore','adoptScore','riskScore'].forEach(function(id){document.getElementById(id).addEventListener('input',updatePriority)});updatePriority()}
+  var roi=document.getElementById('monthlyHours');
+  if(roi){var fmt=new Intl.NumberFormat('zh-TW',{maximumFractionDigits:0});var updateRoi=function(){var hours=n('monthlyHours'),hourly=n('hourlyCost'),save=Math.min(100,n('saveRate'))/100,realize=Math.min(100,n('realizeRate'))/100,initial=n('initialCost'),monthlyCost=n('monthlyCost'),other=n('otherBenefit'),benefit=hours*hourly*save*realize+other,net=benefit-monthlyCost,first=net*12-initial,rate=initial>0?first/initial*100:0,payback=net>0?(initial/net).toFixed(1)+' 個月':'目前無法回收';document.getElementById('roiResult').innerHTML='<strong>每月可實現效益：</strong>NT$ '+fmt.format(benefit)+'　｜　<strong>每月淨效益：</strong>NT$ '+fmt.format(net)+'<br><strong>第一年淨效益：</strong>NT$ '+fmt.format(first)+'　｜　<strong>第一年 ROI：</strong>'+rate.toFixed(1)+'%　｜　<strong>估計回收期間：</strong>'+payback+'<br><span class="small muted">結果未計入稅務、資金成本、風險損失與未量化效益，請用保守、基準、樂觀三種情境比較。</span>'};['monthlyHours','hourlyCost','saveRate','realizeRate','initialCost','monthlyCost','otherBenefit'].forEach(function(id){document.getElementById(id).addEventListener('input',updateRoi)});updateRoi()}
+  var deploy=document.getElementById('dataSensitivity');
+  if(deploy){var updateDeploy=function(){var d=n('dataSensitivity'),u=n('usagePattern'),l=n('latencyNeed'),i=n('itCapability'),m=n('modelFreshness'),diff=d*2+u*1.5+l*1.5+i*1.2+m-((2-d)*1.5+(2-u)*1.4+(2-l)*1.1+(2-i)*1.5+(2-m)*1.2),title,explanation;if(Math.abs(diff)<2.5){title='混合部署';explanation='將敏感或穩定工作放在受控環境，將需要彈性、尖峰容量或最新模型的工作放在雲端。'}else if(diff>0){title='偏向地端／私有環境';explanation='資料控制、穩定使用量或低延遲需求較高，但仍要確認維運人力、利用率、備援與完整 TCO。'}else{title='偏向雲端';explanation='目前較需要快速啟動、彈性與最新能力。應先確認資料政策、權限、供應商條款與用量成本。'}document.getElementById('deployResult').innerHTML='<strong>目前方向：'+title+'</strong><br>'+explanation};['dataSensitivity','usagePattern','latencyNeed','itCapability','modelFreshness'].forEach(function(id){document.getElementById(id).addEventListener('change',updateDeploy)});updateDeploy()}
+})();</script></body></html>
