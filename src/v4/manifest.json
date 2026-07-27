@@ -1,372 +1,374 @@
 {
   "source": "../archive/v1-single-file/presentation_v1.html",
   "sourceRole": "legacy-reference",
+  "canonicalFormat": "v4",
   "generatedAt": "2026-07-23T07:28:20.534Z",
   "pageCount": 52,
-  "exactContentVerified": true,
+  "exactContentVerified": false,
   "sourceContentHash": "cf9d5fd026d36830d642a76143a3904366d124343d85146ba0f20c2915a21a7c",
   "generatedContentHash": "cf9d5fd026d36830d642a76143a3904366d124343d85146ba0f20c2915a21a7c",
+  "verificationNote": "v4 is now the canonical format and includes manual content revisions after the archived v1 extraction; the retained hashes describe the historical exact-rebuild baseline.",
   "pages": [
     {
       "index": 1,
-      "id": "000-cover",
+      "id": "cover",
       "chapter": "COVER",
       "chapterTitle": "課程封面",
       "title": "大語言模型運用於企業管理與決策流程"
     },
     {
       "index": 2,
-      "id": "001-course-上完三小時-學員應該能做到什麼",
+      "id": "00-01",
       "chapter": "CHAPTER 00",
       "chapterTitle": "課程設計與學習目標",
       "title": "上完三小時，學員應該能做到什麼？"
     },
     {
       "index": 3,
-      "id": "002-course-建議的-180-分鐘節奏",
+      "id": "00-02",
       "chapter": "CHAPTER 00",
       "chapterTitle": "課程設計與學習目標",
       "title": "建議的 180 分鐘節奏"
     },
     {
       "index": 4,
-      "id": "003-why-為什麼現在要學-採用正在增加-落差也在擴大",
+      "id": "01-01",
       "chapter": "CHAPTER 01",
       "chapterTitle": "為什麼現在要學：採用正在增加，落差也在擴大",
       "title": "為什麼現在要學：採用正在增加，落差也在擴大"
     },
     {
       "index": 5,
-      "id": "004-why-ai-對工作的影響-通常先發生在-任務-而不是整個職位",
+      "id": "01-02",
       "chapter": "CHAPTER 01",
       "chapterTitle": "為什麼現在要學：採用正在增加，落差也在擴大",
       "title": "AI 對工作的影響，通常先發生在「任務」而不是整個職位"
     },
     {
       "index": 6,
-      "id": "005-foundation-用一句話理解大型語言模型",
+      "id": "02-01",
       "chapter": "CHAPTER 02",
       "chapterTitle": "LLM 的基本原理：它先學會「怎麼說」，不等於先查證「是否真」",
       "title": "用一句話理解大型語言模型"
     },
     {
       "index": 7,
-      "id": "006-foundation-不要把四個不同層次混在一起",
+      "id": "02-02",
       "chapter": "CHAPTER 02",
       "chapterTitle": "LLM 的基本原理：它先學會「怎麼說」，不等於先查證「是否真」",
-      "title": "不要把四個不同層次混在一起"
+      "title": "模型、知識、工具與工作流程不要混在一起"
     },
     {
       "index": 8,
-      "id": "007-limits-四類最常見的限制",
+      "id": "03-01",
       "chapter": "CHAPTER 03",
       "chapterTitle": "能力、幻覺與限制：把風險降到可以管理",
       "title": "四類最常見的限制"
     },
     {
       "index": 9,
-      "id": "008-limits-一個簡單例子-9-11-與-9-9-哪一個比較大",
+      "id": "03-02",
       "chapter": "CHAPTER 03",
       "chapterTitle": "能力、幻覺與限制：把風險降到可以管理",
       "title": "一個簡單例子：9.11 與 9.9，哪一個比較大？"
     },
     {
       "index": 10,
-      "id": "009-limits-降低幻覺的六層防線",
+      "id": "03-03",
       "chapter": "CHAPTER 03",
       "chapterTitle": "能力、幻覺與限制：把風險降到可以管理",
       "title": "降低幻覺的六層防線"
     },
     {
       "index": 11,
-      "id": "010-limits-什麼是好的-不確定性表達",
+      "id": "03-04",
       "chapter": "CHAPTER 03",
       "chapterTitle": "能力、幻覺與限制：把風險降到可以管理",
       "title": "什麼是好的「不確定性表達」？"
     },
     {
       "index": 12,
-      "id": "011-limits-看似完整的答案-哪裡還不能相信",
+      "id": "03-05",
       "chapter": "CHAPTER 03",
       "chapterTitle": "能力、幻覺與限制：把風險降到可以管理",
       "title": "看似完整的答案，哪裡還不能相信？"
     },
     {
       "index": 13,
-      "id": "012-decision-一個完整決策-不只是-問問題-拿答案",
+      "id": "04-01",
       "chapter": "CHAPTER 04",
       "chapterTitle": "企業決策八步驟：AI 不是決策者，而是流程中的能力",
       "title": "一個完整決策，不只是「問問題、拿答案」"
     },
     {
       "index": 14,
-      "id": "013-decision-每一個階段-ai-的角色都不同",
+      "id": "04-02",
       "chapter": "CHAPTER 04",
       "chapterTitle": "企業決策八步驟：AI 不是決策者，而是流程中的能力",
       "title": "每一個階段，AI 的角色都不同"
     },
     {
       "index": 15,
-      "id": "014-decision-五種決策用途-風險逐步增加",
+      "id": "04-03",
       "chapter": "CHAPTER 04",
       "chapterTitle": "企業決策八步驟：AI 不是決策者，而是流程中的能力",
       "title": "五種決策用途，風險逐步增加"
     },
     {
       "index": 16,
-      "id": "015-roles-ai-與人的責任分工-能力可以委派-責任不能消失",
+      "id": "05-01",
       "chapter": "CHAPTER 05",
       "chapterTitle": "AI 與人的責任分工：能力可以委派，責任不能消失",
       "title": "AI 與人的責任分工：能力可以委派，責任不能消失"
     },
     {
       "index": 17,
-      "id": "016-roles-三種人工參與模式",
+      "id": "05-02",
       "chapter": "CHAPTER 05",
       "chapterTitle": "AI 與人的責任分工：能力可以委派，責任不能消失",
       "title": "三種人工參與模式"
     },
     {
       "index": 18,
-      "id": "017-prioritize-三軸評估法",
+      "id": "06-01",
       "chapter": "CHAPTER 06",
       "chapterTitle": "用例選擇與優先排序：先做有價值、做得到、風險可控的事",
       "title": "三軸評估法"
     },
     {
       "index": 19,
-      "id": "018-prioritize-適合第一批-poc-的特徵",
+      "id": "06-02",
       "chapter": "CHAPTER 06",
       "chapterTitle": "用例選擇與優先排序：先做有價值、做得到、風險可控的事",
       "title": "適合第一批 PoC 的特徵"
     },
     {
       "index": 20,
-      "id": "019-cases-案例一-銷售管理-找出需要優先關心的客戶",
+      "id": "07-01",
       "chapter": "CHAPTER 07",
       "chapterTitle": "三個企業管理案例：從資料到建議，再到人類決策",
       "title": "案例一：銷售管理—找出需要優先關心的客戶"
     },
     {
       "index": 21,
-      "id": "020-cases-案例二-採購管理-比較三家供應商-而不是只比單價",
+      "id": "07-02",
       "chapter": "CHAPTER 07",
       "chapterTitle": "三個企業管理案例：從資料到建議，再到人類決策",
       "title": "案例二：採購管理—比較三家供應商，而不是只比單價"
     },
     {
       "index": 22,
-      "id": "021-cases-案例三-營運管理-從-5-000-筆客訴找到改善優先順序",
+      "id": "07-03",
       "chapter": "CHAPTER 07",
       "chapterTitle": "三個企業管理案例：從資料到建議，再到人類決策",
       "title": "案例三：營運管理—從 5,000 筆客訴找到改善優先順序"
     },
     {
       "index": 23,
-      "id": "022-cases-延伸案例-產品與研發知識管理",
+      "id": "07-04",
       "chapter": "CHAPTER 07",
       "chapterTitle": "三個企業管理案例：從資料到建議，再到人類決策",
       "title": "延伸案例：產品與研發知識管理"
     },
     {
       "index": 24,
-      "id": "023-prompt-五段式任務說明",
+      "id": "08-01",
       "chapter": "CHAPTER 08",
       "chapterTitle": "管理者的提問與驗證：好的提示，其實是好的工作委派",
       "title": "五段式任務說明"
     },
     {
       "index": 25,
-      "id": "024-prompt-從模糊問題-改成可管理的任務",
+      "id": "08-02",
       "chapter": "CHAPTER 08",
       "chapterTitle": "管理者的提問與驗證：好的提示，其實是好的工作委派",
       "title": "從模糊問題，改成可管理的任務"
     },
     {
       "index": 26,
-      "id": "025-prompt-可直接套用的管理分析提示",
+      "id": "08-03",
       "chapter": "CHAPTER 08",
       "chapterTitle": "管理者的提問與驗證：好的提示，其實是好的工作委派",
       "title": "可直接套用的管理分析提示"
     },
     {
       "index": 27,
-      "id": "026-prompt-不要只要求-逐步思考-改要求可檢查的產出",
+      "id": "08-04",
       "chapter": "CHAPTER 08",
       "chapterTitle": "管理者的提問與驗證：好的提示，其實是好的工作委派",
       "title": "不要只要求「逐步思考」，改要求可檢查的產出"
     },
     {
       "index": 28,
-      "id": "027-agent-從單輪問答到-agent-能力增加-成本與責任也增加",
+      "id": "09-01",
       "chapter": "CHAPTER 09",
       "chapterTitle": "從單輪問答到 Agent：能力增加，成本與責任也增加",
       "title": "從單輪問答到 Agent：能力增加，成本與責任也增加"
     },
     {
       "index": 29,
-      "id": "028-agent-企業-agent-的受控執行流程",
+      "id": "09-02",
       "chapter": "CHAPTER 09",
       "chapterTitle": "從單輪問答到 Agent：能力增加，成本與責任也增加",
       "title": "企業 Agent 的受控執行流程"
     },
     {
       "index": 30,
-      "id": "029-agent-三種成本容易被忽略",
+      "id": "09-03",
       "chapter": "CHAPTER 09",
       "chapterTitle": "從單輪問答到 Agent：能力增加，成本與責任也增加",
       "title": "三種成本容易被忽略"
     },
     {
       "index": 31,
-      "id": "030-agent-工具權限應分級",
+      "id": "09-04",
       "chapter": "CHAPTER 09",
       "chapterTitle": "從單輪問答到 Agent：能力增加，成本與責任也增加",
       "title": "工具權限應分級"
     },
     {
       "index": 32,
-      "id": "031-roi-先分清楚-效益-與-成本",
+      "id": "10-01",
       "chapter": "CHAPTER 10",
       "chapterTitle": "ROI、TCO 與成效衡量：展示成功不等於企業成功",
       "title": "先分清楚「效益」與「成本」"
     },
     {
       "index": 33,
-      "id": "032-roi-除了財務-還要追蹤四類-kpi",
+      "id": "10-02",
       "chapter": "CHAPTER 10",
       "chapterTitle": "ROI、TCO 與成效衡量：展示成功不等於企業成功",
       "title": "除了財務，還要追蹤四類 KPI"
     },
     {
       "index": 34,
-      "id": "033-roi-常見的效益高估",
+      "id": "10-03",
       "chapter": "CHAPTER 10",
       "chapterTitle": "ROI、TCO 與成效衡量：展示成功不等於企業成功",
       "title": "常見的效益高估"
     },
     {
       "index": 35,
-      "id": "034-governance-台灣情境下可採用的基本原則",
+      "id": "11-01",
       "chapter": "CHAPTER 11",
       "chapterTitle": "治理、風險與內控：讓創新可以持續，而不是靠禁止或放任",
       "title": "台灣情境下可採用的基本原則"
     },
     {
       "index": 36,
-      "id": "035-governance-nist-ai-風險管理的四個動作",
+      "id": "11-02",
       "chapter": "CHAPTER 11",
       "chapterTitle": "治理、風險與內控：讓創新可以持續，而不是靠禁止或放任",
       "title": "NIST AI 風險管理的四個動作"
     },
     {
       "index": 37,
-      "id": "036-governance-紅黃綠燈使用規則",
+      "id": "11-03",
       "chapter": "CHAPTER 11",
       "chapterTitle": "治理、風險與內控：讓創新可以持續，而不是靠禁止或放任",
       "title": "紅黃綠燈使用規則"
     },
     {
       "index": 38,
-      "id": "037-governance-一個簡單的企業角色表",
+      "id": "11-04",
       "chapter": "CHAPTER 11",
       "chapterTitle": "治理、風險與內控：讓創新可以持續，而不是靠禁止或放任",
       "title": "一個簡單的企業角色表"
     },
     {
       "index": 39,
-      "id": "038-governance-生成式-ai-事件處理六步驟",
+      "id": "11-05",
       "chapter": "CHAPTER 11",
       "chapterTitle": "治理、風險與內控：讓創新可以持續，而不是靠禁止或放任",
       "title": "生成式 AI 事件處理六步驟"
     },
     {
       "index": 40,
-      "id": "039-deployment-雲端-地端與混合部署-沒有絕對最好-只有是否適合工作負載",
+      "id": "12-01",
       "chapter": "CHAPTER 12",
       "chapterTitle": "雲端、地端與混合部署：沒有絕對最好，只有是否適合工作負載",
       "title": "雲端、地端與混合部署：沒有絕對最好，只有是否適合工作負載"
     },
     {
       "index": 41,
-      "id": "040-deployment-常見的漸進策略",
+      "id": "12-02",
       "chapter": "CHAPTER 12",
       "chapterTitle": "雲端、地端與混合部署：沒有絕對最好，只有是否適合工作負載",
       "title": "常見的漸進策略"
     },
     {
       "index": 42,
-      "id": "041-roadmap-90-天導入路線圖-從一個可驗證問題開始",
+      "id": "13-01",
       "chapter": "CHAPTER 13",
       "chapterTitle": "90 天導入路線圖：從一個可驗證問題開始",
       "title": "90 天導入路線圖：從一個可驗證問題開始"
     },
     {
       "index": 43,
-      "id": "042-roadmap-poc-驗收不應只看-能不能產生答案",
+      "id": "13-02",
       "chapter": "CHAPTER 13",
       "chapterTitle": "90 天導入路線圖：從一個可驗證問題開始",
       "title": "PoC 驗收不應只看「能不能產生答案」"
     },
     {
       "index": 44,
-      "id": "043-roadmap-變更管理-真正困難的通常不是模型",
+      "id": "13-03",
       "chapter": "CHAPTER 13",
       "chapterTitle": "90 天導入路線圖：從一個可驗證問題開始",
       "title": "變更管理：真正困難的通常不是模型"
     },
     {
       "index": 45,
-      "id": "044-workshop-ai-答案查證工作坊",
+      "id": "14-01",
       "chapter": "CHAPTER 14",
       "chapterTitle": "課堂練習與帶領方式",
       "title": "AI 答案查證工作坊"
     },
     {
       "index": 46,
-      "id": "045-workshop-供應商決策會議",
+      "id": "14-02",
       "chapter": "CHAPTER 14",
       "chapterTitle": "課堂練習與帶領方式",
       "title": "供應商決策會議"
     },
     {
       "index": 47,
-      "id": "046-workshop-我的-90-天-ai-導入畫布",
+      "id": "14-03",
       "chapter": "CHAPTER 14",
       "chapterTitle": "課堂練習與帶領方式",
       "title": "我的 90 天 AI 導入畫布"
     },
     {
       "index": 48,
-      "id": "047-workshop-三小時講師節奏建議",
+      "id": "14-04",
       "chapter": "CHAPTER 14",
       "chapterTitle": "課堂練習與帶領方式",
       "title": "三小時講師節奏建議"
     },
     {
       "index": 49,
-      "id": "048-summary-十個帶得走的重點",
+      "id": "15-01",
       "chapter": "CHAPTER 15",
       "chapterTitle": "總結：把 AI 當成需要管理的企業能力",
       "title": "十個帶得走的重點"
     },
     {
       "index": 50,
-      "id": "049-summary-課後一週行動清單",
+      "id": "15-02",
       "chapter": "CHAPTER 15",
       "chapterTitle": "總結：把 AI 當成需要管理的企業能力",
       "title": "課後一週行動清單"
     },
     {
       "index": 51,
-      "id": "050-sources-主要官方資料",
+      "id": "16-01",
       "chapter": "CHAPTER 16",
       "chapterTitle": "資料來源與授課更新提醒",
       "title": "主要官方資料"
     },
     {
       "index": 52,
-      "id": "051-sources-正式授課前應再次確認",
+      "id": "16-02",
       "chapter": "CHAPTER 16",
       "chapterTitle": "資料來源與授課更新提醒",
       "title": "正式授課前應再次確認"
