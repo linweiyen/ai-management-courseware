@@ -84,6 +84,7 @@
     .callout.warn{background:var(--yellow-100);border-left-color:#d49a18}.callout.danger{background:var(--red-100);border-left-color:var(--red-700)}.callout.success{background:var(--green-100);border-left-color:var(--green-700)}
     .teaching-note{margin:22px 0;padding:16px 18px;border:1px dashed #e2b367;background:#fffaf0;border-radius:14px;color:#60491f}
     .teaching-note:before{content:"講師提示";display:inline-block;margin-right:9px;padding:2px 7px;border-radius:5px;background:#7a5713;color:white;font-size:.72rem;font-weight:850;letter-spacing:.05em}
+    .teaching-note p{margin:.65em 0 0}
     body.hide-notes .teaching-note{display:none}
     .table-wrap{overflow:auto;margin:18px 0;border:1px solid var(--line);border-radius:14px}
     table{width:100%;border-collapse:collapse;background:white;font-size:.94rem}
@@ -113,6 +114,9 @@
     .risk-item:nth-child(2){border-top-color:var(--orange-500)}.risk-item:nth-child(3){border-top-color:#8b5fc4}.risk-item:nth-child(4){border-top-color:var(--red-700)}
     .flow{display:flex;align-items:stretch;gap:22px;overflow:auto;padding:10px 3px 18px;margin:15px 0}
     .flow-step{position:relative;min-width:154px;flex:1;padding:16px 14px;border-radius:15px;border:1px solid #cfe0ea;background:linear-gradient(145deg,#fff,var(--cyan-50))}
+    .flow.two-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;overflow:visible;padding:10px 3px 14px}
+    .flow.two-row .flow-step{min-width:0;padding:13px 12px}
+    .flow.two-row .flow-step:after{display:none}
     .flow-step:after{content:"→";position:absolute;right:-18px;top:50%;transform:translateY(-50%);color:var(--blue-500);font-weight:900;font-size:1.3rem}
     .flow-step:last-child:after{display:none}.flow-step .n{font-size:.75rem;font-weight:900;color:var(--orange-600)}.flow-step strong{display:block;margin:4px 0;color:var(--navy-800)}.flow-step p{font-size:.84rem;color:var(--muted);line-height:1.5;margin:0}
     .split-responsibility{display:grid;grid-template-columns:1fr 70px 1fr;gap:15px;align-items:stretch;margin:20px 0}

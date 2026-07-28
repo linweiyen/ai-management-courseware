@@ -1,19 +1,15 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>可直接套用的管理分析提示｜v4 26</title><link rel="stylesheet" href="../theme.css"></head><body class="v4-child"><main class="v4-page "><article class="chapter exact-fragment" data-source-chapter="prompt"><header class="chapter-head"><span class="chapter-index">CHAPTER 08</span><h2>管理者的提問與驗證：好的提示，其實是好的工作委派</h2><p>提示詞不是咒語。把背景、任務、資料、限制與驗收標準交代清楚，任何人或 AI 都比較可能把工作做好。</p></header><div class="chapter-body"><h3>可直接套用的管理分析提示</h3>
-<div class="formula">背景：我們正在評估＿＿＿＿，目標是＿＿＿＿，決策期限為＿＿＿＿。
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>具體範例：分析客服等待時間｜v4 26</title><link rel="stylesheet" href="../theme.css"></head><body class="v4-child"><main class="v4-page "><article class="chapter exact-fragment" data-source-chapter="prompt"><header class="chapter-head"><span class="chapter-index">CHAPTER 08</span><h2>管理者的提問與驗證：好的提示，其實是好的工作委派</h2><p>提示詞不是咒語。把背景、任務、資料、限制與驗收標準交代清楚，任何人或 AI 都比較可能把工作做好。</p></header><div class="chapter-body"><h3>具體範例：分析客服等待時間為什麼變長</h3>
+<p>客服主管準備下週的排班會議，想先讓 AI 整理現有資料、找出問題並比較方案，但最後排班仍由主管決定。</p>
+<div class="formula">背景：最近三個月，平日 18:00–21:00 的平均等待時間由 4 分鐘增加到 9 分鐘。客服主管要在下週例會決定是否調整晚間排班。
 
-資料：只能使用我提供的資料；若資料不足，請明確標示「未知」，不要自行補造。
+任務：找出等待時間上升的主要日期、時段與可能原因，提出兩個排班調整方案，並比較對人力成本、等待時間與員工負荷的影響。
 
-任務：
-1. 先整理已知事實與資料來源。
-2. 列出三個可行方案，包括維持現況。
-3. 依成本、效益、風險、執行難度比較。
-4. 說明每個方案成立所依賴的假設。
-5. 做保守、基準、樂觀三種情境。
-6. 列出需要人工確認的五個問題。
+資料：只使用附件中的三個月來電與工單紀錄、排班表、請假紀錄及滿意度資料；每項結論都要註明資料欄位與日期。
 
-輸出：一頁管理摘要＋比較表＋風險清單。
+限制：不得推測個別員工能力，不得揭露客戶或員工姓名；資料不足時標示「未知」。AI 不得自行決定或通知排班。
 
-驗證：標示引用、計算方式、資料日期與不確定性；不要只給單一結論。</div></div></article><footer class="v4-footer"><a href="../index.html" target="_top">返回教材目錄</a><span>29 / 55</span><span class="page-links"><a href="08-02.html">上一頁</a><a href="08-04.html">下一頁</a></span></footer></main><script>
+驗收標準：輸出一頁摘要、尖峰時段表及兩個方案的比較表；數字必須可以重算，假設必須清楚，並標出至少三項需要主管確認的事項，例如下月促銷活動、加班上限與臨時支援意願。</div>
+<div class="callout"><strong>分工原則：</strong>AI 先整理資料、找出異常並比較方案；主管確認資料是否合理，考量勞動規範與人員狀況後，再決定實際排班。</div></div></article><footer class="v4-footer"><a href="../index.html" target="_top">返回教材目錄</a><span>29 / 55</span><span class="page-links"><a href="08-02.html">上一頁</a><a href="08-04.html">下一頁</a></span></footer></main><script>
 document.body.classList.toggle('embedded',window.self!==window.top);
 (function(){
   function n(id){return Number(document.getElementById(id)?.value)||0}
