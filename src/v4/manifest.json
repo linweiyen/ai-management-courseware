@@ -2,7 +2,7 @@
   "source": "../archive/v1-single-file/presentation_v1.html",
   "sourceRole": "legacy-reference",
   "canonicalFormat": "v4",
-  "generatedAt": "2026-07-23T07:28:20.534Z",
+  "generatedAt": "2026-07-29T00:00:00+08:00",
   "pageCount": 55,
   "exactContentVerified": false,
   "sourceContentHash": "cf9d5fd026d36830d642a76143a3904366d124343d85146ba0f20c2915a21a7c",
@@ -153,14 +153,14 @@
       "index": 21,
       "id": "06-01",
       "chapter": "CHAPTER 06",
-      "chapterTitle": "用例選擇與優先排序：先做有價值、做得到、風險可控的事",
-      "title": "三軸評估法"
+      "chapterTitle": "用例選擇與優先排序：先做有價值、風險可控、可執行、可驗證的事",
+      "title": "四軸評估法"
     },
     {
       "index": 22,
       "id": "06-02",
       "chapter": "CHAPTER 06",
-      "chapterTitle": "用例選擇與優先排序：先做有價值、做得到、風險可控的事",
+      "chapterTitle": "用例選擇與優先排序：先做有價值、風險可控、可執行、可驗證的事",
       "title": "適合第一批 PoC 的特徵"
     },
     {
@@ -217,7 +217,7 @@
       "id": "08-04",
       "chapter": "CHAPTER 08",
       "chapterTitle": "管理者的提問與驗證：好的提示，其實是好的工作委派",
-      "title": "AI 提出建議後，主管還要檢查什麼？"
+      "title": "AI 分析客服等待時間後，主管還要先查原因"
     },
     {
       "index": 31,
@@ -228,143 +228,143 @@
     },
     {
       "index": 32,
+      "id": "09-02",
+      "chapter": "CHAPTER 09",
+      "chapterTitle": "從單輪問答到 Agent：能力增加，成本與責任也增加",
+      "title": "設計一個可管理的 Agent"
+    },
+    {
+      "index": 33,
       "id": "09-03",
       "chapter": "CHAPTER 09",
       "chapterTitle": "從單輪問答到 Agent：能力增加，成本與責任也增加",
       "title": "Agent 導入容易忽略的四個管理面向"
     },
     {
-      "index": 33,
+      "index": 34,
       "id": "09-04",
       "chapter": "CHAPTER 09",
       "chapterTitle": "從單輪問答到 Agent：能力增加，成本與責任也增加",
       "title": "以費用報支為例：Agent 的工具權限怎麼分級？"
     },
     {
-      "index": 34,
+      "index": 35,
       "id": "10-01",
       "chapter": "CHAPTER 10",
       "chapterTitle": "ROI、TCO 與成效衡量：展示成功不等於企業成功",
       "title": "先分清楚「效益」與「成本」"
     },
     {
-      "index": 35,
+      "index": 36,
       "id": "10-02",
       "chapter": "CHAPTER 10",
       "chapterTitle": "ROI、TCO 與成效衡量：展示成功不等於企業成功",
       "title": "除了財務 ROI，還要追蹤企業營運 KPI"
     },
     {
-      "index": 36,
+      "index": 37,
       "id": "10-03",
       "chapter": "CHAPTER 10",
       "chapterTitle": "ROI、TCO 與成效衡量：展示成功不等於企業成功",
       "title": "常見的效益高估"
     },
     {
-      "index": 37,
+      "index": 38,
       "id": "10-04",
       "chapter": "CHAPTER 10",
       "chapterTitle": "ROI、TCO 與成效衡量：展示成功不等於企業成功",
       "title": "AI 的價值不只在省人力：把釋放的能力轉成成長"
     },
     {
-      "index": 38,
+      "index": 39,
       "id": "11-01",
       "chapter": "CHAPTER 11",
       "chapterTitle": "治理、風險與內控：讓創新可以持續，而不是靠禁止或放任",
-      "title": "台灣情境下可採用的基本原則"
-    },
-    {
-      "index": 39,
-      "id": "11-02",
-      "chapter": "CHAPTER 11",
-      "chapterTitle": "治理、風險與內控：讓創新可以持續，而不是靠禁止或放任",
-      "title": "NIST AI 風險管理的四個動作"
+      "title": "上午 9:12，一份客訴資料進了公開 AI"
     },
     {
       "index": 40,
-      "id": "11-03",
+      "id": "11-02",
       "chapter": "CHAPTER 11",
       "chapterTitle": "治理、風險與內控：讓創新可以持續，而不是靠禁止或放任",
-      "title": "紅黃綠燈使用規則"
+      "title": "NIST 四個動作：找出客服事故的治理缺口"
     },
     {
       "index": 41,
-      "id": "11-04",
+      "id": "11-03",
       "chapter": "CHAPTER 11",
       "chapterTitle": "治理、風險與內控：讓創新可以持續，而不是靠禁止或放任",
-      "title": "一個簡單的企業角色表"
+      "title": "同一個客服 AI，為什麼有時綠燈、有時紅燈？"
     },
     {
       "index": 42,
-      "id": "11-05",
+      "id": "11-04",
       "chapter": "CHAPTER 11",
       "chapterTitle": "治理、風險與內控：讓創新可以持續，而不是靠禁止或放任",
-      "title": "生成式 AI 事件處理六步驟"
+      "title": "事故後的前 30 分鐘：先止血，再查清事實"
     },
     {
       "index": 43,
+      "id": "11-05",
+      "chapter": "CHAPTER 11",
+      "chapterTitle": "治理、風險與內控：讓創新可以持續，而不是靠禁止或放任",
+      "title": "重新上線前，用六個控制把邊界補回來"
+    },
+    {
+      "index": 44,
       "id": "12-01",
       "chapter": "CHAPTER 12",
       "chapterTitle": "雲端、地端與混合部署：沒有絕對最好，只有是否適合工作負載",
       "title": "雲端、地端與混合部署：沒有絕對最好，只有是否適合工作負載"
     },
     {
-      "index": 44,
+      "index": 45,
       "id": "12-02",
       "chapter": "CHAPTER 12",
       "chapterTitle": "雲端、地端與混合部署：沒有絕對最好，只有是否適合工作負載",
       "title": "常見的漸進策略"
     },
     {
-      "index": 45,
+      "index": 46,
       "id": "13-01",
       "chapter": "CHAPTER 13",
       "chapterTitle": "90 天導入路線圖：從一個可驗證問題開始",
       "title": "90 天導入路線圖：從一個可驗證問題開始"
     },
     {
-      "index": 46,
+      "index": 47,
       "id": "13-02",
       "chapter": "CHAPTER 13",
       "chapterTitle": "90 天導入路線圖：從一個可驗證問題開始",
       "title": "PoC 驗收不應只看「能不能產生答案」"
     },
     {
-      "index": 47,
+      "index": 48,
       "id": "13-03",
       "chapter": "CHAPTER 13",
       "chapterTitle": "90 天導入路線圖：從一個可驗證問題開始",
       "title": "變更管理：真正困難的通常不是模型"
     },
     {
-      "index": 48,
+      "index": 49,
       "id": "14-01",
       "chapter": "CHAPTER 14",
       "chapterTitle": "課堂練習與帶領方式",
       "title": "AI 答案查證工作坊"
     },
     {
-      "index": 49,
+      "index": 50,
       "id": "14-02",
       "chapter": "CHAPTER 14",
       "chapterTitle": "課堂練習與帶領方式",
       "title": "供應商決策會議"
     },
     {
-      "index": 50,
+      "index": 51,
       "id": "14-03",
       "chapter": "CHAPTER 14",
       "chapterTitle": "課堂練習與帶領方式",
       "title": "我的 90 天 AI 導入畫布"
-    },
-    {
-      "index": 51,
-      "id": "14-04",
-      "chapter": "CHAPTER 14",
-      "chapterTitle": "課堂練習與帶領方式",
-      "title": "三小時講師節奏建議"
     },
     {
       "index": 52,

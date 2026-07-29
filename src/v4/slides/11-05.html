@@ -1,13 +1,76 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>生成式 AI 事件處理六步驟｜v4 39</title><link rel="stylesheet" href="../theme.css"></head><body class="v4-child"><main class="v4-page "><article class="chapter exact-fragment" data-source-chapter="governance"><header class="chapter-head"><span class="chapter-index">CHAPTER 11</span><h2>治理、風險與內控：讓創新可以持續，而不是靠禁止或放任</h2><p>治理的目的不是阻止使用 AI，而是讓資料、權限、品質與責任有清楚規則。</p></header><div class="chapter-body"><h3>生成式 AI 事件處理六步驟</h3>
-<ol><li><strong>停止：</strong>暫停有問題的自動流程或對外輸出。</li><li><strong>保存：</strong>保存提示、輸入、輸出、模型版本、工具紀錄與時間。</li><li><strong>限制：</strong>撤銷不必要權限，防止問題擴大。</li><li><strong>評估：</strong>確認受影響資料、客戶、決策與法律義務。</li><li><strong>修復：</strong>修正資料、提示、權限、測試或供應商設定。</li><li><strong>學習：</strong>更新政策、教育與監控，避免同類事件再次發生。</li></ol><section class="feedback-loop" style="margin-top:28px"><h3>錯誤如何持續改善？</h3><p class="muted">監控不是終點；每次人工修改或錯誤事件，都要回到前面的環節找原因。</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px"><div class="card"><strong>1｜發現錯誤</strong><p>記錄人工修改、退回或實際事件。</p></div><div class="card"><strong>2｜分類原因</strong><p>判斷是 Prompt、資料、推論、工具或流程問題。</p></div><div class="card"><strong>3｜修正環節</strong><p>調整規則、資料、工具、模型或人工審核點。</p></div><div class="card"><strong>4｜回歸測試</strong><p>用過去案例重新測試，確認沒有引發新問題。</p></div><div class="card"><strong>5｜持續監控</strong><p>追蹤錯誤率、修改率與高風險事件。</p></div></div><p class="callout" style="margin-top:14px"><strong>最後記住：</strong>可靠的 AI 不是第一次就完全正確，而是能透過查核、人工覆核與持續改善，把錯誤控制在可管理範圍內。</p></section>
-<div class="callout warn"><strong>國際趨勢：</strong>歐盟 AI Act 已把 AI 素養、禁止用途、通用 AI 與高風險系統納入分階段治理。一般企業不必在通識課背法條，但應理解「不同用途需要不同程度的控制」。</div></div></article><footer class="v4-footer"><a href="../index.html" target="_top">返回教材目錄</a><span>42 / 55</span><span class="page-links"><a href="11-04.html">上一頁</a><a href="12-01.html">下一頁</a></span></footer></main><script>
-document.body.classList.toggle('embedded',window.self!==window.top);
-(function(){
-  function n(id){return Number(document.getElementById(id)?.value)||0}
-  var priority=document.getElementById('valueScore');
-  if(priority){var updatePriority=function(){var v=n('valueScore'),f=n('feasScore'),a=n('adoptScore'),r=n('riskScore');[['valueLabel',v],['feasLabel',f],['adoptLabel',a],['riskLabel',r]].forEach(function(x){document.getElementById(x[0]).textContent=x[1]});var score=Math.round(((v*.4+f*.3+a*.2+(6-r)*.1)/5)*100);var advice='先釐清資料、流程或風險，不建議直接進入正式導入。';if(score>=78&&r<=3)advice='適合作為優先 PoC，下一步是建立基準線、責任人與驗收標準。';else if(score>=58)advice='可以做小型驗證，但要先降低風險或補足資料。';else if(v>=4&&f<=2)advice='價值高但可行性不足，先做資料與流程準備，不要急著選模型。';if(r>=5)advice='風險很高。即使價值明顯，也應先做法遵、倫理與人工控制評估。';document.getElementById('priorityScore').textContent=score;document.getElementById('priorityAdvice').textContent=advice};['valueScore','feasScore','adoptScore','riskScore'].forEach(function(id){document.getElementById(id).addEventListener('input',updatePriority)});updatePriority()}
-  var roi=document.getElementById('monthlyHours');
-  if(roi){var fmt=new Intl.NumberFormat('zh-TW',{maximumFractionDigits:0});var updateRoi=function(){var hours=n('monthlyHours'),hourly=n('hourlyCost'),save=Math.min(100,n('saveRate'))/100,realize=Math.min(100,n('realizeRate'))/100,initial=n('initialCost'),monthlyCost=n('monthlyCost'),other=n('otherBenefit'),benefit=hours*hourly*save*realize+other,net=benefit-monthlyCost,first=net*12-initial,rate=initial>0?first/initial*100:0,payback=net>0?(initial/net).toFixed(1)+' 個月':'目前無法回收';document.getElementById('roiResult').innerHTML='<strong>每月可實現效益：</strong>NT$ '+fmt.format(benefit)+'　｜　<strong>每月淨效益：</strong>NT$ '+fmt.format(net)+'<br><strong>第一年淨效益：</strong>NT$ '+fmt.format(first)+'　｜　<strong>第一年 ROI：</strong>'+rate.toFixed(1)+'%　｜　<strong>估計回收期間：</strong>'+payback+'<br><span class="small muted">結果未計入稅務、資金成本、風險損失與未量化效益，請用保守、基準、樂觀三種情境比較。</span>'};['monthlyHours','hourlyCost','saveRate','realizeRate','initialCost','monthlyCost','otherBenefit'].forEach(function(id){document.getElementById(id).addEventListener('input',updateRoi)});updateRoi()}
-  var deploy=document.getElementById('dataSensitivity');
-  if(deploy){var updateDeploy=function(){var d=n('dataSensitivity'),u=n('usagePattern'),l=n('latencyNeed'),i=n('itCapability'),m=n('modelFreshness'),diff=d*2+u*1.5+l*1.5+i*1.2+m-((2-d)*1.5+(2-u)*1.4+(2-l)*1.1+(2-i)*1.5+(2-m)*1.2),title,explanation;if(Math.abs(diff)<2.5){title='混合部署';explanation='將敏感或穩定工作放在受控環境，將需要彈性、尖峰容量或最新模型的工作放在雲端。'}else if(diff>0){title='偏向地端／私有環境';explanation='資料控制、穩定使用量或低延遲需求較高，但仍要確認維運人力、利用率、備援與完整 TCO。'}else{title='偏向雲端';explanation='目前較需要快速啟動、彈性與最新能力。應先確認資料政策、權限、供應商條款與用量成本。'}document.getElementById('deployResult').innerHTML='<strong>目前方向：'+title+'</strong><br>'+explanation};['dataSensitivity','usagePattern','latencyNeed','itCapability','modelFreshness'].forEach(function(id){document.getElementById(id).addEventListener('change',updateDeploy)});updateDeploy()}
-})();</script></body></html>
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>重新上線前，用六個控制把邊界補回來｜v4 39</title>
+  <link rel="stylesheet" href="../theme.css">
+</head>
+<body class="v4-child">
+<main class="v4-page case-page">
+  <article class="chapter" data-source-chapter="governance">
+    <header class="chapter-head">
+      <span class="chapter-index">CHAPTER 11</span>
+      <h2>治理、風險與內控：讓創新可以持續，而不是靠禁止或放任</h2>
+      <p>治理定公司的方針、邊界與責任；管理再把它落實成流程與 SOP。</p>
+    </header>
+    <div class="chapter-body">
+      <span class="case-kicker">安全重上線</span>
+      <h3>重新上線前，用六個控制把邊界補回來</h3>
+      <p>事故不代表永遠禁用 AI。公司要把客服助手從「直接行動」改成「在邊界內協助，超出邊界就交給人」。</p>
+      <div class="before-after" aria-label="客服 Agent 治理前後比較">
+        <section class="system-lane before">
+          <h4>事故前｜AI 的推論直接變成行動</h4>
+          <div class="system-path"><span>客訴資料</span><b>→</b><span>AI 判斷</span><b>→</b><span>Agent 寄信</span><b>→</b><span>客戶</span></div>
+        </section>
+        <div class="versus">→</div>
+        <section class="system-lane after">
+          <h4>重上線後｜規則、人工與監控一起把關</h4>
+          <div class="system-path"><span>核准資料</span><b>→</b><span>AI 草稿</span><b>→</b><span>規則檢查</span><b>→</b><span>人工核准</span><b>→</b><span>客戶</span></div>
+        </section>
+      </div>
+      <div class="control-board" aria-label="客服 Agent 最小可行治理">
+        <div class="control-row">
+          <strong>1｜使用目的</strong>
+          <p>可以分類客訴、摘要問題、產生回覆草稿；不能自行判定產品缺陷。</p>
+          <div class="nist-tags"><span>MAP</span><span>GOVERN</span></div>
+        </div>
+        <div class="control-row">
+          <strong>2｜允許資料</strong>
+          <p>只使用核准環境中的必要資料；分析前盡可能去識別化，禁止貼入公開 AI。</p>
+          <div class="nist-tags"><span>MAP</span><span>GOVERN</span></div>
+        </div>
+        <div class="control-row">
+          <strong>3｜Agent 權限</strong>
+          <p>可以分類與草擬；不得自行承認產品問題，也不得無上限發送訊息或補償。</p>
+          <div class="nist-tags"><span>GOVERN</span><span>MANAGE</span></div>
+        </div>
+        <div class="control-row">
+          <strong>4｜人工關卡</strong>
+          <p>涉及產品安全、對外承諾、高額補償或大量寄送，一律轉交授權主管核准。</p>
+          <div class="nist-tags"><span>GOVERN</span><span>MANAGE</span></div>
+        </div>
+        <div class="control-row">
+          <strong>5｜持續監控</strong>
+          <p>追蹤錯誤分類、人工修改率、異常寄件量與申訴；用事件案例定期回歸測試。</p>
+          <div class="nist-tags"><span>MEASURE</span><span>MANAGE</span></div>
+        </div>
+        <div class="control-row">
+          <strong>6｜停止與復原</strong>
+          <p>客服主管可立即暫停對外行動；IT 保留紀錄、撤銷權限，修復並驗證後才能恢復。</p>
+          <div class="nist-tags"><span>MANAGE</span><span>GOVERN</span></div>
+        </div>
+      </div>
+      <div class="governance-management">
+        <div><h4>治理決定規矩</h4><p>允許用途、資料邊界、決策權、責任人、監督與停止條件。</p></div>
+        <div><h4>管理負責落地</h4><p>平台設定、權限控制、測試、教育、監控與事件處理 SOP。</p></div>
+      </div>
+      <div class="case-takeaway">好的治理不是讓 AI 什麼都不能做，而是讓它在清楚的邊界內安全地做更多事。</div>
+      <p class="source-note">NIST 對照依據：<a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/" target="_blank" rel="noopener">AI RMF Core — Govern、Map、Measure、Manage</a>。</p>
+    </div>
+  </article>
+  <footer class="v4-footer"><a href="../index.html" target="_top">返回教材目錄</a><span>43 / 55</span><span class="page-links"><a href="11-04.html">上一頁</a><a href="12-01.html">下一頁</a></span></footer>
+</main>
+<script>document.body.classList.toggle('embedded',window.self!==window.top);</script>
+</body>
+</html>
