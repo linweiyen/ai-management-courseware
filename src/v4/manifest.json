@@ -3,7 +3,7 @@
   "sourceRole": "legacy-reference",
   "canonicalFormat": "v4",
   "generatedAt": "2026-07-29T00:00:00+08:00",
-  "pageCount": 55,
+  "pageCount": 50,
   "exactContentVerified": false,
   "sourceContentHash": "cf9d5fd026d36830d642a76143a3904366d124343d85146ba0f20c2915a21a7c",
   "generatedContentHash": "cf9d5fd026d36830d642a76143a3904366d124343d85146ba0f20c2915a21a7c",
@@ -328,71 +328,36 @@
       "index": 46,
       "id": "13-01",
       "chapter": "CHAPTER 13",
-      "chapterTitle": "90 天導入路線圖：從一個可驗證問題開始",
-      "title": "90 天導入路線圖：從一個可驗證問題開始"
+      "chapterTitle": "把 AI 應用帶回工作：從一個問題開始",
+      "title": "想一個 AI 可以幫忙的工作問題"
     },
     {
       "index": 47,
       "id": "13-02",
       "chapter": "CHAPTER 13",
-      "chapterTitle": "90 天導入路線圖：從一個可驗證問題開始",
-      "title": "PoC 驗收不應只看「能不能產生答案」"
+      "chapterTitle": "把 AI 應用帶回工作：從一個問題開始",
+      "title": "用四個問題檢查這個想法"
     },
     {
       "index": 48,
       "id": "13-03",
       "chapter": "CHAPTER 13",
-      "chapterTitle": "90 天導入路線圖：從一個可驗證問題開始",
-      "title": "變更管理：真正困難的通常不是模型"
+      "chapterTitle": "把 AI 應用帶回工作：從一個問題開始",
+      "title": "怎麼開始：做一個小而可回復的測試"
     },
     {
       "index": 49,
-      "id": "14-01",
-      "chapter": "CHAPTER 14",
-      "chapterTitle": "課堂練習與帶領方式",
-      "title": "AI 答案查證工作坊"
-    },
-    {
-      "index": 50,
-      "id": "14-02",
-      "chapter": "CHAPTER 14",
-      "chapterTitle": "課堂練習與帶領方式",
-      "title": "供應商決策會議"
-    },
-    {
-      "index": 51,
-      "id": "14-03",
-      "chapter": "CHAPTER 14",
-      "chapterTitle": "課堂練習與帶領方式",
-      "title": "我的 90 天 AI 導入畫布"
-    },
-    {
-      "index": 52,
-      "id": "15-01",
-      "chapter": "CHAPTER 15",
-      "chapterTitle": "總結：把 AI 當成需要管理的企業能力",
-      "title": "十個帶得走的重點"
-    },
-    {
-      "index": 53,
-      "id": "15-02",
-      "chapter": "CHAPTER 15",
-      "chapterTitle": "總結：把 AI 當成需要管理的企業能力",
-      "title": "課後一週行動清單"
-    },
-    {
-      "index": 54,
       "id": "16-01",
-      "chapter": "CHAPTER 16",
-      "chapterTitle": "資料來源與授課更新提醒",
+      "chapter": "APPENDIX",
+      "chapterTitle": "資料來源與更新提醒",
       "title": "主要官方資料"
     },
     {
-      "index": 55,
+      "index": 50,
       "id": "16-02",
-      "chapter": "CHAPTER 16",
-      "chapterTitle": "資料來源與授課更新提醒",
-      "title": "正式授課前應再次確認"
+      "chapter": "APPENDIX",
+      "chapterTitle": "資料來源與更新提醒",
+      "title": "引用與使用資料時應再次確認"
     }
   ]
 }
