@@ -3,7 +3,7 @@
   "sourceRole": "legacy-reference",
   "canonicalFormat": "v4",
   "generatedAt": "2026-07-29T00:00:00+08:00",
-  "pageCount": 50,
+  "pageCount": 49,
   "exactContentVerified": false,
   "sourceContentHash": "cf9d5fd026d36830d642a76143a3904366d124343d85146ba0f20c2915a21a7c",
   "generatedContentHash": "cf9d5fd026d36830d642a76143a3904366d124343d85146ba0f20c2915a21a7c",
@@ -351,13 +351,6 @@
       "chapter": "APPENDIX",
       "chapterTitle": "資料來源與更新提醒",
       "title": "主要官方資料"
-    },
-    {
-      "index": 50,
-      "id": "16-02",
-      "chapter": "APPENDIX",
-      "chapterTitle": "資料來源與更新提醒",
-      "title": "引用與使用資料時應再次確認"
     }
   ]
 }
