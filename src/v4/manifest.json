@@ -125,141 +125,141 @@
       "index": 17,
       "id": "04-01",
       "chapter": "CHAPTER 04",
-      "chapterTitle": "AI 進入決策流程：角色、人工關卡與責任",
+      "chapterTitle": "AI 進入決策流程：角色、Agent 與人工責任",
       "title": "一個完整決策，不只是「問問題、拿答案」"
     },
     {
       "index": 18,
       "id": "04-02",
       "chapter": "CHAPTER 04",
-      "chapterTitle": "AI 進入決策流程：角色、人工關卡與責任",
+      "chapterTitle": "AI 進入決策流程：角色、Agent 與人工責任",
       "title": "每一個階段，AI 的角色都不同"
     },
     {
       "index": 19,
       "id": "04-03",
       "chapter": "CHAPTER 04",
-      "chapterTitle": "AI 進入決策流程：角色、人工關卡與責任",
+      "chapterTitle": "AI 進入決策流程：角色、Agent 與人工責任",
       "title": "五種決策用途，風險逐步增加"
     },
     {
       "index": 20,
       "id": "05-01",
       "chapter": "CHAPTER 04",
-      "chapterTitle": "AI 進入決策流程：角色、人工關卡與責任",
+      "chapterTitle": "AI 進入決策流程：角色、Agent 與人工責任",
       "title": "AI 與人的責任分工：能力可以委派，責任不能消失"
     },
     {
       "index": 21,
       "id": "05-02",
       "chapter": "CHAPTER 04",
-      "chapterTitle": "AI 進入決策流程：角色、人工關卡與責任",
+      "chapterTitle": "AI 進入決策流程：角色、Agent 與人工責任",
       "title": "三種人工參與模式"
     },
     {
       "index": 22,
+      "id": "02-03",
+      "chapter": "CHAPTER 04",
+      "chapterTitle": "AI 進入決策流程：角色、Agent 與人工責任",
+      "title": "Agent 架構：模型、工具、記憶與控制循環"
+    },
+    {
+      "index": 23,
+      "id": "09-02",
+      "chapter": "CHAPTER 04",
+      "chapterTitle": "AI 進入決策流程：角色、Agent 與人工責任",
+      "title": "設計一個可管理的 Agent"
+    },
+    {
+      "index": 24,
       "id": "07-01",
       "chapter": "CHAPTER 05",
       "chapterTitle": "從 ERP 資料到管理洞察：用 Codex 找證據，用 Skill 固化規則",
       "title": "ERP 有資料，不代表管理者已經有答案"
     },
     {
-      "index": 23,
+      "index": 25,
       "id": "07-02",
       "chapter": "CHAPTER 05",
       "chapterTitle": "從 ERP 資料到管理洞察：用 Codex 找證據，用 Skill 固化規則",
       "title": "現場示範：H100 為什麼賣得好卻在虧錢？"
     },
     {
-      "index": 24,
+      "index": 26,
       "id": "07-03",
       "chapter": "CHAPTER 05",
       "chapterTitle": "從 ERP 資料到管理洞察：用 Codex 找證據，用 Skill 固化規則",
       "title": "Skill 不是魔法，是給 AI 的企業工作說明"
     },
     {
-      "index": 25,
+      "index": 27,
       "id": "07-04",
       "chapter": "CHAPTER 05",
       "chapterTitle": "從 ERP 資料到管理洞察：用 Codex 找證據，用 Skill 固化規則",
       "title": "主管查核：AI 找到訊號，不等於可以直接行動"
     },
     {
-      "index": 26,
+      "index": 28,
       "id": "10-01",
       "chapter": "CHAPTER 06",
       "chapterTitle": "ROI、TCO 與成效衡量：展示成功不等於企業成功",
       "title": "先分清楚「效益」與「成本」"
     },
     {
-      "index": 27,
+      "index": 29,
       "id": "10-02",
       "chapter": "CHAPTER 06",
       "chapterTitle": "ROI、TCO 與成效衡量：展示成功不等於企業成功",
       "title": "除了財務 ROI，還要追蹤企業營運 KPI"
     },
     {
-      "index": 28,
+      "index": 30,
       "id": "10-03",
       "chapter": "CHAPTER 06",
       "chapterTitle": "ROI、TCO 與成效衡量：展示成功不等於企業成功",
       "title": "常見的效益高估"
     },
     {
-      "index": 29,
+      "index": 31,
       "id": "10-04",
       "chapter": "CHAPTER 06",
       "chapterTitle": "ROI、TCO 與成效衡量：展示成功不等於企業成功",
       "title": "AI 的價值不只在省人力：把釋放的能力轉成成長"
     },
     {
-      "index": 30,
+      "index": 32,
       "id": "08-01",
       "chapter": "CHAPTER 07",
       "chapterTitle": "從清楚指令到可管理的 Agent",
       "title": "五要素任務說明"
     },
     {
-      "index": 31,
+      "index": 33,
       "id": "08-02",
       "chapter": "CHAPTER 07",
       "chapterTitle": "從清楚指令到可管理的 Agent",
       "title": "從模糊問題，改成可管理的任務"
     },
     {
-      "index": 32,
+      "index": 34,
       "id": "08-03",
       "chapter": "CHAPTER 07",
       "chapterTitle": "從清楚指令到可管理的 Agent",
       "title": "具體範例：分析客服等待時間"
     },
     {
-      "index": 33,
+      "index": 35,
       "id": "08-04",
       "chapter": "CHAPTER 07",
       "chapterTitle": "從清楚指令到可管理的 Agent",
       "title": "AI 分析客服等待時間後，主管還要先查原因"
     },
     {
-      "index": 34,
+      "index": 36,
       "id": "09-01",
       "chapter": "CHAPTER 07",
       "chapterTitle": "從清楚指令到可管理的 Agent",
       "title": "從單輪問答到 Agent：能力增加，成本與責任也增加"
-    },
-    {
-      "index": 35,
-      "id": "02-03",
-      "chapter": "CHAPTER 07",
-      "chapterTitle": "從清楚指令到可管理的 Agent",
-      "title": "Agent 架構：模型、工具、記憶與控制循環"
-    },
-    {
-      "index": 36,
-      "id": "09-02",
-      "chapter": "CHAPTER 07",
-      "chapterTitle": "從清楚指令到可管理的 Agent",
-      "title": "設計一個可管理的 Agent"
     },
     {
       "index": 37,
