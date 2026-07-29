@@ -261,6 +261,11 @@ body.embedded .v4-page{width:100%;max-width:none}body.embedded .v4-footer>a:firs
   .incident-steps{grid-template-columns:repeat(3,minmax(0,1fr))}
   .incident-step:nth-child(3):after{display:none}
 }
+
+/* Keep dense evidence tables readable on content-heavy slides. */
+.v4-page .table-wrap,.v4-page .table-wrap table{font-size:1rem!important}
+.v4-page .callout .small{font-size:1rem}
+.v4-page h5{font-size:1rem;line-height:1.4;margin:1em 0 .4em}
 @media(max-width:720px){
   .nist-framework,.risk-lens,.scenario-grid,.governance-management{grid-template-columns:1fr}
   .incident-steps{grid-template-columns:repeat(2,minmax(0,1fr))}

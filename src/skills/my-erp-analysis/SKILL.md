@@ -38,6 +38,10 @@ description: Analyse the my_erp ERP database for a Taiwan regional OEM dealer (N
   ```
   自由探索 / 自訂 join / 計算用這個。`{baseDir}` 是本 skill 安裝後的
   目錄，`seed.db` 隨 skill 一起部署、不用另起 backend。
+  如果環境沒有 `sqlite3` CLI（例如部分 Windows Codex 環境），改用
+  Node.js 內建的 `node:sqlite`，以 `DatabaseSync(..., {readOnly:true})`
+  開啟同一個 `seed.db` 並執行相同 SQL。不得為了工具相容而複製、轉換或
+  寫入資料庫。
 
 - **制式報表（僅當使用者另起 backend 時可用）**：如果環境有跑
   `uvicorn app.main:app --port 8000`，可用 HTTP 拿已封裝業務邏輯的
