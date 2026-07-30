@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>從治理要求推導部署需求｜v4 43</title>
+  <link rel="stylesheet" href="../theme.css">
+</head>
+<body class="v4-child">
+<main class="v4-page case-page">
+  <article class="chapter" data-source-chapter="governance">
+    <header class="chapter-head"><span class="chapter-index">CHAPTER 08</span><h2>治理、風險與內控：讓創新可以持續，而不是靠禁止或放任</h2><p>治理先決定企業需要控制什麼；部署架構再把資料、版本、服務與責任邊界落實到系統中。</p></header><div class="chapter-body"><h3>從治理要求，推導部署需求</h3><p class="lead">客服事故不只暴露流程問題，也提出一個架構問題：現有的雲端（Cloud）API 能否滿足公司的控制要求，還是需要企業內部環境？</p><div class="grid-4"><div class="card"><div class="icon red">🔐</div><h4>資料邊界</h4><p>客訴個資不能進入未核准的公開 AI；敏感資料必須留在核准環境。</p></div><div class="card"><div class="icon orange">↺</div><h4>版本可重現性</h4><p>雲端模型名稱或別名背後的行為可能更新，使提示、工具呼叫或既有 Agent Harness 退化；企業必須能辨識版本並回歸測試。</p></div><div class="card"><div class="icon">⏱</div><h4>服務持續性</h4><p>企業可以停止自己的 Agent；部署差異在於是否需要自行掌握推論容量、網路依賴、維護窗口與復原時間。</p></div><div class="card"><div class="icon green">$</div><h4>成本可控性</h4><p>Agent 的多步推理、長上下文與重試會放大 Token 費用；用量大量且穩定時，要比較雲端按量成本與地端完整 TCO。</p></div></div><div class="grid-2" style="margin-top:18px"><div class="card green"><h4>地端（On-premises）可以增加的控制</h4><ul><li>敏感資料與推論留在企業環境。</li><li>固定模型權重、推論環境與更新時點，測試後再切換或回復。</li><li>控制 GPU 容量、佇列與服務優先順序。</li><li>把按 Token 波動的支出轉為可規劃的算力容量，但仍須管理硬體、電力、維運與利用率。</li></ul></div><div class="card warm"><h4>地端（On-premises）不會自動解決</h4><ul><li>AI 幻覺、錯誤判斷與資料品質。</li><li>模型或 Agent Harness 的回歸測試與監控。</li><li>Agent 停止開關、工具權限、人工核准與決策責任。</li><li>事件應變、教育與管理 SOP。</li></ul></div></div><div class="callout warn"><strong>不是所有情境都需要地端：</strong>如果核准的雲端服務能提供合適的資料條款、模型版本政策、退役通知、紀錄與服務承諾，仍可採用雲端；當企業需要固定模型行為、敏感資料不能離開，或 Agent 用量大量且長期穩定時，地端部署的需求才會提高。</div><div class="callout"><strong>治理先決定邊界，部署再實現邊界。</strong>地端（On-premises）不是治理本身，而是取得資料、版本與推論服務自主性的一種方式。下一章將比較<a href="09-01.html">雲端、地端與混合部署</a>如何滿足不同工作負載。</div><div class="callout danger"><span class="tag red">注意</span><p style="margin:.7em 0 0"><strong>課堂展示，不等於正式上線架構：</strong>課程中由 Codex 依照 Skill 直接讀取模擬 ERP 的 seed.db，只為示範資料分析。Skill 可以規定工作步驟與工具用法，但不是登入與授權邊界，通常會繼承執行環境的帳號、檔案與資料庫權限。正式環境應讓 Skill 負責工作方法，由 ERP 或受控整合層的 MCP Server 串接企業身分驗證系統，將查詢、建立草稿、送出與修改拆成不同工具，並落實角色、資料範圍、金額上限、人工核准與稽核紀錄。若 ERP 資料不得離開企業環境，LLM 與 Agent Harness 也必須部署於地端（On-premises），不得把資料或上下文送往雲端模型。</p></div></div></article>
+  <footer class="v4-footer"><a href="../index.html" target="_top">返回教材目錄</a><span>43 / 49</span><span class="page-links"><a href="08-04.html">上一頁</a><a href="09-01.html">下一頁</a></span></footer>
+</main>
+<script>document.body.classList.toggle('embedded',window.self!==window.top);</script>
+<script src="../navigation.js"></script></body>
+</html>

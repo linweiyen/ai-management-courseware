@@ -1,5 +1,32 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>看似完整的答案，哪裡還不能相信？｜v4 16</title><link rel="stylesheet" href="../theme.css"></head><body class="v4-child"><main class="v4-page "><article class="chapter exact-fragment" data-source-chapter="limits"><header class="chapter-head"><span class="chapter-index">CHAPTER 03</span><h2>LLM 如何產生答案，以及為什麼會出錯</h2>
-      <p>LLM 以機率生成文字；理解它如何工作、容易在哪裡出錯，才能設計查證與人工覆核。</p></header><div class="chapter-body"><div class="exercise"><div class="exercise-head"><div><span class="tag orange">快速練習</span><h3>看似完整的答案，哪裡還不能相信？</h3></div><span class="duration">8 分鐘</span></div><p>請把下面這段 AI 摘要當成「初稿」，逐句標記：哪些可以保留？哪些需要回到來源？哪些其實是 AI 的推論？</p><blockquote>根據 2025 年 3 月的資料，公司第二季雲端支出將增加 18%，主要原因是新法規要求企業保留至少 7 年的 AI 使用紀錄。由於目前已有 80% 的部門使用 AI，建議公司立即擴大 AI 預算，預計可提升整體工作效率 25%。</blockquote><h4>小組討論</h4><ol><li>哪些是可直接採用的文字整理？</li><li>哪些數字必須回到原始資料？</li><li>哪些句子是推論而不是事實？</li><li>如果要送給主管，還缺什麼？</li></ol></div><div class="post-exercise" style="display:grid;gap:12px;margin-top:24px"><details class="answer-key" style="border:1px solid #cbdbe8;border-radius:10px;padding:12px 16px;background:#f8fbfd"><summary style="cursor:pointer;list-style:none"><strong>＋ 引導答案</strong></summary><div style="padding-top:12px"><p class="muted">以下是判讀方向，不是唯一答案。</p><ul><li><strong>雲端支出增加 18%：</strong>回到預算或財務資料確認。</li><li><strong>法規要求保留 7 年：</strong>查法規名稱、生效日期與適用範圍。</li><li><strong>80% 的部門使用 AI：</strong>確認統計定義、調查範圍與資料時間。</li><li><strong>主要原因是新法規：</strong>這是因果推論，不一定由資料直接支持。</li><li><strong>立即擴大 AI 預算：</strong>這是建議，不是事實；還缺成本、效益與風險分析。</li><li><strong>提升效率 25%：</strong>要求說明估算方法、基準線與適用條件。</li></ul></div></details><details class="management-principle" style="border:1px solid #9fc3dd;border-radius:10px;padding:12px 16px;background:#f4f8fb"><summary style="cursor:pointer;list-style:none"><strong>＋ 練習結論</strong></summary><div style="padding-top:12px"><p><strong>AI 摘要的價值，不只是幫我們整理得更快。</strong></p><p>管理者還要知道哪些內容能直接採用、哪些內容必須查證，以及哪些只是 AI 根據資料做出的推論。</p></div></details></div></div></article><footer class="v4-footer"><a href="../index.html" target="_top">返回教材目錄</a><span>16 / 49</span><span class="page-links"><a href="03-05.html">上一頁</a><a href="04-01.html">下一頁</a></span></footer></main><script>
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>降低幻覺的六層防線｜v4 14</title><link rel="stylesheet" href="../theme.css"></head><body class="v4-child"><main class="v4-page "><article class="chapter exact-fragment" data-source-chapter="limits"><header class="chapter-head"><span class="chapter-index">CHAPTER 03</span><h2>LLM 如何產生答案，以及為什麼會出錯</h2>
+      <p>LLM 以機率生成文字；理解它如何工作、容易在哪裡出錯，才能設計查證與人工覆核。</p></header><div class="chapter-body"><h3>降低幻覺的六層防線</h3>
+<p class="small muted">前四層可以直接寫進指令，讓 AI 的回答有資料與格式防線；後兩層屬於流程控制，不能只靠 Prompt 解決。</p>
+<div class="grid-3">
+            <div class="card"><div class="icon">1</div><h4>限定任務</h4><p>明確說明目標、資料範圍、禁止事項與輸出格式。</p></div>
+            <div class="card"><div class="icon">2</div><h4>提供來源</h4><p>使用指定文件、企業知識庫或官方資料，不讓模型任意補空白。</p></div>
+            <div class="card"><div class="icon">3</div><h4>使用工具</h4><p>日期、計算、查價、庫存與統計交給可驗證的系統處理。</p></div>
+            <div class="card"><div class="icon orange">4</div><h4>要求揭露依據</h4><p>要求列出關鍵假設、引用、計算式與不確定之處，而不是只給結論。</p></div>
+            <div class="card"><div class="icon red">5</div><h4>設定人工關卡</h4><p>對外發布、付款、報價、人事與法律動作，執行前必須有人核准。</p></div>
+            <div class="card"><div class="icon green">6</div><h4>持續監測</h4><p>抽樣檢查錯誤、記錄模型版本、追蹤異常並改善提示與資料。</p></div>
+          </div>
+          <div class="callout" style="margin-top:20px"><strong>寫指令時的快速檢查：</strong>先限定資料來源與任務範圍，再說明輸出格式；要求 AI 分開列出事實、推論與未知，並標示引用與計算依據。最後確認哪些行動仍須人工核准。</div>
+          <details class="score-method">
+            <summary><span class="score-method-icon" aria-hidden="true">＋</span>範例：把「請幫我查證」寫成有防線的指令</summary>
+            <div class="score-method-body">
+              <p><strong>模糊指令：</strong>請幫我查證這項資訊。</p>
+              <p><strong>較好的寫法：</strong></p>
+              <div class="formula">請只使用提供的來源查證這項資訊。
+輸出四個區塊：
+1. 來源直接支持的事實
+2. 根據資料做出的推論
+3. 目前未知或缺少的資料
+4. 需要人工確認的事項
+
+找不到證據時請標示「未知」，不要自行補充。每個數字附上來源名稱與日期；不得根據推論直接提出行動建議。</div>
+              <p class="score-method-note">這個例子示範的是降低幻覺的防線；完整的背景、任務、限制與驗收標準，會在 Chapter 07 展開。</p>
+            </div>
+          </details>
+          </div></div></article><footer class="v4-footer"><a href="../index.html" target="_top">返回教材目錄</a><span>14 / 49</span><span class="page-links"><a href="03-05.html">上一頁</a><a href="03-07.html">下一頁</a></span></footer></main><script>
 document.body.classList.toggle('embedded',window.self!==window.top);
 (function(){
   function n(id){return Number(document.getElementById(id)?.value)||0}
@@ -9,4 +36,4 @@ document.body.classList.toggle('embedded',window.self!==window.top);
   if(roi){var fmt=new Intl.NumberFormat('zh-TW',{maximumFractionDigits:0});var updateRoi=function(){var hours=n('monthlyHours'),hourly=n('hourlyCost'),save=Math.min(100,n('saveRate'))/100,realize=Math.min(100,n('realizeRate'))/100,initial=n('initialCost'),monthlyCost=n('monthlyCost'),other=n('otherBenefit'),benefit=hours*hourly*save*realize+other,net=benefit-monthlyCost,first=net*12-initial,rate=initial>0?first/initial*100:0,payback=net>0?(initial/net).toFixed(1)+' 個月':'目前無法回收';document.getElementById('roiResult').innerHTML='<strong>每月可實現效益：</strong>NT$ '+fmt.format(benefit)+'　｜　<strong>每月淨效益：</strong>NT$ '+fmt.format(net)+'<br><strong>第一年淨效益：</strong>NT$ '+fmt.format(first)+'　｜　<strong>第一年 ROI：</strong>'+rate.toFixed(1)+'%　｜　<strong>估計回收期間：</strong>'+payback+'<br><span class="small muted">結果未計入稅務、資金成本、風險損失與未量化效益，請用保守、基準、樂觀三種情境比較。</span>'};['monthlyHours','hourlyCost','saveRate','realizeRate','initialCost','monthlyCost','otherBenefit'].forEach(function(id){document.getElementById(id).addEventListener('input',updateRoi)});updateRoi()}
   var deploy=document.getElementById('dataSensitivity');
   if(deploy){var updateDeploy=function(){var d=n('dataSensitivity'),u=n('usagePattern'),l=n('latencyNeed'),i=n('itCapability'),m=n('modelFreshness'),diff=d*2+u*1.5+l*1.5+i*1.2+m-((2-d)*1.5+(2-u)*1.4+(2-l)*1.1+(2-i)*1.5+(2-m)*1.2),title,explanation;if(Math.abs(diff)<2.5){title='混合部署';explanation='將敏感或穩定工作放在受控環境，將需要彈性、尖峰容量或最新模型的工作放在雲端。'}else if(diff>0){title='偏向地端／私有環境';explanation='資料控制、穩定使用量或低延遲需求較高，但仍要確認維運人力、利用率、備援與完整 TCO。'}else{title='偏向雲端';explanation='目前較需要快速啟動、彈性與最新能力。應先確認資料政策、權限、供應商條款與用量成本。'}document.getElementById('deployResult').innerHTML='<strong>目前方向：'+title+'</strong><br>'+explanation};['dataSensitivity','usagePattern','latencyNeed','itCapability','modelFreshness'].forEach(function(id){document.getElementById(id).addEventListener('change',updateDeploy)});updateDeploy()}
-})();</script></body></html>
+})();</script><script src="../navigation.js"></script></body></html>

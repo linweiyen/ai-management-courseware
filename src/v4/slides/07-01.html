@@ -1,66 +1,22 @@
-<!doctype html>
-<html lang="zh-Hant">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>ERP 有資料，不代表管理者已經有答案｜v4 24</title>
-  <link rel="stylesheet" href="../theme.css">
-</head>
-<body class="v4-child">
-<main class="v4-page">
-  <article class="chapter exact-fragment" data-source-chapter="erp-insight">
-    <header class="chapter-head">
-      <span class="chapter-index">CHAPTER 05</span>
-      <h2>從 ERP 資料到管理洞察：用 Codex 找證據，用 Skill 固化規則</h2>
-      <p>ERP 記錄交易，AI 協助跨表找出訊號；但原因判斷、風險取捨與行動核准仍由管理者負責。</p>
-    </header>
-    <div class="chapter-body">
-      <h3>ERP 有資料，不代表管理者已經有答案</h3>
-      <div class="callout"><strong>課堂情境：</strong>這是一套為 AI 分析展示建立的模擬 ERP。資料涵蓋銷售、採購、庫存、毛利、應收帳款與業務員，但管理者真正想知道的不是「有幾張單」，而是「哪裡正在失血、為什麼，以及接下來要確認什麼」。<br><span class="small">範例系統：<a href="https://github.com/JavisOfWeiYen/my_erp" target="_blank" rel="noopener noreferrer">JavisOfWeiYen/my_erp</a></span></div>
-
-      <div class="grid-4">
-        <div class="card soft"><span class="tag">資料期間</span><h4>18 個月</h4><p class="small">2024-12～2026-05</p></div>
-        <div class="card soft"><span class="tag">交易資料</span><h4>1,576 張</h4><p class="small">已確認銷售單</p></div>
-        <div class="card soft"><span class="tag">客戶資料</span><h4>30 家</h4><p class="small">模擬企業客戶</p></div>
-        <div class="card soft"><span class="tag">商品資料</span><h4>37 項</h4><p class="small">不同產品 SKU</p></div>
-      </div>
-
-      <div class="grid-2">
-        <div class="card">
-          <span class="tag">ERP 擅長記錄</span>
-          <h4>交易事實分散在不同表格</h4>
-          <ul>
-            <li>客戶買了什麼、何時下單、由誰負責</li>
-            <li>確認訂單當下的售價與成本</li>
-            <li>應收是否付款、逾期多久</li>
-            <li>庫存、進貨與盤點異動</li>
-          </ul>
-        </div>
-        <div class="card green">
-          <span class="tag green">管理者真正想問</span>
-          <h4>從紀錄轉成可查核的決策問題</h4>
-          <ul>
-            <li>為什麼 H100 賣得好，毛利卻是負的？</li>
-            <li>哪些客戶同時出現訂單下降與付款惡化？</li>
-            <li>哪些逾期應收值得優先確認？</li>
-            <li>哪些 SKU 已經需要重新議價？</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="flow">
-        <div class="flow-step"><span class="n">1</span><strong>提出問題</strong><p>從管理痛點出發。</p></div>
-        <div class="flow-step"><span class="n">2</span><strong>讀取 Skill</strong><p>取得資料定義與規則。</p></div>
-        <div class="flow-step"><span class="n">3</span><strong>查詢 seed.db</strong><p>留下可重算的證據。</p></div>
-        <div class="flow-step"><span class="n">4</span><strong>提出解讀</strong><p>區分事實、假設與未知。</p></div>
-        <div class="flow-step"><span class="n">5</span><strong>主管查核</strong><p>核准下一步行動。</p></div>
-      </div>
-
-      <div class="callout success"><strong>本章重點：</strong>學員不需要學會操作 ERP、寫 SQL 或開發 Agent；只要看懂 AI 如何利用企業資料提出有證據的管理建議，以及管理者應該在哪裡介入。</div>
-    </div>
-  </article>
-  <footer class="v4-footer"><a href="../index.html" target="_top">返回教材目錄</a><span>24 / 49</span><span class="page-links"><a href="09-02.html">上一頁</a><a href="07-02.html">下一頁</a></span></footer>
-</main>
-<script>document.body.classList.toggle('embedded',window.self!==window.top);</script>
-</body>
-</html>
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI 任務說明五要素｜v4 32</title><link rel="stylesheet" href="../theme.css"></head><body class="v4-child"><main class="v4-page "><article class="chapter exact-fragment" data-source-chapter="prompt"><header class="chapter-head"><span class="chapter-index">CHAPTER 07</span><h2>從清楚指令到可管理的 Agent</h2>
+      <p>指令越清楚，工作越容易驗收；當 AI 能讀取資料、使用工具並採取多步驟行動，權限與控制也必須同步升級。</p></header><div class="chapter-body"><p class="small muted">前面我們在「<a href="03-06.html">降低幻覺的六層防線</a>」中，用資料來源、限制與查證要求降低 AI 幻覺；當 AI 開始讀取企業資料、使用工具並完成多步驟任務時，還需要把這些防線整理成一份完整、可管理的任務說明。</p><h3>五要素任務說明</h3>
+<div class="grid-5 grid-3">
+            <div class="card"><div class="icon">C</div><h4>Context 背景</h4><p>說明目前情境、受眾，以及為什麼要做這件事。</p></div>
+            <div class="card"><div class="icon">T</div><h4>Task 任務</h4><p>說清楚要完成什麼，以及預期產出或決策用途。</p></div>
+            <div class="card"><div class="icon">D</div><h4>Data 資料</h4><p>指定可使用的文件、數據、系統與可信來源。</p></div>
+            <div class="card"><div class="icon orange">L</div><h4>Limits 限制</h4><p>界定資料範圍、禁止事項、權限與人工核准條件。</p></div>
+            <div class="card"><div class="icon red">A</div><h4>Acceptance 驗收標準</h4><p>訂出正確性、格式、來源與人工確認的要求。</p></div>
+          </div>
+          <div class="callout"><strong>延伸觀念：從提示詞到工作環境。</strong>OpenAI 認為，要讓 AI Agent 可靠工作，除了說明任務，還要提供可理解的環境、工具、限制與回饋循環；NVIDIA 也指出，Agent Harness（支撐 Agent 運作的一整套工作環境）不只處理提示與上下文，還包含工具、記憶、限制與回饋機制。這些觀念都提醒管理者：交代任務之外，也要準備資料、劃定邊界並建立驗收方式。</div>
+          <p class="source-note">延伸閱讀：<a href="https://openai.com/index/harness-engineering/" target="_blank" rel="noopener noreferrer">OpenAI：Harness engineering: leveraging Codex in an agent-first world</a>；<a href="https://nvidia.github.io/elements/docs/internal/guidelines/agent-harness/" target="_blank" rel="noopener noreferrer">NVIDIA Elements：Agent Harness Guidelines Reference</a>。兩篇資料並未提出與本頁完全相同的固定五項分類；本頁是依其核心觀念，整理成管理者易用的任務說明框架。</p>
+          </div></article><footer class="v4-footer"><a href="../index.html" target="_top">返回教材目錄</a><span>32 / 49</span><span class="page-links"><a href="06-04.html">上一頁</a><a href="07-02.html">下一頁</a></span></footer></main><script>
+document.body.classList.toggle('embedded',window.self!==window.top);
+(function(){
+  function n(id){return Number(document.getElementById(id)?.value)||0}
+  var priority=document.getElementById('valueScore');
+  if(priority){var updatePriority=function(){var v=n('valueScore'),f=n('feasScore'),a=n('adoptScore'),r=n('riskScore');[['valueLabel',v],['feasLabel',f],['adoptLabel',a],['riskLabel',r]].forEach(function(x){document.getElementById(x[0]).textContent=x[1]});var score=Math.round(((v*.4+f*.3+a*.2+(6-r)*.1)/5)*100);var advice='先釐清資料、流程或風險，不建議直接進入正式導入。';if(score>=78&&r<=3)advice='適合作為優先 PoC，下一步是建立基準線、責任人與驗收標準。';else if(score>=58)advice='可以做小型驗證，但要先降低風險或補足資料。';else if(v>=4&&f<=2)advice='價值高但可行性不足，先做資料與流程準備，不要急著選模型。';if(r>=5)advice='風險很高。即使價值明顯，也應先做法遵、倫理與人工控制評估。';document.getElementById('priorityScore').textContent=score;document.getElementById('priorityAdvice').textContent=advice};['valueScore','feasScore','adoptScore','riskScore'].forEach(function(id){document.getElementById(id).addEventListener('input',updatePriority)});updatePriority()}
+  var roi=document.getElementById('monthlyHours');
+  if(roi){var fmt=new Intl.NumberFormat('zh-TW',{maximumFractionDigits:0});var updateRoi=function(){var hours=n('monthlyHours'),hourly=n('hourlyCost'),save=Math.min(100,n('saveRate'))/100,realize=Math.min(100,n('realizeRate'))/100,initial=n('initialCost'),monthlyCost=n('monthlyCost'),other=n('otherBenefit'),benefit=hours*hourly*save*realize+other,net=benefit-monthlyCost,first=net*12-initial,rate=initial>0?first/initial*100:0,payback=net>0?(initial/net).toFixed(1)+' 個月':'目前無法回收';document.getElementById('roiResult').innerHTML='<strong>每月可實現效益：</strong>NT$ '+fmt.format(benefit)+'　｜　<strong>每月淨效益：</strong>NT$ '+fmt.format(net)+'<br><strong>第一年淨效益：</strong>NT$ '+fmt.format(first)+'　｜　<strong>第一年 ROI：</strong>'+rate.toFixed(1)+'%　｜　<strong>估計回收期間：</strong>'+payback+'<br><span class="small muted">結果未計入稅務、資金成本、風險損失與未量化效益，請用保守、基準、樂觀三種情境比較。</span>'};['monthlyHours','hourlyCost','saveRate','realizeRate','initialCost','monthlyCost','otherBenefit'].forEach(function(id){document.getElementById(id).addEventListener('input',updateRoi)});updateRoi()}
+  var deploy=document.getElementById('dataSensitivity');
+  if(deploy){var updateDeploy=function(){var d=n('dataSensitivity'),u=n('usagePattern'),l=n('latencyNeed'),i=n('itCapability'),m=n('modelFreshness'),diff=d*2+u*1.5+l*1.5+i*1.2+m-((2-d)*1.5+(2-u)*1.4+(2-l)*1.1+(2-i)*1.5+(2-m)*1.2),title,explanation;if(Math.abs(diff)<2.5){title='混合部署';explanation='將敏感或穩定工作放在受控環境，將需要彈性、尖峰容量或最新模型的工作放在雲端。'}else if(diff>0){title='偏向地端／私有環境';explanation='資料控制、穩定使用量或低延遲需求較高，但仍要確認維運人力、利用率、備援與完整 TCO。'}else{title='偏向雲端';explanation='目前較需要快速啟動、彈性與最新能力。應先確認資料政策、權限、供應商條款與用量成本。'}document.getElementById('deployResult').innerHTML='<strong>目前方向：'+title+'</strong><br>'+explanation};['dataSensitivity','usagePattern','latencyNeed','itCapability','modelFreshness'].forEach(function(id){document.getElementById(id).addEventListener('change',updateDeploy)});updateDeploy()}
+})();</script><script src="../navigation.js"></script></body></html>

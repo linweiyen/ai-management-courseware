@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>用 Skill 固化企業規則｜v4 26</title>
+  <link rel="stylesheet" href="../theme.css">
+</head>
+<body class="v4-child">
+<main class="v4-page">
+  <article class="chapter exact-fragment" data-source-chapter="erp-insight">
+    <header class="chapter-head">
+      <span class="chapter-index">CHAPTER 05</span>
+      <h2>從 ERP 資料到管理洞察：用 Codex 找證據，用 Skill 固化規則</h2>
+      <p>一次問對不代表每次都會做對；要把資料定義、工作規則與驗收方式變成可重複使用的企業知識。</p>
+    </header>
+    <div class="chapter-body">
+      <h3>Skill 不是魔法，是給 AI 的企業工作說明</h3>
+      <p class="lead">這套 skill 原本可供 OpenClaw 使用；課堂第一版直接讓 Codex 讀取同一個資料夾。重點不是平台名稱，而是把企業特有、不能猜錯的規則交代清楚。</p>
+
+      <div class="grid-4">
+        <div class="card"><span class="tag">SKILL.md</span><h4>角色與邊界</h4><p>何時啟動、回答語言、唯讀規則、禁止事項與輸出結構。</p></div>
+        <div class="card"><span class="tag orange">schema.md</span><h4>資料口徑</h4><p>表格關係、欄位定義、毛利與帳齡算法，以及常用查詢模式。</p></div>
+        <div class="card green"><span class="tag green">examples.md</span><h4>合格範例</h4><p>示範如何從問題、查詢、證據走到事實、假設、未知與建議。</p></div>
+        <div class="card warm"><span class="tag red">seed.db</span><h4>可重算證據</h4><p>所有數字都必須回到實際資料查詢，不能沿用記憶或舊範例。</p></div>
+      </div>
+
+      <h4>沒有企業規則時，AI 很容易在「看似合理」的地方算錯</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>容易犯的錯</th><th>Skill 內的修正規則</th><th>為什麼重要</th></tr></thead>
+          <tbody>
+            <tr><td>用商品目前成本回算歷史毛利</td><td>使用訂單確認當下的 <code>sales_order_items.unit_cost</code></td><td>避免把後來漲跌的成本套回舊訂單</td></tr>
+            <tr><td>把草稿與取消單算進業績</td><td>只分析 <code>status='confirmed'</code></td><td>尚未成立的交易不能當營收</td></tr>
+            <tr><td>用今天日期計算 demo 帳齡</td><td>固定以 2026-05-22 為分析日</td><td>確保每次課堂展示都能重現</td></tr>
+            <tr><td>看到逾期就自動停信用</td><td>AI 只排序與建議，信用變更必須人工核准</td><td>資料分析不能取代正式授權</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="formula">示範 Codex 協助撰寫 Skill：
+
+請檢查 seed.db 的資料表、計算陷阱與管理風險，替 ERP 分析助理整理一份可重複使用的工作規則。必須包含觸發情境、資料來源、唯讀限制、計算口徑、回答格式、未知處理與人工核准點；詳細 schema 與案例分開保存，避免把所有內容塞進 SKILL.md。</div>
+
+      <div class="callout success"><strong>管理者要提供的不是程式碼：</strong>哪些數字代表正式交易？毛利怎麼算？哪些資料不能使用？什麼行動一定要核准？Codex 可以協助把答案整理成 skill。</div>
+    </div>
+  </article>
+  <footer class="v4-footer"><a href="../index.html" target="_top">返回教材目錄</a><span>26 / 49</span><span class="page-links"><a href="05-02.html">上一頁</a><a href="05-04.html">下一頁</a></span></footer>
+</main>
+<script>document.body.classList.toggle('embedded',window.self!==window.top);</script>
+<script src="../navigation.js"></script></body>
+</html>

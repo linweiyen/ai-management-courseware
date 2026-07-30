@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>設計 Agent 的工作邊界｜v4 23</title>
+  <link rel="stylesheet" href="../theme.css">
+</head>
+<body class="v4-child">
+<main class="v4-page">
+  <article class="chapter exact-fragment" data-source-chapter="agent">
+    <header class="chapter-head">
+      <span class="chapter-index">CHAPTER 04</span>
+      <h2>AI 進入決策流程：角色、Agent 與人工責任</h2>
+      <p>AI 可以協助定義問題、整理資料、比較方案，甚至透過 Agent 使用工具；但目標、權限、核准、例外與責任仍由人掌握。</p>
+    </header>
+    <div class="chapter-body">
+      <h3>設計一個可管理的 Agent｜本課程用 Codex 示範</h3>
+      <p class="lead">學員不必學會 CLI，也不必自行開發 Agent；先用 Codex 看懂一個 Agent 如何讀資料、使用工具、提出建議，再判斷哪些步驟值得自動化。</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h4>先把工作邊界畫清楚</h4>
+          <ol>
+            <li><strong>觸發：</strong>什麼事件或需求會啟動任務？</li>
+            <li><strong>輸入：</strong>可以讀哪些資料？哪些資料禁止使用？</li>
+            <li><strong>產出：</strong>要摘要、分類、建議、草稿，還是有限執行？</li>
+            <li><strong>行動：</strong>哪些動作可自動做？哪一步一定要人工核准？</li>
+            <li><strong>驗證：</strong>用什麼 KPI、基準線與停止條件判斷有效？</li>
+          </ol>
+        </div>
+        <div class="card green">
+          <h4>課程示範：用 Codex 管理一個任務</h4>
+          <ol>
+            <li>用自然語言說明工作目標與限制。</li>
+            <li>指定可讀的資料、參考文件與既有 skill。</li>
+            <li>讓 Codex 分析、引用來源並產生草稿或建議。</li>
+            <li>由人員核准對外回覆、更新紀錄或其他行動。</li>
+            <li>用時間、錯誤率、人工修改率等 KPI 檢查成效。</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4>Agent 不只一種做法：管理者要先看懂取捨</h4>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>路線</th><th>適合情況</th><th>管理上要注意</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tag green">Codex</span> <span class="tag green">Claude Code CLI</span></td><td>用自然語言探索資料、分析問題、產生草稿、撰寫程式或建立 skill；適合從既有專案開始。</td><td>兩者都能讀寫檔案與呼叫工具；需清楚界定資料範圍、工具權限與人工核准點。</td></tr>
+              <tr><td><span class="tag">現成 Agent 工具</span></td><td>例如 OpenClaw、Hermes Agent，適合需要持續執行、多步驟任務與工具整合的技術團隊。</td><td>部署、權限、成本與操作紀錄要有人負責；本課程不要求學員操作。</td></tr>
+              <tr><td><span class="tag red">自行用 LangChain 建置</span></td><td>需要高度客製、長期整合或產品化的場景。</td><td>控制力最高，但也要承擔測試、維護、資安與版本管理。</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="callout success"><strong>管理上的四個檢查：</strong>這個 Agent 解決什麼價值？風險如何控制？資料、工具與流程做得到嗎？KPI 能不能證明它真的改善工作？</div>
+    </div>
+  </article>
+  <footer class="v4-footer"><a href="../index.html" target="_top">返回教材目錄</a><span>23 / 49</span><span class="page-links"><a href="04-06.html">上一頁</a><a href="05-01.html">下一頁</a></span></footer>
+</main>
+<script>document.body.classList.toggle('embedded',window.self!==window.top);</script>
+<script src="../navigation.js"></script></body>
+</html>

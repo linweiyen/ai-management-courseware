@@ -2,7 +2,7 @@
   "source": "../archive/v1-single-file/presentation_v1.html",
   "sourceRole": "legacy-reference",
   "canonicalFormat": "v4",
-  "generatedAt": "2026-07-29T00:00:00+08:00",
+  "generatedAt": "2026-07-30T00:00:00+08:00",
   "pageCount": 49,
   "exactContentVerified": false,
   "sourceContentHash": "cf9d5fd026d36830d642a76143a3904366d124343d85146ba0f20c2915a21a7c",
@@ -14,343 +14,343 @@
       "id": "cover",
       "chapter": "COVER",
       "chapterTitle": "課程封面",
-      "title": "大語言模型運用於企業管理與決策流程"
+      "title": "企業管理與決策的 AI 應用"
     },
     {
       "index": 2,
       "id": "00-01",
       "chapter": "CHAPTER 00",
-      "chapterTitle": "課程設計與學習目標",
-      "title": "上完三小時，學員應該能做到什麼？"
+      "chapterTitle": "課程導覽",
+      "title": "課程學習目標"
     },
     {
       "index": 3,
       "id": "00-02",
       "chapter": "CHAPTER 00",
-      "chapterTitle": "課程設計與學習目標",
-      "title": "建議的 180 分鐘節奏"
+      "chapterTitle": "課程導覽",
+      "title": "180 分鐘課程節奏"
     },
     {
       "index": 4,
       "id": "01-01",
       "chapter": "CHAPTER 01",
-      "chapterTitle": "為什麼現在要學：採用正在增加，落差也在擴大",
-      "title": "為什麼現在要學：採用正在增加，落差也在擴大"
+      "chapterTitle": "為什麼現在學 AI",
+      "title": "企業 AI 採用趨勢"
     },
     {
       "index": 5,
       "id": "01-02",
       "chapter": "CHAPTER 01",
-      "chapterTitle": "為什麼現在要學：採用正在增加，落差也在擴大",
-      "title": "AI 發展脈絡：已發生的里程碑與近期前瞻"
+      "chapterTitle": "為什麼現在學 AI",
+      "title": "AI 能力演進"
     },
     {
       "index": 6,
       "id": "01-03",
       "chapter": "CHAPTER 01",
-      "chapterTitle": "為什麼現在要學：採用正在增加，落差也在擴大",
-      "title": "AI 對工作的影響，通常先發生在「任務」而不是整個職位"
+      "chapterTitle": "為什麼現在學 AI",
+      "title": "練習：盤點可交給 AI 的任務"
     },
     {
       "index": 7,
-      "id": "06-01",
+      "id": "02-01",
       "chapter": "CHAPTER 02",
-      "chapterTitle": "用例選擇與優先排序：先做有價值、風險可控、可執行、可驗證的事",
-      "title": "四軸評估法"
+      "chapterTitle": "AI 用例優先排序",
+      "title": "四軸用例評估"
     },
     {
       "index": 8,
-      "id": "06-02",
+      "id": "02-02",
       "chapter": "CHAPTER 02",
-      "chapterTitle": "用例選擇與優先排序：先做有價值、風險可控、可執行、可驗證的事",
-      "title": "適合第一批 PoC 的特徵"
+      "chapterTitle": "AI 用例優先排序",
+      "title": "練習：選出第一個 PoC"
     },
     {
       "index": 9,
-      "id": "02-01",
+      "id": "03-01",
       "chapter": "CHAPTER 03",
-      "chapterTitle": "LLM 如何產生答案，以及為什麼會出錯",
-      "title": "用一句話理解大型語言模型"
+      "chapterTitle": "LLM 原理與限制",
+      "title": "LLM 如何產生答案"
     },
     {
       "index": 10,
-      "id": "02-02",
+      "id": "03-02",
       "chapter": "CHAPTER 03",
-      "chapterTitle": "LLM 如何產生答案，以及為什麼會出錯",
-      "title": "模型、知識、工具與工作流程不要混在一起"
+      "chapterTitle": "LLM 原理與限制",
+      "title": "模型、知識、工具與流程"
     },
     {
       "index": 11,
-      "id": "03-01",
+      "id": "03-03",
       "chapter": "CHAPTER 03",
-      "chapterTitle": "LLM 如何產生答案，以及為什麼會出錯",
-      "title": "四類最常見的限制"
+      "chapterTitle": "LLM 原理與限制",
+      "title": "LLM 的四類限制"
     },
     {
       "index": 12,
-      "id": "03-02",
+      "id": "03-04",
       "chapter": "CHAPTER 03",
-      "chapterTitle": "LLM 如何產生答案，以及為什麼會出錯",
-      "title": "一個簡單例子：9.11 與 9.9，哪一個比較大？"
+      "chapterTitle": "LLM 原理與限制",
+      "title": "案例：9.11 與 9.9"
     },
     {
       "index": 13,
-      "id": "03-03",
+      "id": "03-05",
       "chapter": "CHAPTER 03",
-      "chapterTitle": "LLM 如何產生答案，以及為什麼會出錯",
-      "title": "潮汐查詢：看似精準的答案也可能不可靠"
+      "chapterTitle": "LLM 原理與限制",
+      "title": "案例：潮汐資訊查證"
     },
     {
       "index": 14,
-      "id": "03-04",
+      "id": "03-06",
       "chapter": "CHAPTER 03",
-      "chapterTitle": "LLM 如何產生答案，以及為什麼會出錯",
+      "chapterTitle": "LLM 原理與限制",
       "title": "降低幻覺的六層防線"
     },
     {
       "index": 15,
-      "id": "03-05",
+      "id": "03-07",
       "chapter": "CHAPTER 03",
-      "chapterTitle": "LLM 如何產生答案，以及為什麼會出錯",
-      "title": "什麼是好的「不確定性表達」？"
+      "chapterTitle": "LLM 原理與限制",
+      "title": "表達已知、推論與未知"
     },
     {
       "index": 16,
-      "id": "03-06",
+      "id": "03-08",
       "chapter": "CHAPTER 03",
-      "chapterTitle": "LLM 如何產生答案，以及為什麼會出錯",
-      "title": "看似完整的答案，哪裡還不能相信？"
+      "chapterTitle": "LLM 原理與限制",
+      "title": "練習：找出不能相信的地方"
     },
     {
       "index": 17,
       "id": "04-01",
       "chapter": "CHAPTER 04",
-      "chapterTitle": "AI 進入決策流程：角色、Agent 與人工責任",
-      "title": "一個完整決策，不只是「問問題、拿答案」"
+      "chapterTitle": "決策流程與 Agent 責任",
+      "title": "企業決策八步驟"
     },
     {
       "index": 18,
       "id": "04-02",
       "chapter": "CHAPTER 04",
-      "chapterTitle": "AI 進入決策流程：角色、Agent 與人工責任",
-      "title": "每一個階段，AI 的角色都不同"
+      "chapterTitle": "決策流程與 Agent 責任",
+      "title": "決策各階段的人機分工"
     },
     {
       "index": 19,
       "id": "04-03",
       "chapter": "CHAPTER 04",
-      "chapterTitle": "AI 進入決策流程：角色、Agent 與人工責任",
-      "title": "五種決策用途，風險逐步增加"
+      "chapterTitle": "決策流程與 Agent 責任",
+      "title": "五種用途與風險層級"
     },
     {
       "index": 20,
-      "id": "05-01",
+      "id": "04-04",
       "chapter": "CHAPTER 04",
-      "chapterTitle": "AI 進入決策流程：角色、Agent 與人工責任",
-      "title": "AI 與人的責任分工：能力可以委派，責任不能消失"
+      "chapterTitle": "決策流程與 Agent 責任",
+      "title": "AI 能力可委派，責任不消失"
     },
     {
       "index": 21,
-      "id": "05-02",
+      "id": "04-05",
       "chapter": "CHAPTER 04",
-      "chapterTitle": "AI 進入決策流程：角色、Agent 與人工責任",
+      "chapterTitle": "決策流程與 Agent 責任",
       "title": "三種人工參與模式"
     },
     {
       "index": 22,
-      "id": "02-03",
+      "id": "04-06",
       "chapter": "CHAPTER 04",
-      "chapterTitle": "AI 進入決策流程：角色、Agent 與人工責任",
-      "title": "Agent 架構：模型、工具、記憶與控制循環"
+      "chapterTitle": "決策流程與 Agent 責任",
+      "title": "可管理的 Agent 架構"
     },
     {
       "index": 23,
-      "id": "09-02",
+      "id": "04-07",
       "chapter": "CHAPTER 04",
-      "chapterTitle": "AI 進入決策流程：角色、Agent 與人工責任",
-      "title": "設計一個可管理的 Agent"
+      "chapterTitle": "決策流程與 Agent 責任",
+      "title": "設計 Agent 的工作邊界"
     },
     {
       "index": 24,
-      "id": "07-01",
+      "id": "05-01",
       "chapter": "CHAPTER 05",
-      "chapterTitle": "從 ERP 資料到管理洞察：用 Codex 找證據，用 Skill 固化規則",
-      "title": "ERP 有資料，不代表管理者已經有答案"
+      "chapterTitle": "ERP 資料分析實作",
+      "title": "ERP 資料如何變成洞察"
     },
     {
       "index": 25,
-      "id": "07-02",
+      "id": "05-02",
       "chapter": "CHAPTER 05",
-      "chapterTitle": "從 ERP 資料到管理洞察：用 Codex 找證據，用 Skill 固化規則",
-      "title": "現場示範：H100 為什麼賣得好卻在虧錢？"
+      "chapterTitle": "ERP 資料分析實作",
+      "title": "實作：H100 毛利轉折"
     },
     {
       "index": 26,
-      "id": "07-03",
+      "id": "05-03",
       "chapter": "CHAPTER 05",
-      "chapterTitle": "從 ERP 資料到管理洞察：用 Codex 找證據，用 Skill 固化規則",
-      "title": "Skill 不是魔法，是給 AI 的企業工作說明"
+      "chapterTitle": "ERP 資料分析實作",
+      "title": "用 Skill 固化企業規則"
     },
     {
       "index": 27,
-      "id": "07-04",
+      "id": "05-04",
       "chapter": "CHAPTER 05",
-      "chapterTitle": "從 ERP 資料到管理洞察：用 Codex 找證據，用 Skill 固化規則",
-      "title": "主管查核：AI 找到訊號，不等於可以直接行動"
+      "chapterTitle": "ERP 資料分析實作",
+      "title": "主管查核：祥豐電腦風險"
     },
     {
       "index": 28,
-      "id": "10-01",
+      "id": "06-01",
       "chapter": "CHAPTER 06",
-      "chapterTitle": "ROI、TCO 與成效衡量：展示成功不等於企業成功",
-      "title": "先分清楚「效益」與「成本」"
+      "chapterTitle": "AI 成效與 ROI",
+      "title": "ROI 與完整成本"
     },
     {
       "index": 29,
-      "id": "10-02",
+      "id": "06-02",
       "chapter": "CHAPTER 06",
-      "chapterTitle": "ROI、TCO 與成效衡量：展示成功不等於企業成功",
-      "title": "除了財務 ROI，還要追蹤企業營運 KPI"
+      "chapterTitle": "AI 成效與 ROI",
+      "title": "營運 KPI 與質化成效"
     },
     {
       "index": 30,
-      "id": "10-03",
+      "id": "06-03",
       "chapter": "CHAPTER 06",
-      "chapterTitle": "ROI、TCO 與成效衡量：展示成功不等於企業成功",
-      "title": "常見的效益高估"
+      "chapterTitle": "AI 成效與 ROI",
+      "title": "案例：效益為何被高估"
     },
     {
       "index": 31,
-      "id": "10-04",
+      "id": "06-04",
       "chapter": "CHAPTER 06",
-      "chapterTitle": "ROI、TCO 與成效衡量：展示成功不等於企業成功",
-      "title": "AI 的價值不只在省人力：把釋放的能力轉成成長"
+      "chapterTitle": "AI 成效與 ROI",
+      "title": "省下時間，不等於創造價值"
     },
     {
       "index": 32,
-      "id": "08-01",
+      "id": "07-01",
       "chapter": "CHAPTER 07",
-      "chapterTitle": "從清楚指令到可管理的 Agent",
-      "title": "五要素任務說明"
+      "chapterTitle": "AI 指令與 Agent 管理",
+      "title": "AI 任務說明五要素"
     },
     {
       "index": 33,
-      "id": "08-02",
+      "id": "07-02",
       "chapter": "CHAPTER 07",
-      "chapterTitle": "從清楚指令到可管理的 Agent",
-      "title": "從模糊問題，改成可管理的任務"
+      "chapterTitle": "AI 指令與 Agent 管理",
+      "title": "把模糊問題改成可驗收任務"
     },
     {
       "index": 34,
-      "id": "08-03",
+      "id": "07-03",
       "chapter": "CHAPTER 07",
-      "chapterTitle": "從清楚指令到可管理的 Agent",
-      "title": "具體範例：分析客服等待時間"
+      "chapterTitle": "AI 指令與 Agent 管理",
+      "title": "範例：客服等待時間分析"
     },
     {
       "index": 35,
-      "id": "08-04",
+      "id": "07-04",
       "chapter": "CHAPTER 07",
-      "chapterTitle": "從清楚指令到可管理的 Agent",
-      "title": "AI 分析客服等待時間後，主管還要先查原因"
+      "chapterTitle": "AI 指令與 Agent 管理",
+      "title": "模擬報告與主管查核"
     },
     {
       "index": 36,
-      "id": "09-01",
+      "id": "07-05",
       "chapter": "CHAPTER 07",
-      "chapterTitle": "從清楚指令到可管理的 Agent",
-      "title": "從單輪問答到 Agent：能力增加，成本與責任也增加"
+      "chapterTitle": "AI 指令與 Agent 管理",
+      "title": "Agent 的成本如何衡量"
     },
     {
       "index": 37,
-      "id": "09-03",
+      "id": "07-06",
       "chapter": "CHAPTER 07",
-      "chapterTitle": "從清楚指令到可管理的 Agent",
-      "title": "Agent 導入容易忽略的四個管理面向"
+      "chapterTitle": "AI 指令與 Agent 管理",
+      "title": "Agent 的四個管理面向"
     },
     {
       "index": 38,
-      "id": "09-04",
+      "id": "07-07",
       "chapter": "CHAPTER 07",
-      "chapterTitle": "從清楚指令到可管理的 Agent",
-      "title": "以費用報支為例：Agent 的工具權限怎麼分級？"
+      "chapterTitle": "AI 指令與 Agent 管理",
+      "title": "案例：報支工具權限分級"
     },
     {
       "index": 39,
-      "id": "11-01",
+      "id": "08-01",
       "chapter": "CHAPTER 08",
-      "chapterTitle": "治理、風險與內控：讓創新可以持續，而不是靠禁止或放任",
-      "title": "上午 9:12，一份客訴資料進了公開 AI"
+      "chapterTitle": "AI 治理與風險內控",
+      "title": "案例：客服 AI 事故"
     },
     {
       "index": 40,
-      "id": "11-02",
+      "id": "08-02",
       "chapter": "CHAPTER 08",
-      "chapterTitle": "治理、風險與內控：讓創新可以持續，而不是靠禁止或放任",
-      "title": "NIST 四個動作：找出客服事故的治理缺口"
+      "chapterTitle": "AI 治理與風險內控",
+      "title": "用 NIST 四動作拆解事故"
     },
     {
       "index": 41,
-      "id": "11-03",
+      "id": "08-03",
       "chapter": "CHAPTER 08",
-      "chapterTitle": "治理、風險與內控：讓創新可以持續，而不是靠禁止或放任",
-      "title": "同一個客服 AI，為什麼有時綠燈、有時紅燈？"
+      "chapterTitle": "AI 治理與風險內控",
+      "title": "練習：AI 行動燈號分級"
     },
     {
       "index": 42,
-      "id": "11-04",
+      "id": "08-04",
       "chapter": "CHAPTER 08",
-      "chapterTitle": "治理、風險與內控：讓創新可以持續，而不是靠禁止或放任",
-      "title": "事故後的前 30 分鐘：先止血，再查清事實"
+      "chapterTitle": "AI 治理與風險內控",
+      "title": "事故後 30 分鐘怎麼做"
     },
     {
       "index": 43,
-      "id": "11-05",
+      "id": "08-05",
       "chapter": "CHAPTER 08",
-      "chapterTitle": "治理、風險與內控：讓創新可以持續，而不是靠禁止或放任",
-      "title": "重新上線前，用六個控制把邊界補回來"
+      "chapterTitle": "AI 治理與風險內控",
+      "title": "從治理要求推導部署需求"
     },
     {
       "index": 44,
-      "id": "12-01",
+      "id": "09-01",
       "chapter": "CHAPTER 09",
-      "chapterTitle": "雲端、地端與混合部署：沒有絕對最好，只有是否適合工作負載",
-      "title": "雲端、地端與混合部署：沒有絕對最好，只有是否適合工作負載"
+      "chapterTitle": "AI 部署策略",
+      "title": "雲端、地端與混合部署"
     },
     {
       "index": 45,
-      "id": "12-02",
+      "id": "09-02",
       "chapter": "CHAPTER 09",
-      "chapterTitle": "雲端、地端與混合部署：沒有絕對最好，只有是否適合工作負載",
-      "title": "常見的漸進策略"
+      "chapterTitle": "AI 部署策略",
+      "title": "從雲端驗證到混合部署"
     },
     {
       "index": 46,
-      "id": "13-01",
+      "id": "10-01",
       "chapter": "CHAPTER 10",
-      "chapterTitle": "把 AI 應用帶回工作：從一個問題開始",
-      "title": "想一個 AI 可以幫忙的工作問題"
+      "chapterTitle": "從想法到小型驗證",
+      "title": "找出值得改善的工作問題"
     },
     {
       "index": 47,
-      "id": "13-02",
+      "id": "10-02",
       "chapter": "CHAPTER 10",
-      "chapterTitle": "把 AI 應用帶回工作：從一個問題開始",
-      "title": "用四個問題檢查這個想法"
+      "chapterTitle": "從想法到小型驗證",
+      "title": "用四個問題檢查 AI 構想"
     },
     {
       "index": 48,
-      "id": "13-03",
+      "id": "10-03",
       "chapter": "CHAPTER 10",
-      "chapterTitle": "把 AI 應用帶回工作：從一個問題開始",
-      "title": "怎麼開始：做一個小而可回復的測試"
+      "chapterTitle": "從想法到小型驗證",
+      "title": "做一個可回復的小型測試"
     },
     {
       "index": 49,
-      "id": "16-01",
+      "id": "appendix-01",
       "chapter": "APPENDIX",
-      "chapterTitle": "資料來源與更新提醒",
-      "title": "主要官方資料"
+      "chapterTitle": "資料來源",
+      "title": "官方資料與延伸閱讀"
     }
   ]
 }
