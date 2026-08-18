@@ -1,0 +1,31 @@
+{
+  "title": "從 Chatbots 到 AI Agents：Agentic AI 的設計與實踐",
+  "version": "talk-v1",
+  "eventDate": "2026-08-26",
+  "audience": "大學生",
+  "durationMinutes": 40,
+  "pageCount": 21,
+  "pages": [
+    {"index":1,"id":"cover","chapter":"COVER","chapterTitle":"開場","title":"從 Chatbots 到 AI Agents"},
+    {"index":2,"id":"01-01","chapter":"CHAPTER 01","chapterTitle":"為什麼需要 Agent","title":"如果 AI 不只回答問題？"},
+    {"index":3,"id":"01-02","chapter":"CHAPTER 01","chapterTitle":"為什麼需要 Agent","title":"從 Answer Engine 到 Execution Engine"},
+    {"index":4,"id":"02-01","chapter":"CHAPTER 02","chapterTitle":"Agent 如何運作","title":"Agent 不只是一個模型呼叫"},
+    {"index":5,"id":"02-02","chapter":"CHAPTER 02","chapterTitle":"Agent 如何運作","title":"Agent Loop：觀察、行動、檢查"},
+    {"index":6,"id":"02-03","chapter":"CHAPTER 02","chapterTitle":"Agent 如何運作","title":"Harness 決定 Agent 怎麼工作"},
+    {"index":7,"id":"03-01","chapter":"CHAPTER 03","chapterTitle":"兩個實作案例","title":"實作一：Fable5 Harness"},
+    {"index":8,"id":"03-02","chapter":"CHAPTER 03","chapterTitle":"兩個實作案例","title":"可靠度來自流程"},
+    {"index":9,"id":"03-03","chapter":"CHAPTER 03","chapterTitle":"兩個實作案例","title":"實作二：Apex GP 賽車模擬"},
+    {"index":10,"id":"03-04","chapter":"CHAPTER 03","chapterTitle":"兩個實作案例","title":"測試通過仍可能不好玩"},
+    {"index":11,"id":"04-01","chapter":"CHAPTER 04","chapterTitle":"從 Agent 到 AIDMS","title":"個人 Agent 到企業系統"},
+    {"index":12,"id":"04-02","chapter":"CHAPTER 04","chapterTitle":"從 Agent 到 AIDMS","title":"AIDMS 是企業 AI 運行層"},
+    {"index":13,"id":"04-03","chapter":"CHAPTER 04","chapterTitle":"從 Agent 到 AIDMS","title":"AIDMS 系統架構"},
+    {"index":14,"id":"04-04","chapter":"CHAPTER 04","chapterTitle":"從 Agent 到 AIDMS","title":"AIDMS 串起 Agent 與企業系統"},
+    {"index":15,"id":"05-01","chapter":"CHAPTER 05","chapterTitle":"Agentic AI 的瓶頸","title":"三個 Agentic AI 瓶頸"},
+    {"index":16,"id":"05-02","chapter":"CHAPTER 05","chapterTitle":"Agentic AI 的瓶頸","title":"Compute 與 Inference"},
+    {"index":17,"id":"05-03","chapter":"CHAPTER 05","chapterTitle":"Agentic AI 的瓶頸","title":"可靠度是系統特性"},
+    {"index":18,"id":"05-04","chapter":"CHAPTER 05","chapterTitle":"Agentic AI 的瓶頸","title":"部署決定控制權"},
+    {"index":19,"id":"06-01","chapter":"CHAPTER 06","chapterTitle":"開始實作","title":"學生也能開始做 Agent"},
+    {"index":20,"id":"06-02","chapter":"CHAPTER 06","chapterTitle":"開始實作","title":"Agentic AI 的真正能力"},
+    {"index":21,"id":"appendix-01","chapter":"APPENDIX","chapterTitle":"資料來源","title":"資料來源與延伸閱讀"}
+  ]
+}
