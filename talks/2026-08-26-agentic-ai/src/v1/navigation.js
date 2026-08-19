@@ -1,7 +1,20 @@
 (function(){
   var embedded=window.self!==window.top;
   document.body.classList.toggle('embedded',embedded);
+  function fitHeadings(){
+    document.querySelectorAll('.talk-head h1,.talk-head h2').forEach(function(heading){
+      heading.style.fontSize='';
+      var size=parseFloat(getComputedStyle(heading).fontSize), min=20;
+      while(heading.scrollWidth>heading.clientWidth&&size>min){
+        size=Math.max(min,size*.94);
+        heading.style.fontSize=size+'px';
+      }
+    });
+  }
+  fitHeadings();
+  window.addEventListener('resize',fitHeadings);
   var footer=document.querySelector('.talk-footer');
+  if(footer){fetch('../manifest.json').then(function(r){return r.json()}).then(function(manifest){var id=location.pathname.split('/').pop().replace(/\.html$/,'');var page=manifest.pages.find(function(item){return item.id===id});var counter=footer.querySelector('span:not(.page-links)');if(page&&counter)counter.textContent=page.index+' / '+manifest.pages.length}).catch(function(){})}
   var links=footer?[].slice.call(footer.querySelectorAll('.page-links a')):[];
   var previous=links.find(function(a){return a.textContent.includes('上一頁')});
   var next=links.find(function(a){return a.textContent.includes('下一頁')||a.textContent.includes('來源')});

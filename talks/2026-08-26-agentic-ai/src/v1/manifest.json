@@ -4,28 +4,140 @@
   "eventDate": "2026-08-26",
   "audience": "大學生",
   "durationMinutes": 40,
-  "pageCount": 21,
+  "pageCount": 20,
   "pages": [
-    {"index":1,"id":"cover","chapter":"COVER","chapterTitle":"開場","title":"從 Chatbots 到 AI Agents"},
-    {"index":2,"id":"01-01","chapter":"CHAPTER 01","chapterTitle":"為什麼需要 Agent","title":"如果 AI 不只回答問題？"},
-    {"index":3,"id":"01-02","chapter":"CHAPTER 01","chapterTitle":"為什麼需要 Agent","title":"從 Answer Engine 到 Execution Engine"},
-    {"index":4,"id":"02-01","chapter":"CHAPTER 02","chapterTitle":"Agent 如何運作","title":"Agent 不只是一個模型呼叫"},
-    {"index":5,"id":"02-02","chapter":"CHAPTER 02","chapterTitle":"Agent 如何運作","title":"Agent Loop：觀察、行動、檢查"},
-    {"index":6,"id":"02-03","chapter":"CHAPTER 02","chapterTitle":"Agent 如何運作","title":"Harness 決定 Agent 怎麼工作"},
-    {"index":7,"id":"03-01","chapter":"CHAPTER 03","chapterTitle":"兩個實作案例","title":"實作一：Fable5 Harness"},
-    {"index":8,"id":"03-02","chapter":"CHAPTER 03","chapterTitle":"兩個實作案例","title":"可靠度來自流程"},
-    {"index":9,"id":"03-03","chapter":"CHAPTER 03","chapterTitle":"兩個實作案例","title":"實作二：Apex GP 賽車模擬"},
-    {"index":10,"id":"03-04","chapter":"CHAPTER 03","chapterTitle":"兩個實作案例","title":"測試通過仍可能不好玩"},
-    {"index":11,"id":"04-01","chapter":"CHAPTER 04","chapterTitle":"從 Agent 到 AIDMS","title":"個人 Agent 到企業系統"},
-    {"index":12,"id":"04-02","chapter":"CHAPTER 04","chapterTitle":"從 Agent 到 AIDMS","title":"AIDMS 是企業 AI 運行層"},
-    {"index":13,"id":"04-03","chapter":"CHAPTER 04","chapterTitle":"從 Agent 到 AIDMS","title":"AIDMS 系統架構"},
-    {"index":14,"id":"04-04","chapter":"CHAPTER 04","chapterTitle":"從 Agent 到 AIDMS","title":"AIDMS 串起 Agent 與企業系統"},
-    {"index":15,"id":"05-01","chapter":"CHAPTER 05","chapterTitle":"Agentic AI 的瓶頸","title":"三個 Agentic AI 瓶頸"},
-    {"index":16,"id":"05-02","chapter":"CHAPTER 05","chapterTitle":"Agentic AI 的瓶頸","title":"Compute 與 Inference"},
-    {"index":17,"id":"05-03","chapter":"CHAPTER 05","chapterTitle":"Agentic AI 的瓶頸","title":"可靠度是系統特性"},
-    {"index":18,"id":"05-04","chapter":"CHAPTER 05","chapterTitle":"Agentic AI 的瓶頸","title":"部署決定控制權"},
-    {"index":19,"id":"06-01","chapter":"CHAPTER 06","chapterTitle":"開始實作","title":"學生也能開始做 Agent"},
-    {"index":20,"id":"06-02","chapter":"CHAPTER 06","chapterTitle":"開始實作","title":"Agentic AI 的真正能力"},
-    {"index":21,"id":"appendix-01","chapter":"APPENDIX","chapterTitle":"資料來源","title":"資料來源與延伸閱讀"}
+    {
+      "index": 1,
+      "id": "cover",
+      "chapter": "COVER",
+      "chapterTitle": "開場",
+      "title": "從 Chatbots 到 AI Agents"
+    },
+    {
+      "index": 2,
+      "id": "01-01",
+      "chapter": "CHAPTER 01",
+      "chapterTitle": "為什麼需要 Agent",
+      "title": "如果 AI 不只回答問題？"
+    },
+    {
+      "index": 3,
+      "id": "01-timeline",
+      "chapter": "CHAPTER 01",
+      "chapterTitle": "為什麼需要 Agent",
+      "title": "近十五年 AI 發展藍圖"
+    },
+    {
+      "index": 4,
+      "id": "01-02",
+      "chapter": "CHAPTER 01",
+      "chapterTitle": "為什麼需要 Agent",
+      "title": "從 Answer Engine 到 Execution Engine"
+    },
+    {
+      "index": 5,
+      "id": "02-01",
+      "chapter": "CHAPTER 02",
+      "chapterTitle": "Agent 如何運作",
+      "title": "Agent 不只是一個模型呼叫"
+    },
+    {
+      "index": 6,
+      "id": "02-02",
+      "chapter": "CHAPTER 02",
+      "chapterTitle": "Agent 如何運作",
+      "title": "Agent Loop：觀察、行動、檢查"
+    },
+    {
+      "index": 7,
+      "id": "02-03",
+      "chapter": "CHAPTER 02",
+      "chapterTitle": "Agent 如何運作",
+      "title": "Harness 決定 Agent 怎麼工作"
+    },
+    {
+      "index": 8,
+      "id": "03-01",
+      "chapter": "CHAPTER 03",
+      "chapterTitle": "兩個案例",
+      "title": "案例一：Fable5 Harness"
+    },
+    {
+      "index": 9,
+      "id": "03-02",
+      "chapter": "CHAPTER 03",
+      "chapterTitle": "兩個案例",
+      "title": "可靠度來自流程"
+    },
+    {
+      "index": 10,
+      "id": "03-03",
+      "chapter": "CHAPTER 03",
+      "chapterTitle": "兩個案例",
+      "title": "案例二：Apex GP 賽車模擬"
+    },
+    {
+      "index": 11,
+      "id": "04-01",
+      "chapter": "CHAPTER 04",
+      "chapterTitle": "AIDMS 產品介紹",
+      "title": "AIDMS 產品定位：企業級 AI 落地的加速引擎"
+    },
+    {
+      "index": 12,
+      "id": "04-02",
+      "chapter": "CHAPTER 04",
+      "chapterTitle": "AIDMS 產品介紹",
+      "title": "AIDMS 與 Agent 的分工：模型與算力由平台提供"
+    },
+    {
+      "index": 13,
+      "id": "04-03",
+      "chapter": "CHAPTER 04",
+      "chapterTitle": "AIDMS 產品介紹",
+      "title": "AIDMS 的六個核心能力"
+    },
+    {
+      "index": 14,
+      "id": "04-04",
+      "chapter": "CHAPTER 04",
+      "chapterTitle": "AIDMS 產品介紹",
+      "title": "AIDMS 平台內建模型與服務"
+    },
+    {
+      "index": 15,
+      "id": "05-01",
+      "chapter": "CHAPTER 05",
+      "chapterTitle": "企業運行與 AIDMS",
+      "title": "Agent 進入企業後，瓶頸從模型擴大到整個平台"
+    },
+    {
+      "index": 16,
+      "id": "05-02",
+      "chapter": "CHAPTER 05",
+      "chapterTitle": "企業運行與 AIDMS",
+      "title": "AIDMS 如何接住算力與推論的瓶頸"
+    },
+    {
+      "index": 17,
+      "id": "05-03",
+      "chapter": "CHAPTER 05",
+      "chapterTitle": "企業運行與 AIDMS",
+      "title": "可靠度不是一句模型很準"
+    },
+    {
+      "index": 18,
+      "id": "05-04",
+      "chapter": "CHAPTER 05",
+      "chapterTitle": "企業運行與 AIDMS",
+      "title": "AIDMS 目前以地端 AI 基礎設施管理為核心"
+    },
+    {
+      "index": 19,
+      "id": "06-02",
+      "chapter": "CHAPTER 06",
+      "chapterTitle": "結論",
+      "title": "結論：把事情做完"
+    }
   ]
 }
