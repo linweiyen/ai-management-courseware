@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Backend.AI vs AIDMS 比較表</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --head: #eef2ff;
+      --accent: #1e3a8a;
+      --yes: #047857;
+      --no: #b91c1c;
+      --partial: #b45309;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 32px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(180deg, #f8fafc 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 28px 30px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 30px;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .table-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 760px;
+    }
+
+    th, td {
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: var(--head);
+      color: var(--accent);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    th:first-child, td:first-child {
+      width: 24%;
+      font-weight: 700;
+      color: #374151;
+    }
+
+    th:nth-child(2), td:nth-child(2),
+    th:nth-child(3), td:nth-child(3) {
+      width: 38%;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    .tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-right: 4px;
+      white-space: nowrap;
+    }
+
+    .yes { color: var(--yes); background: #ecfdf5; }
+    .no { color: var(--no); background: #fef2f2; }
+    .partial { color: var(--partial); background: #fffbeb; }
+
+    .note {
+      margin-top: 18px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px 22px;
+      color: #374151;
+    }
+
+    .note strong { color: var(--accent); }
+
+    @media (max-width: 720px) {
+      body { padding: 18px; }
+      h1 { font-size: 24px; }
+      .hero { padding: 22px; }
+      th, td { padding: 14px 14px; }
+      table { min-width: 720px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <h1>Backend.AI vs AIDMS 比較表</h1>
+      <p class="subtitle">核心差異：Backend.AI 偏向 AI Infrastructure Platform；AIDMS 偏向 AI Development & Deployment Platform。</p>
+    </section>
+
+    <section class="table-card">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>能力</th>
+              <th>Backend.AI</th>
+              <th>AIDMS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>產品定位</td>
+              <td>AI Infrastructure Platform，重點在 GPU、Container、Session、Scheduler 與多租戶資源管理。</td>
+              <td>AI Development & Deployment Platform，重點在模型、資料集、訓練、推論、API 與企業應用落地。</td>
+            </tr>
+            <tr>
+              <td>GPU Cluster Management</td>
+              <td><span class="tag yes">✅ 支援</span>以多節點 GPU 資源管理與排程為核心能力。</td>
+              <td><span class="tag yes">✅ 支援</span>AIDMS 2.0 朝多節點 GPU 叢集管理發展。</td>
+            </tr>
+            <tr>
+              <td>Kubernetes / Container</td>
+              <td><span class="tag yes">✅ 支援</span>以 Container Session 為核心使用方式。</td>
+              <td><span class="tag yes">✅ 支援</span>1.0 為 Docker 單機架構；2.0 為 Kubernetes 架構。</td>
+            </tr>
+            <tr>
+              <td>GPU Scheduling</td>
+              <td><span class="tag yes">✅ 強項</span>偏向 GPU-as-a-Service 與工作排程。</td>
+              <td><span class="tag partial">◐ 發展中</span>可作為 AIDMS 2.0 後續強化方向。</td>
+            </tr>
+            <tr>
+              <td>Notebook Environment</td>
+              <td><span class="tag yes">✅ 支援</span>提供 Jupyter、VS Code 等互動式工作環境。</td>
+              <td><span class="tag partial">◐ 可整合</span>不是目前主要定位，但可透過 API 或外部工具整合。</td>
+            </tr>
+            <tr>
+              <td>Model Repository / Model Zoo</td>
+              <td><span class="tag no">❌ 非核心</span>平台本身主要提供執行環境，模型由使用者自行準備。</td>
+              <td><span class="tag yes">✅ 核心能力</span>可提供模型庫、模型下載、模型管理與部署流程。</td>
+            </tr>
+            <tr>
+              <td>One-click Model Deployment</td>
+              <td><span class="tag no">❌ 非核心</span>偏向開啟 Container / Session，部署流程多由使用者自行處理。</td>
+              <td><span class="tag yes">✅ 核心能力</span>使用者可選擇模型後進行部署與推論服務化。</td>
+            </tr>
+            <tr>
+              <td>Computer Vision Platform</td>
+              <td><span class="tag no">❌ 不提供</span>沒有針對 CV 訓練流程、資料集標註與模型流程做產品化包裝。</td>
+              <td><span class="tag yes">✅ 支援</span>1.0 已支援電腦視覺訓練與推論；2.0 CV 訓練規劃於 2026 年底版本。</td>
+            </tr>
+            <tr>
+              <td>LLM Management</td>
+              <td><span class="tag partial">◐ Runtime 為主</span>可執行 vLLM 等環境，但模型管理不是核心。</td>
+              <td><span class="tag yes">✅ 支援</span>支援大語言模型推論與服務化管理。</td>
+            </tr>
+            <tr>
+              <td>Dataset Management</td>
+              <td><span class="tag no">❌ 非核心</span>主要管理 Storage 與工作環境，不是資料集生命週期平台。</td>
+              <td><span class="tag yes">✅ 核心能力</span>可管理 CV/AI 專案所需資料集與模型訓練流程。</td>
+            </tr>
+            <tr>
+              <td>Training Workflow</td>
+              <td><span class="tag partial">◐ 使用者自建</span>提供運算與環境，訓練流程由使用者自行建立。</td>
+              <td><span class="tag yes">✅ 產品化</span>1.0 已支援 CV 訓練；2.0 訓練功能預計於 2026 年底版本支援。</td>
+            </tr>
+            <tr>
+              <td>Inference Service Management</td>
+              <td><span class="tag partial">◐ 基本容器管理</span>可啟動推論環境，但較偏基礎設施層。</td>
+              <td><span class="tag yes">✅ 核心能力</span>提供模型推論部署、API 化與服務管理。</td>
+            </tr>
+            <tr>
+              <td>Enterprise AI Platform</td>
+              <td><span class="tag partial">偏 Infrastructure</span>較像 AI 基礎設施作業平台。</td>
+              <td><span class="tag yes">偏 AI Platform</span>在基礎設施之上，進一步提供模型、資料、推論與應用落地能力。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="note">
+      <strong>簡報重點：</strong>Backend.AI 的優勢在 GPU 資源利用率、Container Session、Notebook 與基礎設施治理；AIDMS 的差異化價值則在 Model Repository、One-click Deployment、Computer Vision、LLM 推論與企業 AI 應用落地。
+    </section>
+  </main>
+</body>
+</html>
