@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>B300 vs RTX PRO 6000 Blackwell｜AI 與 Omniverse 選型分析</title>
+  <meta name="description" content="NVIDIA B300 與 RTX PRO 6000 Blackwell Server Edition 的規格、LLM、Omniverse、價格與銷售分析。">
+  <style>
+    :root{--ink:#17202a;--muted:#5c6873;--paper:#f6f8fb;--card:#fff;--line:#dfe5eb;--blue:#1261a0;--blue2:#eaf3fb;--orange:#e87532;--green:#18794e;--shadow:0 10px 28px #17202a12}
+    *{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif;line-height:1.7}
+    .wrap{max-width:1180px;margin:auto;padding:0 24px}.hero{background:linear-gradient(135deg,#0b2339,#1261a0 58%,#168a91);color:#fff;padding:70px 0 62px}.eyebrow{letter-spacing:.16em;text-transform:uppercase;font-size:.78rem;opacity:.78}.hero h1{font-size:clamp(2rem,5vw,4.2rem);line-height:1.12;margin:16px 0}.hero p{font-size:1.12rem;max-width:760px;margin:0;color:#e8f4fb}.pillrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.pill{border:1px solid #ffffff55;border-radius:999px;padding:5px 13px;font-size:.9rem;background:#ffffff14}
+    main{padding:42px 0 70px}.lead{font-size:1.3rem;max-width:900px;margin:0 0 32px}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--shadow)}.span-4{grid-column:span 4}.span-6{grid-column:span 6}.span-8{grid-column:span 8}.span-12{grid-column:span 12}.metric{font-size:2.1rem;font-weight:800;line-height:1.15;color:var(--blue)}.label{color:var(--muted);font-size:.92rem}.section{margin-top:42px}.section h2{font-size:1.8rem;margin:0 0 14px}.section h3{margin-top:0}.note{border-left:4px solid var(--orange);background:#fff7f1;padding:15px 18px;border-radius:8px;margin:18px 0}.success{border-left:4px solid var(--green);background:#effaf4;padding:15px 18px;border-radius:8px;margin:18px 0}
+    table{border-collapse:collapse;width:100%;font-size:.95rem;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}th,td{text-align:left;padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:top}th{background:#edf3f8;font-weight:750}tr:last-child td{border-bottom:0}.tag{display:inline-block;background:var(--blue2);color:var(--blue);border-radius:6px;padding:1px 8px;font-size:.84rem;font-weight:700}.bar{height:12px;background:#e8edf1;border-radius:20px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),#28a4b2);border-radius:20px}.small{font-size:.9rem;color:var(--muted)}.quote{font-size:1.15rem;border-left:5px solid var(--blue);padding:12px 20px;background:#f0f7fc;border-radius:8px}.sources a{color:var(--blue)}footer{border-top:1px solid var(--line);padding:28px 0 50px;color:var(--muted);font-size:.9rem}
+    @media(max-width:800px){.span-4,.span-6,.span-8{grid-column:span 12}.hero{padding:48px 0}.wrap{padding:0 16px}table{font-size:.88rem;display:block;overflow-x:auto;white-space:normal}}
+  </style>
+</head>
+<body>
+  <header class="hero"><div class="wrap">
+    <div class="eyebrow">GPU Product Comparison · 2026/09</div>
+    <h1>B300 vs RTX PRO 6000<br>怎麼選才合理？</h1>
+    <p>以兩台都是 8 張 GPU 的整機報價比較：B300 為 US$650,000，RTX PRO 6000 Blackwell Server Edition 為 US$220,000。</p>
+    <div class="pillrow"><span class="pill">大型 LLM 訓練：B300</span><span class="pill">企業 AI 應用：Pro 6000</span><span class="pill">Omniverse／Isaac Sim：Pro 6000</span></div>
+  </div></header>
+
+  <main><div class="wrap">
+    <p class="lead">最簡單的判斷方式：B300 像大型貨車，專門搬很重的 AI 工作；Pro 6000 像多用途商務車，價格低很多，也能同時處理 AI、3D 和模擬工作。</p>
+
+    <div class="grid">
+      <div class="card span-4"><div class="metric">US$430K</div><div class="label">Pro 6000 少花的預算</div><div class="small">相較 B300 約省 66.2%</div></div>
+      <div class="card span-4"><div class="metric">2.95×</div><div class="label">B300 的價格倍數</div><div class="small">B300 約是 Pro 6000 的 2.95 倍價格</div></div>
+      <div class="card span-4"><div class="metric">33.85%</div><div class="label">Pro 6000 的打平門檻</div><div class="small">只要達到 B300 33.85% 的有效吞吐量，價格／吞吐量就打平</div></div>
+    </div>
+
+    <section class="section"><h2>一眼看懂規格差異</h2>
+      <table><thead><tr><th>項目</th><th>B300：8 GPU</th><th>RTX PRO 6000：8 GPU</th><th>白話解釋</th></tr></thead><tbody>
+        <tr><td>平台</td><td>Blackwell Ultra／HGX SXM</td><td>Blackwell／PCIe</td><td>B300 是為大型 AI 伺服器設計；Pro 6000 比較容易採用標準伺服器架構。</td></tr>
+        <tr><td>總 GPU 記憶體</td><td>約 2.16–2.30 TB HBM3e</td><td>768 GB GDDR7 ECC</td><td>B300 的工作桌大約是 Pro 6000 的 3 倍，適合更大的模型和更多 KV Cache。</td></tr>
+        <tr><td>記憶體頻寬</td><td>最高約 64 TB/s（8 卡合計）</td><td>約 12.8 TB/s（8 卡合計）</td><td>B300 從記憶體讀資料更快；LLM 生成速度常受這件事影響。</td></tr>
+        <tr><td>GPU 互連</td><td>NVLink 5／NVSwitch</td><td>無 NVLink，主要依 PCIe</td><td>同一個大型模型需要 8 張卡合作時，B300 的卡與卡之間溝通更快。</td></tr>
+        <tr><td>RT Cores</td><td>沒有 RTX 光追核心</td><td>每卡 188 個第四代 RT Cores</td><td>Pro 6000 適合 Omniverse、Isaac Sim、3D 渲染和視覺模擬。</td></tr>
+        <tr><td>功耗參考</td><td>約 1,100W／卡（HGX B300）</td><td>最高 600W／卡</td><td>Pro 6000 通常比較容易安排機房電力；實際要看整機。</td></tr>
+      </tbody></table>
+      <div class="note">B300 的記憶體容量在不同 NVIDIA／OEM 資料中有 270 GB、288 GB 等版本口徑；採購時應以報價上的確切 SKU 為準。</div>
+    </section>
+
+    <section class="section"><h2>LLM 與 Omniverse，怎麼選？</h2>
+      <table><thead><tr><th>工作</th><th>建議</th><th>原因</th></tr></thead><tbody>
+        <tr><td>從零訓練大型語言模型</td><td><span class="tag">B300</span></td><td>需要大量記憶體、Tensor 運算與高速 GPU 互連。</td></tr>
+        <tr><td>大型模型全參數訓練或大幅微調</td><td><span class="tag">B300</span></td><td>權重之外還有梯度、Optimizer 和 Activation，容量壓力很大。</td></tr>
+        <tr><td>7B–32B LoRA／QLoRA 微調</td><td><span class="tag">Pro 6000</span></td><td>96 GB 單卡提供實用的開發空間，8 卡也能分配給不同實驗。</td></tr>
+        <tr><td>RAG、企業問答、文件摘要、Embedding</td><td><span class="tag">Pro 6000</span></td><td>多數工作可拆成獨立服務，較容易避開跨卡通訊瓶頸。</td></tr>
+        <tr><td>高併發大型模型服務</td><td><span class="tag">B300</span></td><td>模型越大、同時使用者越多，B300 的記憶體與互連優勢越明顯。</td></tr>
+        <tr><td>Omniverse／Isaac Sim／工廠 3D 模擬</td><td><span class="tag">Pro 6000</span></td><td>具備 RT Cores，可做 RTX 渲染、視覺感測器與逼真場景模擬。</td></tr>
+      </tbody></table>
+      <div class="success">若客戶的目標是「把 AI 用進公司」，而不是「自己從零訓練大型 AI」，建議先用 Pro 6000 做工作負載驗證。</div>
+    </section>
+
+    <section class="section"><h2>B300 實際快幾倍？</h2>
+      <p>公開資料中，最接近直接比較的案例是同一個 Cosmos3-Nano 視覺語言模型。以下數字是輸出 token／秒，B300 和 Pro 6000 的測試條件相同；這是單一模型的參考，不能當成所有 LLM 的固定倍率。</p>
+      <table><thead><tr><th>情境</th><th>Pro 6000</th><th>B300</th><th>B300 約快</th></tr></thead><tbody>
+        <tr><td>1 個同時請求</td><td>71 tokens／秒</td><td>203 tokens／秒</td><td><strong>2.85 倍</strong></td></tr>
+        <tr><td>64 個同時請求</td><td>685 tokens／秒</td><td>2,396 tokens／秒</td><td><strong>3.50 倍</strong></td></tr>
+        <tr><td>256 個同時請求</td><td>622 tokens／秒</td><td>2,792 tokens／秒</td><td><strong>4.48 倍</strong></td></tr>
+      </tbody></table>
+      <p class="small">這組資料是視覺語言模型的公開 vLLM 測試，測試資料未完整揭露與你的兩台 8 卡整機完全相同的配置，因此只能作方向性參考。真正採購應使用客戶指定模型、文件長度、精度和併發數量驗證。</p>
+      <div class="card"><h3>如何解讀這些數字？</h3><div class="bar"><i style="width:33.85%"></i></div><p><strong>Pro 6000 只要達到 B300 約 33.85% 的有效速度，價格／吞吐量就打平。</strong>如果 B300 實際快 2.85 倍，Pro 6000 仍可能略有價格優勢；如果快 3.5 倍以上，B300 的速度可能足以抵銷價差。</p></div>
+    </section>
+
+    <section class="section"><h2>Pro 6000 優勢說明</h2>
+      <div class="grid">
+        <div class="card span-6"><h3>少花 US$430,000</h3><p>若 Pro 6000 已經達到客戶的速度和容量要求，可把預算留給資料整理、模型整合、儲存與維運。</p></div>
+        <div class="card span-6"><h3>AI 與 3D 共用平台</h3><p>同一套設備能支援 LLM 推論、模型微調、Omniverse、工廠數位孿生、渲染與影像處理。</p></div>
+        <div class="card span-6"><h3>適合多部門分配</h3><p>8 張卡可以分給不同服務、團隊或實驗，不需要所有工作都綁在同一個大型模型上。</p></div>
+        <div class="card span-6"><h3>支援 MIG 資源切分</h3><p>每張卡最多可切成 4 個 24 GB 的隔離實例，適合多租戶或多個小型 AI 服務。</p></div>
+      </div>
+      <div class="quote">實際導入前，建議以您的模型、資料與使用場景進行測試，確認 22 萬美元的 Pro 6000 方案是否符合速度、容量與應用需求。</div>
+    </section>
+
+    <section class="section"><h2>方案建議</h2><div class="card"><p class="quote">若您的應用包含企業內部 AI 問答、文件處理、模型微調，或 Omniverse 工廠模擬，Pro 6000 是值得評估的方案。以本次報價而言，整機可少投入 43 萬美元，同時支援 AI 與 3D 視覺工作。導入前可使用您的模型與資料進行驗證，確認實際速度、可支援的使用人數，以及畫面與模擬效果是否符合需求。</p></div></section>
+
+    <section class="section sources"><h2>資料來源</h2><p><a href="https://www.nvidia.com/en-us/data-center/hgx/" target="_blank" rel="noopener">NVIDIA HGX 平台與 B300 規格</a> · <a href="https://www.nvidia.com/en-us/data-center/rtx-pro-6000-blackwell-server-edition/" target="_blank" rel="noopener">NVIDIA RTX PRO 6000 Blackwell Server Edition</a> · <a href="https://docs.isaacsim.omniverse.nvidia.com/latest/installation/requirements.html" target="_blank" rel="noopener">Isaac Sim 硬體需求</a> · <a href="https://github.com/NVIDIA/cosmos/blob/main/inference_benchmarks.md" target="_blank" rel="noopener">NVIDIA Cosmos 公開推論測試</a></p></section>
+  </div></main>
+  <footer><div class="wrap">本頁價格採用使用者提供的整機報價：B300 US$650,000、RTX PRO 6000 US$220,000。效能數字需視模型、精度、軟體版本、併發與卡數重新驗證。</div></footer>
+</body>
+</html>

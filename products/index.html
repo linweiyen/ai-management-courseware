@@ -16,13 +16,13 @@
     .intro{position:relative;color:var(--muted);font-size:18px;max-width:650px;margin:0}
     .hero:before{content:"";position:absolute;right:-40px;top:12px;width:350px;height:350px;border:1px solid #64e2d220;border-radius:50%;box-shadow:0 0 0 48px #64e2d207,0 0 0 96px #64e2d205;pointer-events:none}
     .section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:22px}h2{font-size:18px;margin:0}.section-heading span{font-size:13px;color:var(--muted)}
-    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
     .card{display:flex;flex-direction:column;min-width:0;text-decoration:none;padding:28px;background:linear-gradient(145deg,#142737,#0c1b2a);border:1px solid var(--line);border-radius:16px;transition:transform .2s,border-color .2s}
     .card:hover{transform:translateY(-4px);border-color:var(--accent)}.card:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
     .card-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:36px}.number{font:14px Consolas,monospace;color:var(--muted)}.tag{font-size:12px;border:1px solid #3a5367;padding:3px 10px;border-radius:100px;color:var(--accent)}
     .visual{height:76px;display:flex;align-items:center;gap:8px;margin-bottom:24px;color:var(--accent);font:700 22px Consolas,monospace}
     .visual span{padding:10px;border:1px solid #3a5367;border-radius:6px}.visual i{font-style:normal;font-size:18px;color:var(--muted)}
-    .card:nth-child(2){--accent:#9abaff}.card:nth-child(3){--accent:#efc78b}
+    .card:nth-child(2){--accent:#9abaff}.card:nth-child(3){--accent:#efc78b}.card:nth-child(4){--accent:#f29b73}
     h3{font-size:24px;line-height:1.45;margin:0 0 16px;letter-spacing:-.02em}.description{font-size:15px;color:var(--muted);margin:0 0 28px}
     .cta{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:20px;margin-top:auto;color:var(--accent);font-size:14px;font-weight:700}.cta span{font-size:22px}
     .hint{font-size:13px;color:var(--muted);margin:24px 0 0}
@@ -39,10 +39,10 @@
       <section class="hero" aria-labelledby="title">
         <p class="eyebrow">AIDMS SALES KIT</p>
         <h1>從 AI 算力，<br>走向<span>企業應用。</span></h1>
-        <p class="intro">認識 AIDMS 的產品定位、基礎設施方案與平台差異。<br>選擇主題，開啟簡報或比較資料。</p>
+        <p class="intro">認識 AIDMS 的產品定位、基礎設施方案與平台差異。<br>選擇主題，開啟簡報、比較資料或 GPU 選型分析。</p>
       </section>
       <section aria-labelledby="resources">
-        <div class="section-heading"><h2 id="resources">產品與方案資料</h2><span>03 份精選內容</span></div>
+        <div class="section-heading"><h2 id="resources">產品與方案資料</h2><span>04 份精選內容</span></div>
         <div class="cards">
           <a class="card" href="aidms_sales_kits/slides/aidms-evolution-inference.html">
             <div class="card-top"><span class="number">01 / PRODUCT</span><span class="tag">產品架構</span></div>
@@ -64,6 +64,13 @@
             <h3>Backend.AI vs AIDMS<br>比較表</h3>
             <p class="description">透過並列比較，掌握兩個平台的定位與功能差異，作為產品討論與方案評估的參考。</p>
             <div class="cta">查看平台比較<span aria-hidden="true">↗</span></div>
+          </a>
+          <a class="card" href="gpu/pro6000_vs_b300.html">
+            <div class="card-top"><span class="number">04 / GPU</span><span class="tag">GPU 選型</span></div>
+            <div class="visual" aria-hidden="true"><span>B300</span><i>vs</i><span>PRO 6000</span></div>
+            <h3>RTX PRO 6000<br>vs NVIDIA B300</h3>
+            <p class="description">比較兩種 8 卡整機在 LLM、Omniverse、效能、價格與實際導入情境上的差異。</p>
+            <div class="cta">查看 GPU 選型分析<span aria-hidden="true">↗</span></div>
           </a>
         </div>
         <p class="hint">點選卡片即可開啟內容；使用瀏覽器返回鍵回到此目錄。</p>
